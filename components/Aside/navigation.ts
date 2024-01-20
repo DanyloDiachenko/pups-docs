@@ -16,8 +16,20 @@ export const navigation = [
                 link: "/pups1/made-prototype",
             },
             {
+                title: "Час зарядки АКБ",
+                link: "/pups1/charge-accumulator-time",
+            },
+            {
                 title: "Тестування під навантаженням",
                 link: "/pups1/testing-load",
+            },
+            {
+                title: "Час зарядки пристроїв",
+                link: "/pups1/charge-time",
+            },
+            {
+                title: "Цикли зарядки пристроїв",
+                link: "/pups1/charge-cycles",
             },
             {
                 title: "Технічні характеристики",

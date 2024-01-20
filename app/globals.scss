@@ -41,6 +41,12 @@ a {
     }
 }
 
+img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+}
+
 .main-section-bg-1 {
     left: -300px;
     top: 250px;
@@ -49,6 +55,7 @@ a {
     width: 550px;
     height: 550px;
     filter: blur(226px);
+    z-index: -1;
 }
 .main-section-bg-2 {
     right: 0;
@@ -58,6 +65,7 @@ a {
     width: 550px;
     height: 550px;
     filter: blur(226px);
+    z-index: -1;
 }
 .main-section-bg-3 {
     top: 25%;
@@ -68,4 +76,5 @@ a {
     height: 550px;
     transform: rotate(-147.05deg);
     filter: blur(226px);
+     z-index: -1;
 }
