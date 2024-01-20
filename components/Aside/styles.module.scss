@@ -1,0 +1,97 @@
+.aside {
+    padding: 30px;
+    min-height: 100vh;
+    background: rgba(0, 0, 0, 0.3);
+
+    .asideWrapper {
+        position: sticky;
+        z-index: 10;
+        top: 30px;
+
+        .item {
+            background: #2a1a44;
+            border-radius: 24px;
+            padding: 30px;
+            margin-top: 10px;
+            z-index: 1;
+
+            &:first-child {
+                margin-top: 0;
+            }
+
+            .top {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                cursor: pointer;
+                z-index: 1;
+
+                .title {
+                    font-weight: 700;
+                    font-size: 20px;
+                }
+
+                .arrow {
+                    transition: 0.3s;
+
+                    &.reversed {
+                        transform: rotate(180deg);
+                    }
+                }
+            }
+
+            .links {
+                display: grid;
+                grid-template-rows: 0fr;
+                transition: 0.5s;
+                overflow: hidden;
+                margin-top: 0;
+
+                &.opened {
+                    grid-template-rows: 1fr;
+                    
+                }
+
+                .wrapper {
+                    min-height: 0;
+
+                    .linkWrapper {
+                        display: flex;
+                        align-items: center;
+                        margin-top: 15px;
+
+                        a {
+                            color: var(--white);
+                            text-decoration: none;
+                            display: block;
+                            font-size: 20px;
+                            line-height: 28px;
+                            margin-left: 15px;
+                            transition: 0.3s;
+                            cursor: pointer;
+                            z-index: 1;
+
+                            &:hover {
+                                color: #fd7081;
+                            }
+
+                            &:first-child {
+                                margin-top: 0;
+                            }
+
+                            &.linkActive {
+                                color: #8c55fe;
+
+                                font-weight: 600;
+
+                                &:hover {
+                                    color: #8c55fe;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

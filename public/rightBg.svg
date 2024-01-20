@@ -1,0 +1,38 @@
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="682"
+    height="950"
+    viewBox="0 0 682 950"
+    fill="none"
+>
+    <g filter="url(#filter0_f_135_54)">
+        <path
+            d="M543.233 492.241C628.247 400.051 947.267 488.166 1096.15 543.747C1175.45 595.143 916.291 962.829 828.592 980.468C740.893 998.107 536.929 830.163 485.305 784.788C433.681 739.412 436.965 607.479 543.233 492.241Z"
+            fill="#BD00FF"
+            fill-opacity="0.23"
+        />
+    </g>
+    <defs>
+        <filter
+            id="filter0_f_135_54"
+            x="0.789062"
+            y="0.140625"
+            width="1562.25"
+            height="1433.62"
+            filterUnits="userSpaceOnUse"
+            color-interpolation-filters="sRGB"
+        >
+            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feBlend
+                mode="normal"
+                in="SourceGraphic"
+                in2="BackgroundImageFix"
+                result="shape"
+            />
+            <feGaussianBlur
+                stdDeviation="226"
+                result="effect1_foregroundBlur_135_54"
+            />
+        </filter>
+    </defs>
+</svg>

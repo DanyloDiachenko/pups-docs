@@ -1,0 +1,32 @@
+.list {
+    margin-top: 50px;
+    list-style: none;
+
+    li {
+        margin-top: 35px;
+
+        &:first-child {
+            margin-top: 0;
+        }
+
+        p {
+            margin-top: 15px;
+        }
+
+        img {
+            margin-top: 15px;
+            max-width: 600px;
+        }
+
+        .shcemeNumbers {
+            list-style: none;
+            margin-top: 0;
+
+            li {
+                margin-top: 10px;
+                font-size: 18px;
+                color: #bcbcbc;
+            }
+        }
+    }
+}
