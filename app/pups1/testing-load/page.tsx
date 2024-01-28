@@ -39,6 +39,10 @@ const Page = () => {
                         n<span className={styles.small}>модуля</span>) = 4500 +
                         4500 * 7% = 4500 + 315 = 4815 (міліампер-годин)
                     </p>
+                    <img
+                        src="/pups1/charge-phone.jpg"
+                        alt="Перевірка порту USB 5 вольт 1 ампер"
+                    />
                 </li>
                 <li>
                     <h2>3. Перевірка порту прикурювача</h2>
