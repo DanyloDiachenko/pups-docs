@@ -1,4 +1,4 @@
-import styles from "./page.module.scss";
+import styles from "./styles.module.scss";
 
 const Page = () => {
     return (
@@ -43,7 +43,11 @@ const Page = () => {
                     <p>Процес заряджання телефону наведено нижче:</p>
                 </li>
             </ol>
-            <img className={styles.image} src="/pups1/charge-phone.jpg" alt="Заряджання телефону від порту USB 2.1 ампера" />
+            <img
+                className={styles.image}
+                src="/pups1/charge-phone.jpg"
+                alt="Заряджання телефону від порту USB 2.1 ампера"
+            />
         </>
     );
 };

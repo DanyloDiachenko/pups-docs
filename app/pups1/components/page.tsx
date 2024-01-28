@@ -1,5 +1,5 @@
 import { components } from "./components";
-import styles from "./page.module.scss";
+import styles from "./styles.module.scss";
 
 const Page = () => {
     const totalPrice = components.reduce(
