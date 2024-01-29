@@ -12,6 +12,20 @@
         z-index: 10;
         top: 30px;
 
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            font-size: 32px;
+            font-weight: 800;
+            padding-bottom: 20px;
+            color: #ffffff;
+
+            img {
+                max-width: 80px;
+            }
+        }
+
         .item {
             background: #2a1a44;
             border-radius: 24px;
@@ -53,7 +67,6 @@
 
                 &.opened {
                     grid-template-rows: 1fr;
-                    
                 }
 
                 .wrapper {

@@ -1,7 +1,21 @@
 export const navigation = [
     {
-        title: "«PUPS» v.1",
+        title: "Перед прочитанням",
         id: 0,
+        links: [
+            {
+                title: "Про наукову роботу",
+                link: "/before/about-work",
+            },
+            {
+                title: "Перелік умовних позначень",
+                link: "/before/shorts-list",
+            },
+        ],
+    },
+    {
+        title: "«PUPS» v.1",
+        id: 1,
         links: [
             {
                 title: "Процес виготовлення",
@@ -47,11 +61,15 @@ export const navigation = [
                 title: "Відгук від військових",
                 link: "/pups1/military-review",
             },
+            {
+                title: "Станція після використання",
+                link: "/pups1/after-using",
+            },
         ],
     },
     {
         title: "«PUPS» v.1.5",
-        id: 1,
+        id: 2,
         links: [
             {
                 title: "Доробка недоліків",
@@ -77,7 +95,7 @@ export const navigation = [
     },
     {
         title: "«PUPS» v.2",
-        id: 2,
+        id: 3,
         links: [
             {
                 title: "Складові станції",

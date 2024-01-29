@@ -1,0 +1,33 @@
+.description {
+    margin-top: 50px;
+}
+
+.descriptionAddtional {
+    margin-top: 20px;
+}
+
+.list {
+    list-style: none;
+    margin-top: 30px;
+
+    li {
+        margin-top: 25px;
+        list-style: none;
+
+        p {
+            margin-top: 10px;
+        }
+
+        &:first-child {
+            margin-top: 0;
+        }
+
+        .subUl {
+            margin-top: 15px;
+
+            li {
+                margin-top: 10px;
+            }
+        }
+    }
+}

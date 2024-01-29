@@ -46,6 +46,10 @@ export const Aside = () => {
     return (
         <aside className={styles.aside}>
             <div className={styles.asideWrapper}>
+                <Link className={styles.logo} href="/">
+                    <img src="/logo.png" alt="Логотип" />
+                    «PUPS»
+                </Link>
                 {navigation.map((tab, index) => (
                     <div className={styles.item} key={index}>
                         <div

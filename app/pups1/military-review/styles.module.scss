@@ -1,24 +1,20 @@
-.mainDescription {
+.descriptionMain {
     margin-top: 50px;
 }
 
-.description {
-    margin-top: 20px;
-}
-
 .list {
-    margin-top: 20px;
+    margin-top: 50px;
     list-style: none;
 
     li {
-        margin-top: 20px;
+        margin-top: 30px;
 
         &:first-child {
             margin-top: 0;
         }
 
         p {
-            margin-top: 10px;
+            margin-top: 15px;
         }
     }
 }
