@@ -72,9 +72,18 @@ export const navigation = [
         id: 2,
         links: [
             {
+                title: "Додаткові складові",
+                link: "/pups1.5/additional-components",
+            },
+            {
                 title: "Доробка недоліків",
                 link: "/pups1.5/improvements",
             },
+            {
+                title: "Виготовлений прототип",
+                link: "/pups1.5/made-prototype",
+            },
+
             {
                 title: "Технічні характеристики",
                 link: "/pups1.5/technical-characteristics",

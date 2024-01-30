@@ -10,5 +10,6 @@ export const components = [
     { title: "Роз`єм 3pin", pricePerOne: 12.0, quantity: 1 },
     { title: "Штекер XT60", pricePerOne: 35.0, quantity: 1 },
     { title: "Шнур зарядки", pricePerOne: 50.0, quantity: 1 },
-    { title: "Порт прикурювача", pricePerOne: 76.0, quantity: 1 },
+    { title: "Порт прикурювача (замінено)", pricePerOne: 0.0, quantity: 1 },
+    { title: "Розгалужувач USB QC 3.0", pricePerOne: 230.0, quantity: 1 },
 ];

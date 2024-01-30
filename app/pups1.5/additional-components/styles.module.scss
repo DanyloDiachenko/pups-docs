@@ -1,0 +1,82 @@
+.description {
+    margin-top: 50px;
+}
+
+.table {
+    margin-top: 30px;
+    font-size: 22px;
+    line-height: 32px;
+    background: rgba(0, 0, 0, 0.17);
+    border-spacing: 0;
+
+    thead {
+        tr {
+            background: #242a4d;
+            border-top-left-radius: 7px;
+            border-top-right-radius: 7px;
+            border-bottom-left-radius: 7px;
+            border-bottom-right-radius: 7px;
+
+            th {
+                padding-left: 15px;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                text-align: start;
+
+                &.name {
+                    min-width: 350px;
+                    border-top-left-radius: 7px;
+                }
+
+                &.pricePerOne {
+                    min-width: 250px;
+                }
+
+                &.quantity {
+                    min-width: 250px;
+                }
+
+                &.priceFull {
+                    min-width: 250px;
+                    border-top-right-radius: 7px;
+                }
+            }
+        }
+    }
+
+    tbody {
+        tr {
+            &:last-child {
+                border-bottom-left-radius: 7px;
+                border-bottom-right-radius: 7px;
+
+                td {
+                    border-bottom: none;
+
+                    &:first-child {
+                        border-bottom-left-radius: 7px;
+                    }
+                    &:last-child {
+                        border-bottom-right-radius: 7px;
+                    }
+                }
+            }
+
+            td {
+                padding-left: 15px;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                border-bottom: 1px solid #242a4d;
+
+                &.tdSecond,
+                &.tdFourth {
+                    background: rgba(255, 255, 255, 0.02);
+                }
+
+                .total {
+                    color: #8C55FE;
+                }
+            }
+        }
+    }
+}
