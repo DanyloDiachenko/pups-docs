@@ -89,10 +89,6 @@ export const navigation = [
                 link: "/pups1.5/technical-characteristics",
             },
             {
-                title: "Інструкція використання",
-                link: "/pups1.5/instruction",
-            },
-            {
                 title: "Тестування під навантаженням",
                 link: "/pups1.5/testing-load",
             },
