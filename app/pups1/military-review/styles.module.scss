@@ -1,10 +1,36 @@
-.descriptionMain {
-    margin-top: 50px;
-}
-
 .list {
     margin-top: 50px;
     list-style: none;
+
+    .videoTextSm {
+        display: grid;
+        align-items: center;
+        grid-template-columns: 350px 300px;
+        gap: 20px;
+    }
+
+    .videoText {
+        display: grid;
+        align-items: center;
+        grid-template-columns: 300px 300px;
+        gap: 20px;
+    }
+
+    .video {
+        margin-top: 15px;
+        border: none;
+        border-radius: 16px;
+        width: 300px;
+        height: 650px;
+    }
+
+    .videoSmall {
+        margin-top: 15px;
+        border: none;
+        border-radius: 16px;
+        width: 350px;
+        height: 270px;
+    }
 
     li {
         margin-top: 30px;
