@@ -1,8 +1,10 @@
 .list {
-    list-style: none;
-
     li {
         margin-top: 35px;
+
+        @media (max-width: 500px) {
+            margin-top: 25px;
+        }
 
         &:first-child {
             margin-top: 0;
@@ -10,14 +12,21 @@
 
         p {
             margin-top: 15px;
+
+            @media (max-width: 500px) {
+                margin-top: 10px;
+            }
         }
 
         img {
             margin-top: 15px;
+
+            @media (max-width: 500px) {
+                margin-top: 10px;
+            }
         }
 
         .shcemeNumbers {
-            list-style: none;
             margin-top: 0;
 
             li {
