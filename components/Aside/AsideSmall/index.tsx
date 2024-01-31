@@ -56,7 +56,11 @@ export const AsideSmall = ({ navigation }: AsideSmallProps) => {
 
         const handleScroll = () => {
             const currentScrollY = window.scrollY;
-            setScroll(prevScrollY > currentScrollY);
+            if (prevScrollY > currentScrollY || currentScrollY <= 20) {
+                setScroll(true);
+            } else {
+                setScroll(false);
+            }
             prevScrollY = currentScrollY;
         };
 
