@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 
 import styles from "./styles.module.scss";
 import { navigation } from "./navigation";
+import { AsideSmall } from "./AsideSmall";
 
 export const Aside = () => {
     const pathname = usePathname();
@@ -44,64 +45,70 @@ export const Aside = () => {
     }, [pathname]);
 
     return (
-        <aside className={styles.aside}>
-            <div className={styles.asideWrapper}>
-                <Link className={styles.logo} href="/">
-                    <img src="/logo.png" alt="Логотип" />
-                    «PUPS»
-                </Link>
-                {navigation.map((tab, index) => (
-                    <div className={styles.item} key={index}>
-                        <div
-                            className={styles.top}
-                            onClick={() => onTabClick(tab.id)}
-                        >
-                            <div className={styles.title}>{tab.title}</div>
-                            <img
-                                src="/arrow.svg"
-                                alt="arrow"
-                                className={`${styles.arrow} ${
+        <>
+            <AsideSmall navigation={navigation} />
+            <aside className={styles.aside}>
+                <div className={styles.asideWrapper}>
+                    <Link className={styles.logo} href="/">
+                        <img src="/logo.png" alt="Логотип" />
+                        «PUPS»
+                    </Link>
+                    {navigation.map((tab, index) => (
+                        <div className={styles.item} key={index}>
+                            <div
+                                className={styles.top}
+                                onClick={() => onTabClick(tab.id)}
+                            >
+                                <div className={styles.title}>{tab.title}</div>
+                                <img
+                                    src="/arrow.svg"
+                                    alt="arrow"
+                                    className={`${styles.arrow} ${
+                                        openedTabIndexes.includes(tab.id)
+                                            ? styles.reversed
+                                            : ""
+                                    }`}
+                                />
+                            </div>
+                            <div
+                                className={`${styles.links} ${
                                     openedTabIndexes.includes(tab.id)
-                                        ? styles.reversed
+                                        ? styles.opened
                                         : ""
                                 }`}
-                            />
-                        </div>
-                        <div
-                            className={`${styles.links} ${
-                                openedTabIndexes.includes(tab.id)
-                                    ? styles.opened
-                                    : ""
-                            }`}
-                        >
-                            <div className={styles.wrapper}>
-                                {tab.links.map((link, linkIndex) => (
-                                    <div
-                                        className={styles.linkWrapper}
-                                        key={linkIndex}
-                                    >
-                                        {activeLink === link.link ? (
-                                            <img src="/line.svg" alt="line" />
-                                        ) : (
-                                            ""
-                                        )}
-                                        <Link
-                                            href={link.link}
-                                            className={
-                                                activeLink === link.link
-                                                    ? styles.linkActive
-                                                    : ""
-                                            }
+                            >
+                                <div className={styles.wrapper}>
+                                    {tab.links.map((link, linkIndex) => (
+                                        <div
+                                            className={styles.linkWrapper}
+                                            key={linkIndex}
                                         >
-                                            {link.title}
-                                        </Link>
-                                    </div>
-                                ))}
+                                            {activeLink === link.link ? (
+                                                <img
+                                                    src="/line.svg"
+                                                    alt="line"
+                                                />
+                                            ) : (
+                                                ""
+                                            )}
+                                            <Link
+                                                href={link.link}
+                                                className={
+                                                    activeLink === link.link
+                                                        ? styles.linkActive
+                                                        : ""
+                                                }
+                                            >
+                                                {link.title}
+                                            </Link>
+                                        </div>
+                                    ))}
+                                </div>
                             </div>
                         </div>
-                    </div>
-                ))}
-            </div>
-        </aside>
+                    ))}
+                </div>
+            </aside>
+        </>
     );
 };

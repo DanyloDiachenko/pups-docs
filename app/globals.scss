@@ -8,15 +8,26 @@ body {
     grid-template-columns: 350px auto;
     color: #ffffff;
     background: #1f233f;
+
+    @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+    }
 }
 
 main {
     padding: 50px;
+
+    @media (max-width: 768px) {
+        margin-top: 130px;
+        padding: 15px;
+        padding-top: 0;
+    }
 }
 
 h1 {
     font-size: 32px;
     font-weight: 700;
+    margin-bottom: 50px;
 }
 
 h2 {
@@ -77,5 +88,5 @@ img {
     height: 550px;
     transform: rotate(-147.05deg);
     filter: blur(226px);
-     z-index: -1;
+    z-index: -1;
 }
