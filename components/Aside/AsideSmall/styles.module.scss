@@ -25,7 +25,7 @@
     }
 
     &.opened {
-        max-height: 451px;
+        max-height: 350px;
         overflow-y: scroll;
         z-index: 10;
 
@@ -125,6 +125,10 @@
                     margin-top: 10px;
                     z-index: 1;
 
+                    @media (max-width: 500px) {
+                        padding: 20px;
+                    }
+
                     &:first-child {
                         margin-top: 0;
                     }
@@ -138,7 +142,7 @@
 
                         .title {
                             font-weight: 700;
-                            font-size: 20px;
+                            font-size: 18px;
                         }
 
                         .arrow {
@@ -173,8 +177,8 @@
                                     color: var(--white);
                                     text-decoration: none;
                                     display: block;
-                                    font-size: 20px;
-                                    line-height: 28px;
+                                    font-size: 17px;
+                                    line-height: 22px;
                                     margin-left: 15px;
                                     transition: 0.3s;
                                     cursor: pointer;
