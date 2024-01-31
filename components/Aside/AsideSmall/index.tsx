@@ -17,9 +17,9 @@ export const AsideSmall = ({ navigation }: AsideSmallProps) => {
     });
 
     const [isContentOpened, setIsContentOpened] = useState<boolean>(false);
-    const [scroll, setScroll] = useState(true);
-    const [openedTabIndexes, setOpenedTabIndexes] = useState<number[]>([0]);
-    const [activeLink, setActiveLink] = useState<string>();
+    const [scroll, setScroll] = useState<boolean>(true);
+    const [openedTabIndexes, setOpenedTabIndexes] = useState<number[]>([-1]);
+    const [activeLink, setActiveLink] = useState<string>("");
 
     const onTabClick = (tabId: number) => {
         if (openedTabIndexes.includes(tabId)) {
