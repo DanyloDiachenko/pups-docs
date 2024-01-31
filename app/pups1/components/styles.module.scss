@@ -1,79 +1,127 @@
-.description {
-}
+.tableWrapper {
+    max-width: 1160px;
+    overflow: auto;
+    padding-bottom: 5px;
 
-.table {
-    margin-top: 30px;
-    font-size: 22px;
-    line-height: 32px;
-    background: rgba(0, 0, 0, 0.17);
-    border-spacing: 0;
+    .table {
+        width: 100%;
+        white-space: nowrap;
+        border-collapse: collapse;
+        border-spacing: 0;
+        margin-top: 30px;
+        font-size: 22px;
+        line-height: 32px;
+        background: rgba(0, 0, 0, 0.17);
 
-    thead {
-        tr {
-            background: #242a4d;
-            border-top-left-radius: 7px;
-            border-top-right-radius: 7px;
-            border-bottom-left-radius: 7px;
-            border-bottom-right-radius: 7px;
-
-            th {
-                padding-left: 15px;
-                padding-top: 10px;
-                padding-bottom: 10px;
-                text-align: start;
-
-                &.name {
-                    min-width: 350px;
-                    border-top-left-radius: 7px;
-                }
-
-                &.pricePerOne {
-                    min-width: 250px;
-                }
-
-                &.quantity {
-                    min-width: 250px;
-                }
-
-                &.priceFull {
-                    min-width: 250px;
-                    border-top-right-radius: 7px;
-                }
-            }
+        @media (max-width: 500px) {
+            margin-top: 15px;
+            font-size: 16px;
+            line-height: 14px;
         }
-    }
 
-    tbody {
-        tr {
-            &:last-child {
+        thead {
+            tr {
+                background: #242a4d;
+                border-top-left-radius: 7px;
+                border-top-right-radius: 7px;
                 border-bottom-left-radius: 7px;
                 border-bottom-right-radius: 7px;
 
-                td {
-                    border-bottom: none;
+                th {
+                    padding-left: 15px;
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                    text-align: start;
 
-                    &:first-child {
-                        border-bottom-left-radius: 7px;
+                    @media (max-width: 500px) {
+                        padding-left: 7.5px;
                     }
-                    &:last-child {
-                        border-bottom-right-radius: 7px;
+
+                    &.name {
+                        min-width: 350px;
+                        border-top-left-radius: 7px;
+
+                        @media (max-width: 1100px) {
+                            min-width: 275px;
+                        }
+                        @media (max-width: 500px) {
+                            min-width: 175px;
+                        }
+                    }
+
+                    &.pricePerOne {
+                        min-width: 250px;
+
+                        @media (max-width: 1100px) {
+                            min-width: 150px;
+                        }
+                        @media (max-width: 500px) {
+                            min-width: 100px;
+                        }
+                    }
+
+                    &.quantity {
+                        min-width: 250px;
+
+                        @media (max-width: 1100px) {
+                            min-width: 130px;
+                        }
+                        @media (max-width: 500px) {
+                            min-width: 85px;
+                        }
+                    }
+
+                    &.priceFull {
+                        min-width: 250px;
+                        border-top-right-radius: 7px;
+
+                        @media (max-width: 1100px) {
+                            min-width: 150px;
+                        }
+                        @media (max-width: 500px) {
+                            min-width: 100px;
+                        }
                     }
                 }
             }
+        }
 
-            td {
-                padding-left: 15px;
-                padding-top: 10px;
-                padding-bottom: 10px;
-                border-bottom: 1px solid #242a4d;
+        tbody {
+            tr {
+                &:last-child {
+                    border-bottom-left-radius: 7px;
+                    border-bottom-right-radius: 7px;
 
-                &.tdSecond,
-                &.tdFourth {
-                    background: rgba(255, 255, 255, 0.02);
+                    td {
+                        border-bottom: none;
+
+                        &:first-child {
+                            border-bottom-left-radius: 7px;
+                        }
+                        &:last-child {
+                            border-bottom-right-radius: 7px;
+                        }
+                    }
                 }
 
-                .total {
-                    color: #8C55FE;
+                td {
+                    padding-left: 15px;
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                    border-bottom: 1px solid #242a4d;
+
+                    @media (max-width: 500px) {
+                        padding-left: 7.5px;
+                    }
+
+                    &.tdSecond,
+                    &.tdFourth {
+                        background: rgba(255, 255, 255, 0.02);
+                    }
+
+                    .total {
+                        color: #8c55fe;
+                    }
                 }
             }
         }

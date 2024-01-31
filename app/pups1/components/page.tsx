@@ -10,44 +10,48 @@ const Page = () => {
     return (
         <>
             <h1>Компоненти зарядної станції «PUPS» v.1</h1>
-            <p className={styles.description}>
+            <p>
                 Ціни вказано на момент вересня-жовтня 2023 року. Ціни враховано
                 без плати за доставку
             </p>
-            <table className={styles.table}>
-                <thead>
-                    <tr>
-                        <th className={styles.name}>Назва</th>
-                        <th className={styles.pricePerOne}>Ціна/штуку</th>
-                        <th className={styles.quantity}>Кількість</th>
-                        <th className={styles.priceFull}>Ціна повна</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {components.map((item, index) => (
-                        <tr key={index}>
-                            <td>{item.title}</td>
-                            <td className={styles.tdSecond}>
-                                {item.pricePerOne.toFixed(2)}
-                            </td>
-                            <td>{item.quantity}</td>
-                            <td className={styles.tdFourth}>
-                                {(item.pricePerOne * item.quantity).toFixed(2)}
+            <div className={styles.tableWrapper}>
+                <table className={styles.table}>
+                    <thead>
+                        <tr>
+                            <th className={styles.name}>Назва</th>
+                            <th className={styles.pricePerOne}>Ціна/штуку</th>
+                            <th className={styles.quantity}>Кількість</th>
+                            <th className={styles.priceFull}>Ціна повна</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {components.map((item, index) => (
+                            <tr key={index}>
+                                <td>{item.title}</td>
+                                <td className={styles.tdSecond}>
+                                    {item.pricePerOne.toFixed(2)}
+                                </td>
+                                <td>{item.quantity}</td>
+                                <td className={styles.tdFourth}>
+                                    {(item.pricePerOne * item.quantity).toFixed(
+                                        2,
+                                    )}
+                                </td>
+                            </tr>
+                        ))}
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>
+                                <strong className={styles.total}>
+                                    {totalPrice.toFixed(2)}
+                                </strong>
                             </td>
                         </tr>
-                    ))}
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td>
-                            <strong className={styles.total}>
-                                {totalPrice.toFixed(2)}
-                            </strong>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+                    </tbody>
+                </table>
+            </div>
         </>
     );
 };

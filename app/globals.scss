@@ -16,6 +16,7 @@ body {
 
 main {
     padding: 50px;
+    overflow: hidden;
 
     @media (max-width: 768px) {
         margin-top: 130px;
