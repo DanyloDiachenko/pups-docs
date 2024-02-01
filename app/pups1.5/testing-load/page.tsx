@@ -45,7 +45,7 @@ const Page = () => {
                     <p>
                         N = Q<span className={styles.small}>робоча</span> / Q
                         <span className={styles.small}>зарядки</span> = 40000 /
-                        5815 = 6.88 (разів)
+                        5815 = 6.88 - разів можливо зарядити телефон
                     </p>
                 </li>
                 <li>
