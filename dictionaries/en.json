@@ -17,5 +17,139 @@
             "content": "Get acquainted with new components, the manufacturing process, the prototype, technical specifications, instructions, and station testing, as well as information about delivery to the military."
         },
         "navigationDescription": "The navigation present on the webpage will help you quickly find important sections and obtain crucial information about our products and their applications."
+    },
+    "aboutWork": {
+        "title": "About Scientific Work",
+        "author": "Author: Dyachenko Danilo Oleksandrovych, 11th-grade student of the municipal organization (institution) 'Shostka Comprehensive Secondary School I-III levels No. 4 of Shostka City Council of Sumy Region'; member of the 'Radio Electronics' club of the municipal organization (institution) 'Shostka Young Technicians Station of Shostka City Council of Sumy Region'.",
+        "descriptionAdditional1": "After the outbreak of a full-scale war, it became evident that ensuring a stable source of electricity has become one of the most pressing problems both in everyday civilian life and in military operations. Over the past two years, my research has been dedicated to the development of reliable sources of electrical energy to continually improve their characteristics.",
+        "descriptionAdditional2": "Furthermore, due to the constant power outages that have been occurring in Ukraine for the third consecutive year, it was decided to focus efforts on the development of a more powerful, portable, and economically viable source of electrical energy to meet various daily needs and ensure reliable operation in the absence of the main power supply.",
+        "list": [
+            {
+                "title": "1. Relevance of the Topic",
+                "content": "The relevance of the chosen topic is determined by the possibility of effective implementation of an innovative, relatively inexpensive self-made station that can store electrical energy for a long period and be recharged. This device has found applications in both everyday household tasks and in emergency situations and military operations."
+            },
+            {
+                "title": "2. Work Objective",
+                "content": "The objective of this research work is to develop an affordable, easy-to-manufacture, and easy-to-use portable charging station. Another goal is to demonstrate its effectiveness and practicality in various situations."
+            },
+            {
+                "title": "3. Main Tasks",
+                "sublist": [
+                    "1. Selection of the necessary components for creating a charging station.",
+                    "2. Development of the station itself based on the chosen components.",
+                    "3. Experimental and theoretical confirmation of the possibilities of using the created device for various purposes.",
+                    "4. Determination of the main technical characteristics of the station, comparison with industrial analogs, consideration of future project development directions, consultations with military experts."
+                ]
+            },
+            {
+                "title": "4. Object of Study",
+                "content": "The object of scientific research is the developed prototype of a charging station as a high-efficiency source of medium-power electrical energy designed for charging various types of electrical devices."
+            },
+            {
+                "title": "5. Subject of Research",
+                "content": "The subject of the study is the exploration of the possibilities and advantages of using a self-made station designed to provide a stable and reliable source of electrical energy."
+            },
+            {
+                "title": "6. Scientific Novelty",
+                "content": "The scientific novelty of this research lies in the experimental creation of an innovative, relatively inexpensive medium-power station designed for multiple uses. The development has the potential to be useful in various areas, including domestic and household needs, military applications, tourist conditions, and in case of power outages."
+            },
+            {
+                "title": "7. Practical Application",
+                "content": "The practical application includes the ability to charge smartphones, laptops, tablets, flashlights, backup power sources, night vision devices, drones, and other electrical devices; use as an uninterrupted power source; for home lighting; in trenches, support points, checkpoints, and other locations with limited power supply."
+            },
+            {
+                "title": "8. Work Conclusions",
+                "content": "The important conclusions of this research include the successful production of an innovative, economically accessible medium-power charging station; conducting experiments using it for various needs; calculating the main characteristics of the device, determining its advantages and disadvantages, comparing it with analogs, selecting future project development directions, and successfully conducting consultations with military experts."
+            }
+        ]
+    },
+    "shortsList": {
+        "title": "List of Abbreviations and Acronyms",
+        "list": [
+            {
+                "title": "3S, 4S, 5S",
+                "value": "Designation for the number of connected elements in a battery (3, 4, 5 elements respectively)"
+            },
+            {
+                "title": "BMS",
+                "value": "Battery Management System"
+            },
+            {
+                "title": "DC",
+                "value": "Direct Current"
+            },
+            {
+                "title": "PD",
+                "value": "Power Delivery, fast charging technology for Type-C ports"
+            },
+            {
+                "title": "QC",
+                "value": "Quick Charge, fast charging technology for USB ports"
+            },
+            {
+                "title": "LCD",
+                "value": "Liquid Crystal Display, charge indicator"
+            },
+            {
+                "title": "Li-FePO4",
+                "value": "Lithium Iron Phosphate (battery)"
+            },
+            {
+                "title": "Li-Ion",
+                "value": "Lithium-Ion (battery)"
+            },
+            {
+                "title": "Li-Pol",
+                "value": "Lithium Polymer (battery)"
+            },
+            {
+                "title": "NTC",
+                "value": "Negative Temperature Coefficient Thermistor"
+            },
+            {
+                "title": "PUPS",
+                "value": "Portable Universal Power Station"
+            },
+            {
+                "title": "SA",
+                "value": "Switch on the circuit"
+            },
+            {
+                "title": "Type-C",
+                "value": "Type-C (interface for connection)"
+            },
+            {
+                "title": "UKC",
+                "value": "Inverter manufacturer's name (brand)"
+            },
+            {
+                "title": "USB",
+                "value": "Universal Serial Bus"
+            },
+            {
+                "title": "XT-60",
+                "value": "Type of connector for electronic devices"
+            },
+            {
+                "title": "AC",
+                "value": "Alternating Current"
+            },
+            {
+                "title": "GPS",
+                "value": "Global Positioning System"
+            },
+            {
+                "title": "АКБ",
+                "value": "Battery (Akkumulyatorna Bateria)"
+            },
+            {
+                "title": "ЗП",
+                "value": "Power Charger (Zaryadnyi Prystrіy)"
+            },
+            {
+                "title": "ККД",
+                "value": "Efficiency Coefficient (Koefіtsієnt Korisnoi Dіi)"
+            }
+        ]
     }
 }
