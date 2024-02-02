@@ -5,11 +5,23 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 
 import styles from "./styles.module.scss";
-import { navigation } from "./navigation";
 import { AsideSmall } from "./AsideSmall";
+import { useParams, useRouter } from "next/navigation";
+import { dictionaries } from "@/app/[lang]/dictionaries";
 
 export const Aside = () => {
+    const params = useParams();
+    const router = useRouter();
+
     const pathname = usePathname();
+
+    if (!params.lang) {
+        if (typeof window !== "undefined") {
+            router.back();
+        }
+    }
+    const strings = dictionaries[params.lang as keyof typeof dictionaries];
+    const navigation = strings && strings.navigation ? strings.navigation : [];
 
     const [openedTabIndexes, setOpenedTabIndexes] = useState<number[]>([0]);
     const [activeLink, setActiveLink] = useState<string>();

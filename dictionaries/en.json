@@ -1,4 +1,138 @@
 {
+    "navigation": [
+        {
+            "title": "Before Reading",
+            "id": 0,
+            "links": [
+                {
+                    "title": "About the Research",
+                    "link": "/before/about-work"
+                },
+                {
+                    "title": "List of Abbreviations",
+                    "link": "/before/shorts-list"
+                }
+            ]
+        },
+        {
+            "title": "«PUPS» v.1",
+            "id": 1,
+            "links": [
+                {
+                    "title": "Manufacturing Process",
+                    "link": "/pups1/manufacturing-process"
+                },
+                {
+                    "title": "Station Components",
+                    "link": "/pups1/components"
+                },
+                {
+                    "title": "Manufactured Prototype",
+                    "link": "/pups1/manufactured-prototype"
+                },
+                {
+                    "title": "Battery Charging Time",
+                    "link": "/pups1/battery-charge-time"
+                },
+                {
+                    "title": "Load Testing",
+                    "link": "/pups1/load-testing"
+                },
+                {
+                    "title": "Device Charging Time",
+                    "link": "/pups1/device-charge-time"
+                },
+                {
+                    "title": "Charge Cycles",
+                    "link": "/pups1/charge-cycles"
+                },
+                {
+                    "title": "Technical Specifications",
+                    "link": "/pups1/technical-specifications"
+                },
+                {
+                    "title": "Usage Instructions",
+                    "link": "/pups1/usage-instructions"
+                },
+                {
+                    "title": "Transfer to Military",
+                    "link": "/pups1/transfer-to-military"
+                },
+                {
+                    "title": "Military Review",
+                    "link": "/pups1/military-review"
+                },
+                {
+                    "title": "Station After Use",
+                    "link": "/pups1/station-after-use"
+                }
+            ]
+        },
+        {
+            "title": "«PUPS» v.1.5",
+            "id": 2,
+            "links": [
+                {
+                    "title": "Additional Components",
+                    "link": "/pups1.5/additional-components"
+                },
+                {
+                    "title": "Improvements",
+                    "link": "/pups1.5/improvements"
+                },
+                {
+                    "title": "Manufactured Prototype",
+                    "link": "/pups1.5/manufactured-prototype"
+                },
+                {
+                    "title": "Technical Specifications",
+                    "link": "/pups1.5/technical-specifications"
+                },
+                {
+                    "title": "Load Testing",
+                    "link": "/pups1.5/load-testing"
+                },
+                {
+                    "title": "Transfer to Military",
+                    "link": "/pups1.5/transfer-to-military"
+                }
+            ]
+        },
+        {
+            "title": "«PUPS» v.2",
+            "id": 3,
+            "links": [
+                {
+                    "title": "Station Components",
+                    "link": "/pups2/components"
+                },
+                {
+                    "title": "Manufacturing Process",
+                    "link": "/pups2/manufacturing-process"
+                },
+                {
+                    "title": "Manufactured Prototype",
+                    "link": "/pups2/manufactured-prototype"
+                },
+                {
+                    "title": "Technical Specifications",
+                    "link": "/pups2/technical-specifications"
+                },
+                {
+                    "title": "Load Testing",
+                    "link": "/pups2/load-testing"
+                },
+                {
+                    "title": "Usage Instructions",
+                    "link": "/pups2/usage-instructions"
+                },
+                {
+                    "title": "Transfer to Military",
+                    "link": "/pups2/transfer-to-military"
+                }
+            ]
+        }
+    ],
     "home": {
         "title": "Knowledge base «PUPS»",
         "mainDescription": "Knowledge base for the portable charging station \"PUPS\"",

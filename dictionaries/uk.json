@@ -1,4 +1,138 @@
 {
+    "navigation": [
+        {
+            "title": "Перед прочитанням",
+            "id": 0,
+            "links": [
+                {
+                    "title": "Про наукову роботу",
+                    "link": "/before/about-work"
+                },
+                {
+                    "title": "Перелік умовних позначень",
+                    "link": "/before/shorts-list"
+                }
+            ]
+        },
+        {
+            "title": "«PUPS» v.1",
+            "id": 1,
+            "links": [
+                {
+                    "title": "Процес виготовлення",
+                    "link": "/pups1/manufacturing-process"
+                },
+                {
+                    "title": "Складові станції",
+                    "link": "/pups1/components"
+                },
+                {
+                    "title": "Виготовлений прототип",
+                    "link": "/pups1/made-prototype"
+                },
+                {
+                    "title": "Час зарядки АКБ",
+                    "link": "/pups1/charge-accumulator-time"
+                },
+                {
+                    "title": "Тестування під навантаженням",
+                    "link": "/pups1/testing-load"
+                },
+                {
+                    "title": "Час зарядки пристроїв",
+                    "link": "/pups1/charge-time"
+                },
+                {
+                    "title": "Цикли зарядки пристроїв",
+                    "link": "/pups1/charge-cycles"
+                },
+                {
+                    "title": "Технічні характеристики",
+                    "link": "/pups1/technical-characteristics"
+                },
+                {
+                    "title": "Інструкція використання",
+                    "link": "/pups1/instruction"
+                },
+                {
+                    "title": "Передача військовим",
+                    "link": "/pups1/transfer-military"
+                },
+                {
+                    "title": "Відгук від військових",
+                    "link": "/pups1/military-review"
+                },
+                {
+                    "title": "Станція після використання",
+                    "link": "/pups1/after-using"
+                }
+            ]
+        },
+        {
+            "title": "«PUPS» v.1.5",
+            "id": 2,
+            "links": [
+                {
+                    "title": "Додаткові складові",
+                    "link": "/pups1.5/additional-components"
+                },
+                {
+                    "title": "Доробка недоліків",
+                    "link": "/pups1.5/improvements"
+                },
+                {
+                    "title": "Виготовлений прототип",
+                    "link": "/pups1.5/made-prototype"
+                },
+                {
+                    "title": "Технічні характеристики",
+                    "link": "/pups1.5/technical-characteristics"
+                },
+                {
+                    "title": "Тестування під навантаженням",
+                    "link": "/pups1.5/testing-load"
+                },
+                {
+                    "title": "Передача військовим",
+                    "link": "/pups1.5/transfer-military"
+                }
+            ]
+        },
+        {
+            "title": "«PUPS» v.2",
+            "id": 3,
+            "links": [
+                {
+                    "title": "Складові станції",
+                    "link": "/pups2/components"
+                },
+                {
+                    "title": "Процес виготовлення",
+                    "link": "/pups2/manufacturing-proccess"
+                },
+                {
+                    "title": "Виготовлений прототип",
+                    "link": "/pups2/made-prototype"
+                },
+                {
+                    "title": "Технічні характеристики",
+                    "link": "/pups2/technical-characteristics"
+                },
+                {
+                    "title": "Тестування під навантаженням",
+                    "link": "/pups2/testing-load"
+                },
+                {
+                    "title": "Інструкція використання",
+                    "link": "/pups2/instruction"
+                },
+                {
+                    "title": "Передача військовим",
+                    "link": "/pups2/transfer-military"
+                }
+            ]
+        }
+    ],
     "home": {
         "title": "База знань «PUPS»",
         "mainDescription": "База знань із виготовлення портативної зарядної станції «PUPS»",
