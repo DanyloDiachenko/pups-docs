@@ -13,8 +13,6 @@ const Page = () => {
                     src="/pups1/proto3.jpg"
                     alt="Прототип зарядної станції «PUPS» v.1"
                 />
-            </div>
-            <div className={styles.images}>
                 <img
                     src="/pups1/proto4.jpg"
                     alt="Прототип зарядної станції «PUPS» v.1"

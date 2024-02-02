@@ -1,0 +1,21 @@
+{
+    "home": {
+        "title": "Knowledge base «PUPS»",
+        "mainDescription": "Knowledge base for the portable charging station \"PUPS\"",
+        "description1": "Here you can find the necessary information about various aspects of our work and projects, including preparatory materials, details of the creation process, specifications, and instructions for our portable universal charging stations (PUPS).",
+        "description2": "Before reading: Familiarize yourself with the basics of scientific work and the list of conventional notations to have a better understanding of the presented information.",
+        "section1": {
+            "title": "1. PUPS v.1:",
+            "content": "Explore the entire process from manufacturing to delivery to the military, including the station's components, charging time, load testing, technical specifications, instructions, and reviews."
+        },
+        "section2": {
+            "title": "2. PUPS v.1.5:",
+            "content": "Learn about the improvements made to the previous version's flaws, updated technical specifications, testing process, and delivery to the military."
+        },
+        "section3": {
+            "title": "3. PUPS v.2:",
+            "content": "Get acquainted with new components, the manufacturing process, the prototype, technical specifications, instructions, and station testing, as well as information about delivery to the military."
+        },
+        "navigationDescription": "The navigation present on the webpage will help you quickly find important sections and obtain crucial information about our products and their applications."
+    }
+}
