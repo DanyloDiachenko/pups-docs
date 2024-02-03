@@ -104,7 +104,7 @@ export const Aside = () => {
                                                 ""
                                             )}
                                             <Link
-                                                href={link.link}
+                                                href={`/${params.lang}/${link.link}`}
                                                 className={
                                                     activeLink === link.link
                                                         ? styles.linkActive
