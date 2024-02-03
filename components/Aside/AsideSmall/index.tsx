@@ -1,16 +1,21 @@
 "use client";
 
-import { usePathname } from "next/navigation";
+import { useParams, usePathname } from "next/navigation";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 
 import styles from "./styles.module.scss";
 import { AsideSmallProps } from "./component.props";
 import { onClickOutside } from "@/helpers/onClickOutside";
+import { LanguageSelector } from "@/components/LanguageSelector";
+import { dictionaries } from "@/app/[lang]/dictionaries";
 
 export const AsideSmall = ({ navigation }: AsideSmallProps) => {
     const pathname = usePathname();
+    const language = useParams().lang;
     const asideRef = useRef(null);
+
+    const strings = dictionaries[language as keyof typeof dictionaries];
 
     onClickOutside(asideRef, () => {
         setIsContentOpened(false);
@@ -96,6 +101,12 @@ export const AsideSmall = ({ navigation }: AsideSmallProps) => {
                     }`}
                 >
                     <div className={styles.wrapper}>
+                        <div className={styles.topContent}>
+                            <LanguageSelector />
+                            <button className={styles.button}>
+                                {strings.header.button}
+                            </button>
+                        </div>
                         {navigation.map((tab, index) => (
                             <div className={styles.item} key={index}>
                                 <div

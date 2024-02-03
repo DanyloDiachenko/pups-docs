@@ -1,4 +1,16 @@
 {
+    "common": {
+        "charge": "charge",
+        "phone": "phone",
+        "module": "module",
+        "port": "port"
+    },
+    "header": {
+        "support": "Support",
+        "feedback": "Feedback",
+        "contacts": "Contacts",
+        "button": "My profile"
+    },
     "navigation": [
         {
             "title": "Before Reading",
@@ -19,12 +31,12 @@
             "id": 1,
             "links": [
                 {
-                    "title": "Manufacturing Process",
-                    "link": "/pups1/manufacturing-process"
-                },
-                {
                     "title": "Station Components",
                     "link": "/pups1/components"
+                },
+                {
+                    "title": "Manufacturing Process",
+                    "link": "/pups1/manufacturing-process"
                 },
                 {
                     "title": "Manufactured Prototype",
@@ -134,23 +146,55 @@
         }
     ],
     "home": {
-        "title": "Knowledge base «PUPS»",
-        "mainDescription": "Knowledge base for the portable charging station \"PUPS\"",
-        "description1": "Here you can find the necessary information about various aspects of our work and projects, including preparatory materials, details of the creation process, specifications, and instructions for our portable universal charging stations (PUPS).",
-        "description2": "Before reading: Familiarize yourself with the basics of scientific work and the list of conventional notations to have a better understanding of the presented information.",
-        "section1": {
-            "title": "1. PUPS v.1:",
-            "content": "Explore the entire process from manufacturing to delivery to the military, including the station's components, charging time, load testing, technical specifications, instructions, and reviews."
-        },
-        "section2": {
-            "title": "2. PUPS v.1.5:",
-            "content": "Learn about the improvements made to the previous version's flaws, updated technical specifications, testing process, and delivery to the military."
-        },
-        "section3": {
-            "title": "3. PUPS v.2:",
-            "content": "Get acquainted with new components, the manufacturing process, the prototype, technical specifications, instructions, and station testing, as well as information about delivery to the military."
-        },
-        "navigationDescription": "The navigation present on the webpage will help you quickly find important sections and obtain crucial information about our products and their applications."
+        "slider": [
+            {
+                "title": "«PUPS» Charging Station Knowledge Base",
+                "description": "Here you can find essential information about various aspects of our work and projects, including preparatory materials, creation process details, specifications, and instructions for our Portable Universal Power Stations «PUPS».",
+                "image": "/slider1.jpeg",
+                "buttonText": "Learn More",
+                "buttonLink": "/before/about-work"
+            },
+            {
+                "title": "Before You Read",
+                "description": "Familiarize yourself with the basics of scientific work and the list of abbreviations to better understand the information presented.",
+                "image": "/slider3.jpeg",
+                "buttonText": "Get Acquainted",
+                "buttonLink": "/before/shorts-list"
+            },
+            {
+                "title": "Use the On-Site Navigation",
+                "description": "The navigation on the left side of the web page will help you quickly find important sections and get crucial information about our products and their applications.",
+                "image": "/slider6.jpeg"
+            },
+            {
+                "title": "«PUPS» Charging Station v.1",
+                "description": "Explore the entire process from manufacturing to military handover, including the station components, charging time, load testing, technical specifications, instructions, and reviews.",
+                "image": "/slider2.jpeg",
+                "buttonText": "Learn More",
+                "buttonLink": "/pups1/components"
+            },
+            {
+                "title": "«PUPS» Charging Station v.1.5",
+                "description": "Learn about the refinement of the previous version's shortcomings, updated technical specifications, testing process, and military handover.",
+                "image": "/slider4.jpeg",
+                "buttonText": "Learn More",
+                "buttonLink": "/pups1.5/additional-components"
+            },
+            {
+                "title": "«PUPS» Charging Station v.2",
+                "description": "Discover new components, manufacturing process, prototype, technical specifications, instructions, and testing of the station, as well as information about military handover.",
+                "image": "/slider5.jpg",
+                "buttonText": "Learn More",
+                "buttonLink": "/pups2/components"
+            },
+            {
+                "title": "Got Questions or Interested in Collaborating?",
+                "description": "If you want to delve deeper into the project, have questions for the author, or are considering collaboration, we are ready to connect with you! Visit our support page to get in touch with us.",
+                "image": "/slider7.jpeg",
+                "buttonText": "Contact Us",
+                "buttonLink": "/contact"
+            }
+        ]
     },
     "aboutWork": {
         "title": "About Scientific Work",
@@ -239,6 +283,14 @@
             {
                 "title": "NTC",
                 "value": "Negative Temperature Coefficient Thermistor"
+            },
+            {
+                "title": "mAh",
+                "value": "milliampere-hour"
+            },
+            {
+                "title": "Ah",
+                "value": "ampere-hour"
             },
             {
                 "title": "PUPS",
@@ -360,5 +412,98 @@
             "link": "link.",
             "url": "/pups1/manufactured-prototype"
         }
+    },
+    "components": {
+        "title": "Components of the «PUPS» Charging Station v.1",
+        "note": "Prices are as of September-October 2023. Prices are considered without shipping costs.",
+        "tableHeaders": {
+            "name": "Name",
+            "pricePerOne": "Price/Unit",
+            "quantity": "Quantity",
+            "totalPrice": "Total Price"
+        },
+        "items": [
+            { "title": "Inverter", "pricePerOne": 518.0, "quantity": 1 },
+            { "title": "Battery", "pricePerOne": 250.0, "quantity": 15 },
+            { "title": "Charger", "pricePerOne": 520.0, "quantity": 1 },
+            { "title": "Enclosure Box", "pricePerOne": 880.0, "quantity": 1 },
+            { "title": "Charge Indicator", "pricePerOne": 50.0, "quantity": 1 },
+            { "title": "BMS Board", "pricePerOne": 130.0, "quantity": 1 },
+            { "title": "USB Hub", "pricePerOne": 206.0, "quantity": 1 },
+            { "title": "Switch Button", "pricePerOne": 16.0, "quantity": 4 },
+            { "title": "3pin Connector", "pricePerOne": 12.0, "quantity": 1 },
+            { "title": "XT60 Plug", "pricePerOne": 35.0, "quantity": 1 },
+            { "title": "Charging Cable", "pricePerOne": 50.0, "quantity": 1 },
+            {
+                "title": "Cigarette Lighter Port",
+                "pricePerOne": 76.0,
+                "quantity": 1
+            }
+        ]
+    },
+    "manufacturedPrototype": {
+        "title": "Manufactured prototype of power station «PUPS» v.1",
+        "images": [
+            "/pups1/proto1.jpg",
+            "/pups1/proto3.jpg",
+            "/pups1/proto4.jpg",
+            "/pups1/proto2.jpg"
+        ]
+    },
+    "batteryChargeTime": {
+        "title": "Charging the «PUPS» v.1 accumulator battery",
+        "description": "Let's determine the battery charging time. The charging board accepts 220 volts and outputs 12.6 volts at 5 amps, meaning the batteries are charged with a voltage of 12.6 volts and a current of 5 amps. The station's battery was discharged to a voltage of 9.5 volts, which is the lower limit of the battery system's voltage. The station charged from 9.5 volts to 12.6 volts over approximately 9 hours.",
+        "descriptionAdditional": "The process of charging the charging station is shown in the photo below:",
+        "image": "/pups1/charge-pups.jpg"
+    },
+    "loadTesting": {
+        "title": "Testing the «PUPS» Charging Station v.1",
+        "list": [
+            {
+                "title": "1. Testing the 5-volt 1-amp USB port",
+                "description": "The switch for the USB ports was turned on, and a Xiaomi Redmi Note 8 Pro phone with a 4500 mAh capacity was connected to the first USB. The phone was charged from 0% to 100%. The station's battery lost 4770 mAh. Not just 4500, as is the capacity of the phone's battery, but slightly more, since there is a 12 – 5 volt reduction module with 94% efficiency in the USB hub.",
+                "descriptionToFormule": "mAh spent on charging the phone"
+            },
+            {
+                "title": "2. Testing the 5-volt 2.1-amp USB port",
+                "description": "A similar phone was charged using the 5-volt 2.1-amp USB port. Due to the higher current, the efficiency of the reduction module dropped to 93% (due to heating).",
+                "descriptionToFormule": "mAh spent on charging the phone",
+                "image": "/pups1/charge-phone.jpg"
+            },
+            {
+                "title": "3. Testing the cigarette lighter port",
+                "description": "A 12-volt 48-watt 5-meter long LED strip was connected to the cigarette lighter port using an adapter, and the corresponding switch was turned on. The strip lit up, and then it was disconnected."
+            },
+            {
+                "title": "4. Testing the 220-volt network",
+                "description": "The switch for this output was turned on, and a charger for a Macbook laptop was connected to the port. The laptop's battery capacity was 6140 mAh. During the full charge of the laptop, the charging station's battery lost 8372 mAh. The determination of the station's battery capacity loss was conducted using a tester."
+            },
+            {
+                "title": "5. Testing the charging station's charge indicator",
+                "description": "The station's batteries were fully charged, and a voltmeter was connected to them, and the switch for the indicator was turned on. Initially, the battery voltage was 12.6 volts, and 4 segments of the indicator were lit. A 200-watt 220-volt incandescent lamp was used for the load. After 3 segments of the indicator lit up, the battery voltage was approximately 11.7 volts; 2 segments - 11.1 volts; 1 segment - 10.5 volts. The absence of segments, but still operational inverter - 9.9 volts."
+            }
+        ]
+    },
+    "chargeTime": {
+        "title": "Device Charging Time from the «PUPS» Charging Station v.1",
+        "list": [
+            {
+                "title": "1. Determining the charging time of a phone from the 5-volt 1-amp USB port",
+                "description": "The charging time for the phone was calculated using the 5-volt 1-amp USB port. The phone's battery capacity is 4500 mAh, which equals 4.5 Ah. The current of the USB port is 1 amp.",
+                "descriptionToFormule": "hours spent on charging the phone"
+            },
+            {
+                "title": "2. Determining the charging time of a phone from the 5-volt 2.1-amp USB port",
+                "description": "The charging time for the phone was calculated using the 5-volt 2.1-amp USB port. The phone's battery capacity is 4500 mAh, which equals 4.5 Ah. The current of the USB port is 2.1 amps.",
+                "descriptionToFormule": "hours spent on charging the phone",
+                "descriptionAdditional": "The phone charging process is shown below:",
+                "image": "/pups1/charge-phone.jpg"
+            },
+            {
+                "title": "3. Determining the charging time of a laptop from the 220-volt port",
+                "description": "The charging time for the laptop was calculated using the 220-volt socket port. The laptop's battery capacity is 6140 mAh, which equals 6.14 Ah. The current of the laptop charging adapter is 3.3 amps.",
+                "descriptionToFormule": "hours spent on charging the laptop"
+            }
+        ]
     }
 }

@@ -1,31 +1,46 @@
-import { components } from "./components";
+import { dictionaries } from "../../dictionaries";
 import styles from "./styles.module.scss";
 
-const Page = () => {
-    const totalPrice = components.reduce(
+interface PageProps {
+    params: {
+        lang: string;
+    };
+}
+
+const Page = async ({ params }: PageProps) => {
+    const language = params.lang;
+
+    const strings = dictionaries[language as keyof typeof dictionaries];
+
+    const totalPrice = strings.components.items.reduce(
         (acc, current) => acc + current.pricePerOne * current.quantity,
         0,
     );
 
     return (
         <>
-            <h1>Компоненти зарядної станції «PUPS» v.1</h1>
-            <p>
-                Ціни вказано на момент вересня-жовтня 2023 року. Ціни враховано
-                без плати за доставку
-            </p>
+            <h1>{strings.components.title}</h1>
+            <p>{strings.components.note}</p>
             <div className={styles.tableWrapper}>
                 <table className={styles.table}>
                     <thead>
                         <tr>
-                            <th className={styles.name}>Назва</th>
-                            <th className={styles.pricePerOne}>Ціна/штуку</th>
-                            <th className={styles.quantity}>Кількість</th>
-                            <th className={styles.priceFull}>Ціна повна</th>
+                            <th className={styles.name}>
+                                {strings.components.tableHeaders.name}
+                            </th>
+                            <th className={styles.pricePerOne}>
+                                {strings.components.tableHeaders.pricePerOne}
+                            </th>
+                            <th className={styles.quantity}>
+                                {strings.components.tableHeaders.quantity}
+                            </th>
+                            <th className={styles.priceFull}>
+                                {strings.components.tableHeaders.totalPrice}
+                            </th>
                         </tr>
                     </thead>
                     <tbody>
-                        {components.map((item, index) => (
+                        {strings.components.items.map((item, index) => (
                             <tr key={index}>
                                 <td>{item.title}</td>
                                 <td className={styles.tdSecond}>

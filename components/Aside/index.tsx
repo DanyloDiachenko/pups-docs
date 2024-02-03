@@ -61,7 +61,11 @@ export const Aside = () => {
             <AsideSmall navigation={navigation} />
             <aside className={styles.aside}>
                 <div className={styles.asideWrapper}>
-                    <Link className={styles.logo} href="/">
+                    <Link
+                        className={styles.logo}
+                        href={`/${params.lang}`}
+                        onClick={() => setActiveLink("")}
+                    >
                         <img src="/logo.png" alt="Логотип" />
                         «PUPS»
                     </Link>

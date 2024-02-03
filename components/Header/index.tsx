@@ -1,29 +1,19 @@
 "use client";
 
 import Link from "next/link";
-import { useParams, usePathname, useRouter } from "next/navigation";
+import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
 
 import styles from "./styles.module.scss";
-
-type ActiveLangiageType = "ua" | "en";
+import { LanguageSelector } from "../LanguageSelector";
+import { dictionaries } from "@/app/[lang]/dictionaries";
 
 export const Header = () => {
-    const router = useRouter();
-    const pathname = usePathname();
-    const params = useParams();
+    const language = useParams().lang;
 
-    const [activeLanguage, setActiveLanguage] = useState<ActiveLangiageType>(
-        params.lang as ActiveLangiageType,
-    );
+    const strings = dictionaries[language as keyof typeof dictionaries];
+
     const [scroll, setScroll] = useState<boolean>(true);
-
-    const switchLanguage = () => {
-        const newLang = activeLanguage === "en" ? "ua" : "en";
-        setActiveLanguage(newLang);
-
-        router.push(`/${newLang}/${pathname.slice(4, pathname.length)}`);
-    };
 
     useEffect(() => {
         let prevScrollY = window.scrollY;
@@ -49,32 +39,24 @@ export const Header = () => {
         <header
             className={`${styles.header} ${scroll ? styles.scrollable : ""}`}
         >
-            <div className={styles.language}>
-                <div className={styles.active}>
-                    <img src="/language.svg" alt="Мова" />
-                    <span>{activeLanguage.toLocaleUpperCase()}</span>
-                </div>
-                <div className={styles.selector}>
-                    <span onClick={switchLanguage}>
-                        {activeLanguage === "en" ? "ua" : "en"}
-                    </span>
-                </div>
-            </div>
+            <LanguageSelector />
             <div className={styles.rightCol}>
                 <div className={styles.links}>
                     <Link href="#" className={styles.email}>
-                        Підтримка
+                        {strings.header.support}
                     </Link>
-                    /
+                    <span className={styles.line}>/</span>
                     <Link href="#" className={styles.email}>
-                        Зворотній зв'язок
+                        {strings.header.feedback}
                     </Link>
-                    /
+                    <span className={styles.line}>/</span>
                     <Link href="#" className={styles.email}>
-                        Контакти
+                        {strings.header.contacts}
                     </Link>
                 </div>
-                <button className={styles.button}>Ваш профіль</button>
+                <button className={styles.button}>
+                    {strings.header.button}
+                </button>
             </div>
         </header>
     );

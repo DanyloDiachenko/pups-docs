@@ -1,70 +1,43 @@
+import { dictionaries } from "../../dictionaries";
 import styles from "./styles.module.scss";
 
-const Page = () => {
+interface PageProps {
+    params: {
+        lang: string;
+    };
+}
+
+const Page = async ({ params }: PageProps) => {
+    const language = params.lang;
+
+    const strings = dictionaries[language as keyof typeof dictionaries];
+
     return (
         <>
-            <h1>Час зарядки пристроїв від зарядної станції «PUPS» v.1</h1>
+            <h1>{strings.chargeTime.title}</h1>
             <ol className={styles.list}>
-                <li>
-                    <h2>
-                        1. Визначення часу зарядки телефону від порту USB 5
-                        вольт 1 ампер
-                    </h2>
-                    <p>
-                        Було розраховано час зарядки телефону, використовуючи
-                        порт USB 5 вольт 1 ампер. Ємність АКБ телефону становить
-                        4500 міліампер-годин, і дорівнює 4.5 ампер-годин. Сила
-                        струму порту USB становить 1 ампер.
-                    </p>
-                    <p>
-                        t<span className={styles.small}>зарядки</span> = Q
-                        <span className={styles.small}>телефона</span> / I
-                        <span className={styles.small}>порту</span> = 4.5 / 1 =
-                        4.5 (години)
-                    </p>
-                </li>
-                <li>
-                    <h2>
-                        2. Визначення часу зарядки телефону від порту USB 5
-                        вольт 2.1 ампера
-                    </h2>
-                    <p>
-                        Було розраховано час зарядки телефону, використовуючи
-                        порт USB 5 вольт 2.1 ампера. Ємність АКБ телефону
-                        становить 4500 міліампер-годин, і дорівнює 4.5
-                        ампер-годин. Сила струму порту USB становить 2.1 ампер.
-                    </p>
-                    <p>
-                        t<span className={styles.small}>зарядки</span> = Q
-                        <span className={styles.small}>телефона</span> / I
-                        <span className={styles.small}>порту</span> = 4.5 / 2.1
-                        = 2.14 (години)
-                    </p>
-                    <p>Процес заряджання телефону наведено нижче:</p>
-                    <img
-                        className={styles.image}
-                        src="/pups1/charge-phone.jpg"
-                        alt="Заряджання телефону від порту USB 2.1 ампера"
-                    />
-                </li>
-                <li>
-                    <h2>
-                        3. Визначення часу зарядки ноутбука від порту 220 вольт
-                    </h2>
-                    <p>
-                        Було розраховано час зарядки ноутбука, використовуючи
-                        порт розетки 220 вольт. Ємність АКБ ноутбука становить
-                        6140 міліампер-годин, і дорівнює 6.14 ампер-годин. Сила
-                        струму адаптера зарядки для ноутбука дорівнює 3.3
-                        ампера.
-                    </p>
-                    <p>
-                        t<span className={styles.small}>зарядки</span> = Q
-                        <span className={styles.small}>телефона</span> / I
-                        <span className={styles.small}>порту</span> = 6.14 / 3.3
-                        = 1.86 (години)
-                    </p>
-                </li>
+                {strings.chargeTime.list.map((listItem, index) => (
+                    <li key={index}>
+                        <h2>{listItem.title}</h2>
+                        <p>{listItem.description}</p>
+                        <p>
+                            t<span className={styles.small}>зарядки</span> = Q
+                            <span className={styles.small}>телефона</span> / I
+                            <span className={styles.small}>порту</span> = 4.5 /
+                            2.1 = 2.14 - {listItem.descriptionToFormule}
+                        </p>
+                        {listItem.descriptionAdditional && (
+                            <p>{listItem.descriptionAdditional}</p>
+                        )}
+                        {listItem.image && (
+                            <img
+                                className={styles.image}
+                                src={listItem.image}
+                                alt={listItem.title}
+                            />
+                        )}
+                    </li>
+                ))}
             </ol>
         </>
     );

@@ -1,0 +1,17 @@
+.main {
+    min-height: 850px;
+    background: linear-gradient(101.09deg, #8938f7 49.48%, #6c2fee);
+    border-radius: 0px 0px 150px 150px;
+    margin-left: -50px;
+    margin-right: -50px;
+
+    position: relative;
+
+    @media (max-width: 1350px) {
+        border-radius: 0px 0px 70px 70px;
+        height: auto;
+    }
+    @media (max-width: 600px) {
+        padding: 0;
+    }
+}
