@@ -285,5 +285,80 @@
                 "value": "Efficiency Coefficient (Koefіtsієnt Korisnoi Dіi)"
             }
         ]
+    },
+    "manufacturingProcess": {
+        "title": "Manufacturing Process of the 'PUPS' Charging Station v.1",
+        "steps": [
+            {
+                "id": 1,
+                "title": "Planning Future Features",
+                "content": "The main characteristics of the future station were preliminarily planned to meet our needs in its further use. These include: the ability to charge phones, laptops, drones; the possibility of power supply from a cigarette lighter socket through an adapter; the presence of a 220-volt network with average power."
+            },
+            {
+                "id": 2,
+                "title": "Purchasing Components",
+                "content": "The main components for its creation were selected and purchased, such as: inverter, case, charger, batteries, etc. The list of all purchased components and their prices is provided on the ",
+                "link": {
+                    "title": "components page.",
+                    "url": "/pups1/components"
+                }
+            },
+
+            {
+                "id": 3,
+                "title": "Developing the Connection Scheme",
+                "content": "Accordingly, the principal scheme of the planned prototype of the charging station was developed.",
+                "image": "/pups1/scheme.png",
+                "subSteps": [
+                    { "id": 1, "content": "Battery pack" },
+                    { "id": 2, "content": "Charging board" },
+                    { "id": 3, "content": "Input for station charging" },
+                    { "id": 4, "content": "Cooler for cooling" },
+                    { "id": 5, "content": "Voltage inverter" },
+                    { "id": 6, "content": "220-volt network output" },
+                    { "id": 7, "content": "Dual USB output" },
+                    { "id": 8, "content": "Cigarette lighter socket" },
+                    { "id": 9, "content": "Battery charge indicator" },
+                    { "id": 10, "content": "SA1, SA2, SA3, SA4 - switches" }
+                ]
+            },
+            {
+                "id": 4,
+                "title": "Manufacturing the Battery Pack",
+                "content": "Lithium-polymer batteries with a voltage range of 3.7 – 4.2 volts and a capacity of 10000 milliampere-hours were chosen for creating the battery pack. To provide a higher capacity for the system, it was decided to make 3 separate battery blocks, each consisting of 5 batteries connected in parallel, providing a capacity of 50000 milliampere-hours for each. To increase the output voltage to the required 12.6 volts, the aforementioned three battery blocks were connected in series."
+            },
+            {
+                "id": 5,
+                "title": "Connecting to the Balancing Board and Wiring",
+                "content": "The battery system was integrated with a BMS board, which was modified to work in a 3S configuration. Two pairs of cables were laid from the battery and BMS board: one for current output and the other for the charging process."
+            },
+            {
+                "id": 6,
+                "title": "Insulating the Battery System",
+                "content": "The manufactured battery system was protected with plastic cardboard and additionally insulated with reinforced tape, providing protection from external factors and increased safety during operation. The overall dimensions of the completed battery system are 150x162x90 millimeters.",
+                "image": "/pups1/acb.jpg"
+            },
+            {
+                "id": 7,
+                "title": "Installing the Charging Board",
+                "content": "A module (board) of the charging device was installed in the case for charging the battery system. To prevent overheating during charging, a cooling fan is activated, which is also connected to the charging board. The charging device module has one red indicator LED, which signals that the charging process is ongoing."
+            },
+            {
+                "id": 8,
+                "title": "Managing Station Outputs",
+                "content": "A module (board) of the charging device was installed in the case for charging the battery system. To prevent overheating during charging, a cooling fan is activated, which is also connected to the charging board. The charging device module has one red indicator LED, which signals that the charging process is ongoing."
+            },
+            {
+                "id": 9,
+                "title": "Developing Inputs and Outputs",
+                "content": "The final stage of creating the charging station was the design and cutting of ports in the case. The case was used in a way that maximized the space for component placement while ensuring easy access to charging inputs and power outputs for various devices. The input for charging and the output for the inverter were located on one side, while other outputs, such as USB, charge indicator, and cigarette lighter output, were placed on top of the case for convenience.",
+                "image": "/pups1/pups1-into.jpeg"
+            }
+        ],
+        "additionalInfo": {
+            "title": "Special ventilation holes were also created in the case; mounting for the installation of various components inside the case. Photos of the developed prototype of the first version of the charging station can be seen by following the ",
+            "link": "link.",
+            "url": "/pups1/manufactured-prototype"
+        }
     }
 }

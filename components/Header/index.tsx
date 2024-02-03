@@ -61,9 +61,19 @@ export const Header = () => {
                 </div>
             </div>
             <div className={styles.rightCol}>
-                <Link href="#" className={styles.email}>
-                    Підтримка / Зворотній зв'язок / Контакти
-                </Link>
+                <div className={styles.links}>
+                    <Link href="#" className={styles.email}>
+                        Підтримка
+                    </Link>
+                    /
+                    <Link href="#" className={styles.email}>
+                        Зворотній зв'язок
+                    </Link>
+                    /
+                    <Link href="#" className={styles.email}>
+                        Контакти
+                    </Link>
+                </div>
                 <button className={styles.button}>Ваш профіль</button>
             </div>
         </header>
