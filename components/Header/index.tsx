@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useParams } from "next/navigation";
+import { useParams, usePathname, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
 import styles from "./styles.module.scss";
@@ -9,9 +9,18 @@ import { LanguageSelector } from "../LanguageSelector";
 import { dictionaries } from "@/app/[lang]/dictionaries";
 
 export const Header = () => {
-    const language = useParams().lang;
+    const params = useParams();
+    const router = useRouter();
+    const pathname = usePathname();
 
-    const strings = dictionaries[language as keyof typeof dictionaries];
+    if (!params.lang) {
+        if (typeof window !== "undefined") {
+            router.back();
+        }
+    }
+
+    const strings = dictionaries[params.lang as keyof typeof dictionaries];
+    const header = strings && strings.header ? strings.header : null;
 
     const [scroll, setScroll] = useState<boolean>(true);
 
@@ -34,6 +43,10 @@ export const Header = () => {
             window.removeEventListener("scroll", handleScroll);
         };
     }, []);
+
+    if (!strings) {
+        return <></>
+    }
 
     return (
         <header

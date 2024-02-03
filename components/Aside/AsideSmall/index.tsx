@@ -1,6 +1,6 @@
 "use client";
 
-import { useParams, usePathname } from "next/navigation";
+import { useParams, usePathname, useRouter } from "next/navigation";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 
@@ -12,10 +12,18 @@ import { dictionaries } from "@/app/[lang]/dictionaries";
 
 export const AsideSmall = ({ navigation }: AsideSmallProps) => {
     const pathname = usePathname();
-    const language = useParams().lang;
+    const params = useParams();
+    const router = useRouter();
+
     const asideRef = useRef(null);
 
-    const strings = dictionaries[language as keyof typeof dictionaries];
+    if (!params.lang) {
+        if (typeof window !== "undefined") {
+            router.back();
+        }
+    }
+
+    const strings = dictionaries[params.lang as keyof typeof dictionaries];
 
     onClickOutside(asideRef, () => {
         setIsContentOpened(false);
@@ -75,6 +83,10 @@ export const AsideSmall = ({ navigation }: AsideSmallProps) => {
             window.removeEventListener("scroll", handleScroll);
         };
     }, []);
+
+    if (!strings) {
+        return <></>;
+    }
 
     return (
         <aside

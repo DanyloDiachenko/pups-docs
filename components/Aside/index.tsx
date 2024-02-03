@@ -12,7 +12,6 @@ import { dictionaries } from "@/app/[lang]/dictionaries";
 export const Aside = () => {
     const params = useParams();
     const router = useRouter();
-
     const pathname = usePathname();
 
     if (!params.lang) {
@@ -20,6 +19,7 @@ export const Aside = () => {
             router.back();
         }
     }
+    
     const strings = dictionaries[params.lang as keyof typeof dictionaries];
     const navigation = strings && strings.navigation ? strings.navigation : [];
 

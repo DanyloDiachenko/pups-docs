@@ -6,12 +6,18 @@ import styles from "./styles.module.scss";
 type ActiveLangiageType = "ua" | "en";
 
 export const LanguageSelector = () => {
+    const params = useParams();
     const router = useRouter();
     const pathname = usePathname();
-    const params = useParams();
+
+    if (!params.lang) {
+        if (typeof window !== "undefined") {
+            router.back();
+        }
+    }
 
     const [activeLanguage, setActiveLanguage] = useState<ActiveLangiageType>(
-        params.lang as ActiveLangiageType,
+        (params.lang as ActiveLangiageType) || "ua",
     );
 
     const switchLanguage = () => {
