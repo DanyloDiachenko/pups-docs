@@ -602,7 +602,8 @@
                     "3. Car Cigarette Lighter Socket Switch (4)",
                     "4. Car Cigarette Lighter Socket",
                     "5. USB Port Hub Switch (5)",
-                    "6. USB Port Hub 7. Ventilation Holes"
+                    "6. USB Port Hub",
+                    "7. Ventilation Holes"
                 ]
             },
             {
@@ -630,7 +631,7 @@
                     "4. If you are not experienced in electronics, do not attempt to open the device. It is strictly forbidden to open the charging station while it is operating or charging.",
                     "5. When operating the device, strictly follow the working environment temperature requirements specified in this manual. High ambient temperatures may pose a fire or explosion risk; extremely low temperatures may significantly reduce battery performance or cause it to cease functioning.",
                     "6. Do not block the fan during operation. It is not advisable to leave the device in dusty, unventilated areas for a long time.",
-                    "7. Protect the device from impacts, drops, or severe vibrations during operation. Immediately turn off the power and stop operating if subjected to significant external shock. Ensure the battery is securely mounted during transportation to protect against vibrations and shocks.",
+                    "7. Protect the device from impacts, drops, or severe vibrations during operation. Immediately turn off the power and stop operating if subjected to significant external shock.",
                     "8. Keep the charging station out of reach of children and pets."
                 ]
             }

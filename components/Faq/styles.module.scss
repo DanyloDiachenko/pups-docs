@@ -24,10 +24,24 @@
             cursor: pointer;
             transition: 0.3s;
 
+            @media (max-width: 600px) {
+                padding: 10px;
+                border-top-left-radius: 10px;
+                border-bottom-left-radius: 10px;
+            }
+
             h4 {
                 font-weight: 400;
                 font-size: 20px;
                 transition: 0.3s;
+
+                @media (max-width: 600px) {
+                    font-size: 16px;
+                }
+                @media (max-width: 400px) {
+                    font-size: 13px;
+                    line-height: 18px;
+                }
             }
 
             &.active {
@@ -53,6 +67,12 @@
         border-top-right-radius: 20px;
         border-bottom-right-radius: 20px;
 
+        @media (max-width: 600px) {
+            padding: 10px;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+
         .answerWrapper {
             &.answerWrapperActive {
                 overflow: hidden;
@@ -62,12 +82,26 @@
 
         h3 {
             font-size: 24px;
+
+            @media (max-width: 600px) {
+                font-size: 16px;
+                line-height: 22px;
+            }
+            @media (max-width: 400px) {
+                font-size: 14px;
+                line-height: 20px;
+            }
         }
 
         p {
             margin-top: 10px;
             font-size: 20px;
             line-height: 30px;
+
+            @media (max-width: 600px) {
+                font-size: 14px;
+                line-height: 21px;
+            }
         }
     }
 }
