@@ -21,10 +21,19 @@ const Page = async ({ params }: PageProps) => {
                         <h2>{listItem.title}</h2>
                         <p>{listItem.description}</p>
                         <p>
-                            t<span className={styles.small}>зарядки</span> = Q
-                            <span className={styles.small}>телефона</span> / I
-                            <span className={styles.small}>порту</span> = 4.5 /
-                            2.1 = 2.14 - {listItem.descriptionToFormule}
+                            t
+                            <span className={styles.small}>
+                                {strings.common.charge}
+                            </span>{" "}
+                            = Q
+                            <span className={styles.small}>
+                                {strings.common.phone}
+                            </span>{" "}
+                            / I
+                            <span className={styles.small}>
+                                {strings.common.port}
+                            </span>{" "}
+                            {listItem.descriptionToFormule}
                         </p>
                         {listItem.descriptionAdditional && (
                             <p>{listItem.descriptionAdditional}</p>

@@ -1,96 +1,75 @@
 import Link from "next/link";
 
 import styles from "./styles.module.scss";
+import { dictionaries } from "../../dictionaries";
 
-const Page = () => {
+interface PageProps {
+    params: {
+        lang: string;
+    };
+}
+
+const Page = async ({ params }: PageProps) => {
+    const language = params.lang;
+
+    const strings = dictionaries[language as keyof typeof dictionaries];
+
     return (
         <>
-            <h1>Цикли зарядки пристроїв від зарядної станції «PUPS» v.1</h1>
+            <h1>{strings.loadTesting.title}</h1>
             <ol className={styles.list}>
                 <li>
-                    <h2>1. Визначення робочої ємності АКБ</h2>
+                    <h2>{strings.chargeCycles.firstListItem.title}</h2>
+                    <p>{strings.chargeCycles.firstListItem.description}</p>
                     <p>
-                        Було розраховано ємність станції, яка використовується у
-                        процесі роботи. Враховуючи, що ефективна ємність
-                        акумуляторів становить, приблизно, 80%, а відповідно 20%
-                        – залишкова ємність акумуляторів.
-                    </p>
-                    <p>
-                        Q<span className={styles.small}>робоча</span> = Q
-                        <span className={styles.small}>повна</span> - Q
-                        <span className={styles.small}>повна</span> * (100% -
-                        80%) = 50 - 50 * 0.2 = 50 - 10 = 40 (ампер-годин) =
-                        40000 (міліампер-годин)
-                    </p>
-                </li>
-                <li>
-                    <h2>
-                        2. Визначення кількості циклів заряду телефону від порту
-                        USB 5 вольт 1 ампер
-                    </h2>
-                    <p>
-                        Для визначення кількості циклів заряду телефону від
-                        порту USB 5 вольт 1 ампер використовувався телефон Redmi
-                        Note 8 Pro. На сторінці{" "}
-                        <Link href="/pups1/testing-load">
-                            Тестування під навантаженням
-                        </Link>{" "}
-                        в пункті 1 «Перевірка порту USB 5 вольт 1 ампер» було
-                        розраховано кількість ємності, яка використовується для
-                        зарядки телефону від порту USB 5 вольт 1 ампер, тобто Q
-                        <span className={styles.small}>зарядки</span> дорівнює
-                        4770 міліампер-годин.
-                    </p>
-                    <p>
-                        N = Q<span className={styles.small}>робоча</span> / Q
-                        <span className={styles.small}>зарядки</span> = 40000 /
-                        4770 = 8.39 (разів)
+                        Q
+                        <span className={styles.small}>
+                            {strings.common.work}
+                        </span>{" "}
+                        = Q
+                        <span className={styles.small}>
+                            {strings.common.full}
+                        </span>{" "}
+                        - Q
+                        <span className={styles.small}>
+                            {strings.common.full}
+                        </span>{" "}
+                        * (100% - 80%) = 50 - 50 * 0.2 = 50 - 10{" "}
+                        {
+                            strings.chargeCycles.firstListItem
+                                .descriptionForFormule
+                        }
                     </p>
                 </li>
-                <li>
-                    <h2>
-                        3. Визначення кількості циклів заряду телефону від порту
-                        USB 5 вольт 2.1 ампера
-                    </h2>
-                    <p>
-                        Було визначено кількість циклів заряду від USB 5 вольт
-                        2.1 ампера. Для експерименту використовувався
-                        аналогічний телефон. Ємність, витрачена на його зарядку,
-                        становить 4815 міліампер-годин (пункт 2{" "}
-                        <Link href="/pups1/testing-load">
-                            Тестування під навантаженням
-                        </Link>{" "}
-                        ), тобто Q<span className={styles.small}>зарядки</span>{" "}
-                        дорівнює 4815 міліампер-годин.
-                    </p>
-                    <p>
-                        N = Q<span className={styles.small}>робоача</span> / Q
-                        <span className={styles.small}>зарядки</span> = 40000 /
-                        4815 = 8.31 (разів)
-                    </p>
-                </li>
-                <li>
-                    <h2>
-                        4. Визначення кількості циклів заряду ноутбука від порту
-                        220 вольт
-                    </h2>
-                    <p>
-                        Для визначення кількості циклів заряду від порту 220
-                        вольт обрано ноутбук моделі Macbook моделі M2 Pro 2023.
-                        Ємність, витрачена на його зарядку, становить 8372
-                        міліампер-годин (пункт 4{" "}
-                        <Link href="/pups1/testing-load">
-                            Тестування під навантаженням
-                        </Link>
-                        ), тобто Q<span className={styles.small}>зарядки</span>{" "}
-                        дорівнює 8372 міліампер-годин.
-                    </p>
-                    <p>
-                        N = Q<span className={styles.small}>робоча</span> / Q
-                        <span className={styles.small}>зарядки</span> = 40000 /
-                        8372 = 4.82 (разів)
-                    </p>
-                </li>
+                {strings.chargeCycles.list.map((listItem, index) => (
+                    <li key={index}>
+                        <h2>{listItem.title}</h2>
+                        <p>
+                            {listItem.descriptionBeforeLink}{" "}
+                            <Link
+                                href={`/${language}/${listItem.descriptionLink.url}`}
+                            >
+                                {listItem.descriptionLink.title}
+                            </Link>{" "}
+                            {listItem.descriptionAfter1}
+                            <span className={styles.small}>
+                                {listItem.descriptionAfterSmall2}
+                            </span>{" "}
+                            {listItem.descriptionAfter3}
+                        </p>
+                        <p>
+                            N = Q
+                            <span className={styles.small}>
+                                {strings.common.work}
+                            </span>{" "}
+                            / Q
+                            <span className={styles.small}>
+                                {strings.common.charge}
+                            </span>
+                            {listItem.descriptionForFormule}
+                        </p>
+                    </li>
+                ))}
             </ol>
         </>
     );

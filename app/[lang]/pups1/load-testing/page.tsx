@@ -38,8 +38,7 @@ const Page = async ({ params }: PageProps) => {
                                 <span className={styles.small}>
                                     {strings.common.module}
                                 </span>
-                                ) = 4500 + 4500 * 7% = 4500 + 315 = 4815 -{" "}
-                                {listItem.descriptionToFormule}
+                                ){listItem.descriptionToFormule}
                             </p>
                         )}
 

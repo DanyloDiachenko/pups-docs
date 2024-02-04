@@ -1,7 +1,18 @@
 import { Faq } from "@/components/Faq";
 import styles from "./styles.module.scss";
+import { dictionaries } from "../../dictionaries";
 
-const Page = () => {
+interface PageProps {
+    params: {
+        lang: string;
+    };
+}
+
+const Page = async ({ params }: PageProps) => {
+    const language = params.lang;
+
+    const strings = dictionaries[language as keyof typeof dictionaries];
+
     return (
         <>
             <h1>Інструкція використання зарядної станції «PUPS» v.1</h1>

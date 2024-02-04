@@ -1,9 +1,11 @@
 {
     "common": {
-        "charge": "charge",
+        "charge": "charging",
         "phone": "phone",
         "module": "module",
-        "port": "port"
+        "port": "port",
+        "work": "work",
+        "full": "full"
     },
     "header": {
         "support": "Support",
@@ -462,12 +464,12 @@
             {
                 "title": "1. Testing the 5-volt 1-amp USB port",
                 "description": "The switch for the USB ports was turned on, and a Xiaomi Redmi Note 8 Pro phone with a 4500 mAh capacity was connected to the first USB. The phone was charged from 0% to 100%. The station's battery lost 4770 mAh. Not just 4500, as is the capacity of the phone's battery, but slightly more, since there is a 12 – 5 volt reduction module with 94% efficiency in the USB hub.",
-                "descriptionToFormule": "mAh spent on charging the phone"
+                "descriptionToFormule": " = 4500 + 4500 * 6% = 4500 + 270 = 4770 - mAh spent on charging the phone"
             },
             {
                 "title": "2. Testing the 5-volt 2.1-amp USB port",
                 "description": "A similar phone was charged using the 5-volt 2.1-amp USB port. Due to the higher current, the efficiency of the reduction module dropped to 93% (due to heating).",
-                "descriptionToFormule": "mAh spent on charging the phone",
+                "descriptionToFormule": " = 4500 + 4500 * 7% = 4500 + 315 = 4815 - mAh spent on charging the phone",
                 "image": "/pups1/charge-phone.jpg"
             },
             {
@@ -490,20 +492,102 @@
             {
                 "title": "1. Determining the charging time of a phone from the 5-volt 1-amp USB port",
                 "description": "The charging time for the phone was calculated using the 5-volt 1-amp USB port. The phone's battery capacity is 4500 mAh, which equals 4.5 Ah. The current of the USB port is 1 amp.",
-                "descriptionToFormule": "hours spent on charging the phone"
+                "descriptionToFormule": " = 4.5 / 1 = 4.5 - hours spent on charging the phone"
             },
             {
                 "title": "2. Determining the charging time of a phone from the 5-volt 2.1-amp USB port",
                 "description": "The charging time for the phone was calculated using the 5-volt 2.1-amp USB port. The phone's battery capacity is 4500 mAh, which equals 4.5 Ah. The current of the USB port is 2.1 amps.",
-                "descriptionToFormule": "hours spent on charging the phone",
+                "descriptionToFormule": " = 4.5 / 2.1 = 2.1 - hours spent on charging the phone",
                 "descriptionAdditional": "The phone charging process is shown below:",
                 "image": "/pups1/charge-phone.jpg"
             },
             {
                 "title": "3. Determining the charging time of a laptop from the 220-volt port",
                 "description": "The charging time for the laptop was calculated using the 220-volt socket port. The laptop's battery capacity is 6140 mAh, which equals 6.14 Ah. The current of the laptop charging adapter is 3.3 amps.",
-                "descriptionToFormule": "hours spent on charging the laptop"
+                "descriptionToFormule": " = 6.14 / 3.3 = 1.9 - hours spent on charging the laptop"
             }
+        ]
+    },
+    "chargeCycles": {
+        "title": "Device Charging Cycles from 'PUPS' Charging Station v.1",
+        "firstListItem": {
+            "title": "1. Determining the Working Capacity of the Battery",
+            "description": "The capacity of the station used during operation was calculated. Considering that the effective capacity of the batteries is approximately 80%, and correspondingly 20% is the residual capacity of the batteries.",
+            "descriptionForFormule": " = 40 Ah = 40000 mAh - working capacity of the battery"
+        },
+        "list": [
+            {
+                "title": "2. Determining the Number of Phone Charging Cycles from a USB 5 Volt 1 Amp Port",
+                "descriptionBeforeLink": "To determine the number of phone charging cycles from a USB 5 volt 1 amp port, a Redmi Note 8 Pro phone was used. On the page ",
+                "descriptionLink": {
+                    "title": "Load Testing",
+                    "url": "/load-testing"
+                },
+                "descriptionAfter1": " in section 1 'Checking the USB 5 volt 1 amp port,' the amount of capacity used to charge the phone from a USB 5 volt 1 amp port, that is Q",
+                "descriptionAfterSmall2": "charging",
+                "descriptionAfter3": " equals 4770 mAh.",
+                "descriptionForFormule": " = 40000 / 4770 = 8.39 - times the phone can be charged"
+            },
+            {
+                "title": "3. Determining the Number of Phone Charging Cycles from a USB 5 Volt 2.1 Amp Port",
+                "descriptionBeforeLink": "The number of charging cycles from a USB 5 volt 2.1 amp port was determined. A similar phone was used for the experiment. The capacity spent on its charging amounts to 4815 mAh (section 2 ",
+                "descriptionLink": {
+                    "title": "Load Testing",
+                    "url": "/load-testing"
+                },
+                "descriptionAfter1": " ), that is Q",
+                "descriptionAfterSmall2": "charging",
+                "descriptionAfter3": " equals 4815 mAh.",
+                "descriptionForFormule": " = 40000 / 4815 = 8.31 - times the phone can be charged"
+            },
+            {
+                "title": "4. Determining the Number of Laptop Charging Cycles from a 220 Volt Port",
+                "descriptionBeforeLink": "To determine the number of charging cycles from a 220 volt port, a Macbook model M2 Pro 2023 was chosen. The capacity spent on its charging amounts to 8372 mAh (section 4 ",
+                "descriptionLink": {
+                    "title": "Load Testing",
+                    "url": "/load-testing"
+                },
+                "descriptionAfter1": "), that is Q",
+                "descriptionAfterSmall2": "charging",
+                "descriptionAfter3": " equals 8372 mAh.",
+                "descriptionForFormule": " = 40000 / 8372 = 4.8 times the laptop can be charged"
+            }
+        ]
+    },
+    "technicalCharacteristics": {
+        "title": "Technical Characteristics of 'PUPS' Charging Station v.1",
+        "characteristics": [
+            { "title": "AC Outlet 220V", "value": "1" },
+            { "title": "USB Type-A", "value": "2" },
+            { "title": "Car Socket (Cigarette Lighter)", "value": "1" },
+            { "title": "Nominal Power, W", "value": "250" },
+            { "title": "Peak Power, W", "value": "500" },
+            { "title": "USB Type-A Power, W", "value": "5, 10.5" },
+            {
+                "title": "Car Socket (Cigarette Lighter) Power, W",
+                "value": "120"
+            },
+            { "title": "Output Signal Form", "value": "Modified Sine Wave" },
+            { "title": "Battery Technology", "value": "Li-Pol" },
+            { "title": "Charging Cycles", "value": "2500" },
+            { "title": "Additional", "value": "Carrying Handle" },
+            {
+                "title": "Charging Parameters of the Station",
+                "value": "From 220 volt outlet: 8 hours"
+            },
+            { "title": "Display", "value": "Battery Charge Indicator" },
+            { "title": "Flashlight", "value": "No" },
+            { "title": "Dimensions, mm", "value": "232 x 192 x 111" },
+            { "title": "Weight", "value": "2.4 kg" },
+            {
+                "title": "Battery Capacity",
+                "value": "630 watt-hours or 60 ampere-hours"
+            },
+            {
+                "title": "Device Connections",
+                "value": "220 volt outlet, USB Type-A x 2, Car Socket (Cigarette Lighter)"
+            },
+            { "title": "Station Charging", "value": "From 220 volt outlet" }
         ]
     }
 }
