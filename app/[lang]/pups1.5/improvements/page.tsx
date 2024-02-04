@@ -1,24 +1,30 @@
 import Link from "next/link";
 
 import styles from "./styles.module.scss";
+import { dictionaries } from "../../dictionaries";
 
-const Page = () => {
+interface PageProps {
+    params: {
+        lang: string;
+    };
+}
+
+const Page = async ({ params }: PageProps) => {
+    const language = params.lang;
+
+    const strings = dictionaries[language as keyof typeof dictionaries];
+
     return (
         <>
-            <h1>Доробка недоліків зарядної станції «PUPS» v.1</h1>
+            <h1>{strings.improvements.title}</h1>
             <p className={styles.mainDescription}>
-                З метою поліпшення функціональності та відповідності потребам
-                військового використання за їхнім запитом, ми внесли наступні
-                зміни: замінили порт прикурювача на два порти USB Quick-Charge
-                3.0; для зручності використання додали маркерні позначення
-                вимикача та портів білим маркером. В результаті цих модифікацій,
-                оновлену станцію було підвищено до версії 1.5.
+                {strings.improvements.description}
                 <br />
-                Фото наведено на сторінці{" "}
-                <Link href="/pups1.5/made-prototype">
-                    виготовлений прототип
+                {strings.improvements.description1}{" "}
+                <Link href={`/${language}/${strings.improvements.link.url}`}>
+                    {strings.improvements.link.title}
                 </Link>{" "}
-                зарядної станції «PUPS» v.1.5
+                {strings.improvements.description2}
             </p>
         </>
     );

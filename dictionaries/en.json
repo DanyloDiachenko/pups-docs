@@ -100,7 +100,7 @@
                 },
                 {
                     "title": "Technical Specifications",
-                    "link": "/pups1.5/technical-specifications"
+                    "link": "/pups1.5/technical-characteristics"
                 },
                 {
                     "title": "Load Testing",
@@ -108,7 +108,7 @@
                 },
                 {
                     "title": "Transfer to Military",
-                    "link": "/pups1.5/transfer-to-military"
+                    "link": "/pups1.5/transfer-military"
                 }
             ]
         },
@@ -740,5 +740,15 @@
                 "quantity": 1
             }
         ]
+    },
+    "improvements": {
+        "title": "Refinement of Shortcomings in 'PUPS' Charging Station v.1",
+        "description": "To enhance functionality and meet the needs of military usage as per their request, we made the following changes: replaced the cigarette lighter port with two USB Quick-Charge 3.0 ports; for ease of use, added marker labels to the switches and ports with a white marker. As a result of these modifications, the updated station was upgraded to version 1.5.",
+        "description1": "Photo presented on the page",
+        "link": {
+            "title": "manufactured prototype",
+            "url": "/pups1.5/made-prototype"
+        },
+        "description2": "of the 'PUPS' charging station v.1.5"
     }
 }
