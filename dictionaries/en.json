@@ -714,5 +714,31 @@
         "title": "'PUPS' Charging Station v.1 After Use",
         "description": "After receiving the station back, we conducted an analysis of its condition post-use in military operation settings, where signs of usage were evident.",
         "descriptionAddtional": "A photo of the received charging station is shown below:"
+    },
+    "additionalComponents": {
+        "title": "'PUPS' Charging Station Components v.1.5",
+        "description": "Prices are as of September-October 2023. Prices are considered without shipping fees.",
+        "descriptionAddtional": "The cigarette lighter port was replaced with a fast USB hub QC 3.0.",
+        "thName": "Name",
+        "thPricePerOne": "Price/Unit",
+        "thQuantity": "Quantity",
+        "thPriceFull": "Total Price",
+        "components": [
+            {
+                "title": "(Components of 'PUPS' v.1)",
+                "pricePerOne": 6291,
+                "quantity": 1
+            },
+            {
+                "title": "Cigarette Lighter Port (removed)",
+                "pricePerOne": -70.0,
+                "quantity": 1
+            },
+            {
+                "title": "USB Hub QC 3.0 (added)",
+                "pricePerOne": 230.0,
+                "quantity": 1
+            }
+        ]
     }
 }
