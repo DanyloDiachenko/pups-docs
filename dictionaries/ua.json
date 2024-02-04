@@ -760,5 +760,31 @@
             "url": "/pups1.5/made-prototype"
         },
         "description2": "зарядної станції «PUPS» v.1.5"
+    },
+    "manufacturedPrototype15": {
+        "title": "Фото зарядної станції «PUPS» v.1.5"
+    },
+    "technicalCharacteristics15": {
+        "title": "Технічні характеристики зарядної станції «PUPS» v.1.5",
+        "description": "Технічні зарядної станції «PUPS» v.1.5 аналогічні характеристиками зарядної станції «PUPS» v.1 -",
+        "link": {
+            "title": "Тех. характеристики «PUPS» v.1",
+            "url": "/pups1/technical-characteristics"
+        },
+        "descriptionAdditional": ", за виключенням заміни порту прикурювача на подвійний швидкий порт USB Quick-Charge 3.0",
+        "characteristics": [
+            {
+                "name": "(Тех. характеристики ЗС «PUPS» v.1)",
+                "value": "..."
+            },
+            {
+                "name": "Автомобільна розетка (прикурювач) (видалено)",
+                "value": "1"
+            },
+            {
+                "name": "USB QC 3.0 Type-A (додано)",
+                "value": "2"
+            }
+        ]
     }
 }

@@ -750,5 +750,31 @@
             "url": "/pups1.5/made-prototype"
         },
         "description2": "of the 'PUPS' charging station v.1.5"
+    },
+    "manufacturedPrototype15": {
+        "title": "Photo of 'PUPS' Charging Station v.1.5"
+    },
+    "technicalCharacteristics15": {
+        "title": "Technical Specifications of 'PUPS' Charging Station v.1.5",
+        "description": "The technical specifications of the 'PUPS' charging station v.1.5 are similar to those of the 'PUPS' charging station v.1 -",
+        "link": {
+            "title": "Technical Specs of 'PUPS' v.1",
+            "url": "/pups1/technical-characteristics"
+        },
+        "descriptionAdditional": ", except for the replacement of the cigarette lighter port with a dual USB Quick-Charge 3.0 port",
+        "characteristics": [
+            {
+                "name": "(Tech. specs of 'PUPS' v.1)",
+                "value": "..."
+            },
+            {
+                "name": "Car Socket (cigarette lighter) (removed)",
+                "value": "1"
+            },
+            {
+                "name": "USB QC 3.0 Type-A (added)",
+                "value": "2"
+            }
+        ]
     }
 }

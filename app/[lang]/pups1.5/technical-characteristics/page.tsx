@@ -1,27 +1,40 @@
 import Link from "next/link";
-import styles from "./styles.module.scss";
-import { technicalCharacteristics } from "./technicalCharacteristics";
 
-const Page = () => {
+import styles from "./styles.module.scss";
+import { dictionaries } from "../../dictionaries";
+
+interface PageProps {
+    params: {
+        lang: string;
+    };
+}
+
+const Page = async ({ params }: PageProps) => {
+    const language = params.lang;
+
+    const strings = dictionaries[language as keyof typeof dictionaries];
+
     return (
         <>
-            <h1>Технічні характеристики зарядної станції «PUPS» v.1.5</h1>
+            <h1>{strings.technicalCharacteristics15.title}</h1>
             <p className={styles.mainDescription}>
-                Технічні зарядної станції «PUPS» v.1.5 аналогічні
-                характеристиками зарядної станції «PUPS» v.1 -{" "}
-                <Link href="/pups1/technical-characteristics">
-                    Тех. характеристики «PUPS» v.1
+                {strings.technicalCharacteristics15.description}{" "}
+                <Link
+                    href={`/${language}/${strings.technicalCharacteristics15.link.url}`}
+                >
+                    {strings.technicalCharacteristics15.link.title}
                 </Link>{" "}
-                , за виключенням заміни порту прикурювача на подвійний швидкий
-                порт USB Quick-Charge 3.0
+                {strings.technicalCharacteristics15.descriptionAdditional}
             </p>
             <ol className={styles.list}>
-                {technicalCharacteristics.map((techChar, index) => (
-                    <li key={index}>
-                        <p className={styles.key}>{techChar.name}</p>
-                        <p className={styles.value}>{techChar.value}</p>
-                    </li>
-                ))}
+                {strings.technicalCharacteristics15.characteristics.map(
+                    (techChar, index) => (
+                        <li key={index}>
+                            <p className={styles.key}>{techChar.name}</p>
+                            <p className={styles.value}>{techChar.value}</p>
+                        </li>
+                    ),
+                )}
             </ol>
         </>
     );
