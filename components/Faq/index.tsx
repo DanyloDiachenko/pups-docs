@@ -1,16 +1,25 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import styles from "./styles.module.scss";
-import { faq } from "./faq";
+import { FaqProps } from "./module.props";
 
-export const Faq = () => {
-    const [activeIndex, setActiveIndex] = useState<number>(0);
+export const Faq = ({ faq }: FaqProps) => {
+    const [activeFaqIndex, setActiveFaqIndex] = useState<number>(0);
+    const [isActiveClass, setIsActiveClass] = useState<boolean>(false);
 
     const handleFaqClick = (index: number) => {
-        setActiveIndex(index);
+        setActiveFaqIndex(index);
     };
+
+    useEffect(() => {
+        setIsActiveClass(true);
+        const timeoutId = setTimeout(() => {
+            setIsActiveClass(false);
+        }, 500);
+        return () => clearTimeout(timeoutId);
+    }, [activeFaqIndex]);
 
     return (
         <div className={styles.faqWrapper}>
@@ -19,7 +28,7 @@ export const Faq = () => {
                     <div
                         key={index}
                         className={`${styles.question} ${
-                            index === activeIndex ? styles.active : ""
+                            index === activeFaqIndex ? styles.active : ""
                         }`}
                         onClick={() => handleFaqClick(index)}
                     >
@@ -28,8 +37,14 @@ export const Faq = () => {
                 ))}
             </div>
             <div className={styles.rightCol}>
-                <h3>{faq[activeIndex].question}</h3>
-                <p>{faq[activeIndex].answer}</p>
+                <div
+                    className={`${styles.answerWrapper} ${
+                        isActiveClass ? styles.answerWrapperActive : ""
+                    }`}
+                >
+                    <h3>{faq[activeFaqIndex].question}</h3>
+                    <p>{faq[activeFaqIndex].answer}</p>
+                </div>
             </div>
         </div>
     );

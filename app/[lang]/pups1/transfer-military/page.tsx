@@ -1,36 +1,49 @@
 import Link from "next/link";
 
 import styles from "./styles.module.scss";
+import { dictionaries } from "../../dictionaries";
 
-const Page = () => {
+interface PageProps {
+    params: {
+        lang: string;
+    };
+}
+
+const Page = async ({ params }: PageProps) => {
+    const language = params.lang;
+
+    const strings = dictionaries[language as keyof typeof dictionaries];
+
     return (
         <>
-            <h1>Передача військовим зарядної станції «PUPS» v.1</h1>
+            <h1>{strings.transferMilitary.title}</h1>
             <p className={styles.descriptionMain}>
-                Після успішного завершення розробки зарядної станції «PUPS»
-                першої версії, її було передано військовому підрозділу 45-ї
-                бригади 25-го окремого стрілецького батальйону (Фото нижче).
-                Військові спеціалісти активно використовували цей винахід під
-                час військових операцій протягом двох тижнів. Після цього
-                періоду вони надали нам зворотний звіт, в якому вказали на
-                непотрібність порту прикурювача та проблеми з розумінням способу
-                заряджання пристроїв, що виникали в колективі. <br /> Їх відгук
-                наведено на сторінці{" "}
-                <Link href="/pups1/military-review">Відгук від військових</Link>
+                {strings.transferMilitary.description1}
+                <br />
+                {strings.transferMilitary.description1additional}{" "}
+                <Link
+                    href={`/${language}/${strings.transferMilitary.description1Link.url}`}
+                >
+                    {strings.transferMilitary.description1Link.title}
+                </Link>
                 .
             </p>
             <p className={styles.description}>
-                Детальний процес доробки зарядної станції «PUPS» v.1 наведено на
-                сторінці{" "}
-                <Link href="/pups1.5/improvements">Доробка недоліків</Link>.
+                {strings.transferMilitary.description2}{" "}
+                <Link
+                    href={`/${language}/${strings.transferMilitary.description2Link.url}`}
+                >
+                    {strings.transferMilitary.description2Link.title}
+                </Link>
+                .
             </p>
             <p className={styles.description}>
-                Фотозвіт військвого про отримання зарядної станції «PUPS» v.1:
+                {strings.transferMilitary.description3}
             </p>
             <img
                 className={styles.image}
-                src="/pups1/military-man.jpg"
-                alt="Фотозвіт військвого про отримання зарядної станції «PUPS» v.1"
+                src={strings.transferMilitary.image}
+                alt={strings.transferMilitary.title}
             />
         </>
     );

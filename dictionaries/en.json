@@ -61,16 +61,16 @@
                     "link": "/pups1/charge-cycles"
                 },
                 {
-                    "title": "Technical Specifications",
-                    "link": "/pups1/technical-specifications"
+                    "title": "Technical Characteristics",
+                    "link": "/pups1/technical-characteristics"
                 },
                 {
                     "title": "Usage Instructions",
-                    "link": "/pups1/usage-instructions"
+                    "link": "/pups1/instruction"
                 },
                 {
                     "title": "Transfer to Military",
-                    "link": "/pups1/transfer-to-military"
+                    "link": "/pups1/transfer-military"
                 },
                 {
                     "title": "Military Review",
@@ -78,7 +78,7 @@
                 },
                 {
                     "title": "Station After Use",
-                    "link": "/pups1/station-after-use"
+                    "link": "/pups1/after-using"
                 }
             ]
         },
@@ -341,7 +341,7 @@
         ]
     },
     "manufacturingProcess": {
-        "title": "Manufacturing Process of the 'PUPS' Charging Station v.1",
+        "title": "Manufacturing Process of the «PUPS» Charging Station v.1",
         "steps": [
             {
                 "id": 1,
@@ -509,7 +509,7 @@
         ]
     },
     "chargeCycles": {
-        "title": "Device Charging Cycles from 'PUPS' Charging Station v.1",
+        "title": "Device Charging Cycles from «PUPS» Charging Station v.1",
         "firstListItem": {
             "title": "1. Determining the Working Capacity of the Battery",
             "description": "The capacity of the station used during operation was calculated. Considering that the effective capacity of the batteries is approximately 80%, and correspondingly 20% is the residual capacity of the batteries.",
@@ -555,7 +555,7 @@
         ]
     },
     "technicalCharacteristics": {
-        "title": "Technical Characteristics of 'PUPS' Charging Station v.1",
+        "title": "Technical Characteristics of «PUPS» Charging Station v.1",
         "characteristics": [
             { "title": "AC Outlet 220V", "value": "1" },
             { "title": "USB Type-A", "value": "2" },
@@ -589,5 +589,129 @@
             },
             { "title": "Station Charging", "value": "From 220 volt outlet" }
         ]
+    },
+    "instruction": {
+        "title": "PUPS Charging Station User Manual v.1",
+        "list": [
+            {
+                "title": "1. Top View Schematic of the Station",
+                "image": "/pups1/top-scheme.png",
+                "subUl": [
+                    "1. Battery Indicator Switch (2)",
+                    "2. Battery Charge Indicator",
+                    "3. Car Cigarette Lighter Socket Switch (4)",
+                    "4. Car Cigarette Lighter Socket",
+                    "5. USB Port Hub Switch (5)",
+                    "6. USB Port Hub 7. Ventilation Holes"
+                ]
+            },
+            {
+                "title": "2. Schematic of the Side and Front View of the Station",
+                "image": "/pups1/scheme-left.png",
+                "subUl": [
+                    "1. Cooler",
+                    "2. Charging Input from a 220 Volt Socket",
+                    "3. 220 Volt Outlet",
+                    "4. 220 Volt Outlet Port Switch (3)"
+                ]
+            },
+            {
+                "title": "3. Switch-Port",
+                "description": "Each port is equipped with an individual switch. To activate the port, flip the corresponding switch to the linear position to turn it on. If the switch is in the circular position, it means the port is turned off.",
+                "descriptionAdditional": "When you activate the USB port, an LED indicator lights up next to it. The cooler automatically turns on to signal the inverter's operation and the presence of voltage in the 220-volt socket. When connecting the charging station to a charging source, the fan activates automatically and a red LED lights up, which turns off after the station's battery is fully charged.",
+                "descriptionAdditional1": "* The cigarette lighter socket is not equipped with an LED indicator."
+            },
+            {
+                "title": "4. Safety Instructions",
+                "subUl": [
+                    "1. Do not use the device near heat sources such as open flames or stoves.",
+                    "2. Avoid contact with liquids. Do not immerse the device in water, avoid getting it wet. Do not use the device in the rain or snow.",
+                    "3. Do not use the device in strong electrostatic/magnetic fields.",
+                    "4. If you are not experienced in electronics, do not attempt to open the device. It is strictly forbidden to open the charging station while it is operating or charging.",
+                    "5. When operating the device, strictly follow the working environment temperature requirements specified in this manual. High ambient temperatures may pose a fire or explosion risk; extremely low temperatures may significantly reduce battery performance or cause it to cease functioning.",
+                    "6. Do not block the fan during operation. It is not advisable to leave the device in dusty, unventilated areas for a long time.",
+                    "7. Protect the device from impacts, drops, or severe vibrations during operation. Immediately turn off the power and stop operating if subjected to significant external shock. Ensure the battery is securely mounted during transportation to protect against vibrations and shocks.",
+                    "8. Keep the charging station out of reach of children and pets."
+                ]
+            }
+        ],
+        "faqTitle": "5. Possible questions",
+        "faq": [
+            {
+                "question": "What type of battery is used in your device?",
+                "answer": "It uses a high-quality lithium-polymer battery with a total capacity of 50 ampere-hours, 12.6 volts."
+            },
+            {
+                "question": "What devices can be connected to the AC output port of this device?",
+                "answer": "The AC output port, with a rated power of 250W and a peak power of 500W, can power a portion of household appliances. We recommend checking the power of the appliances first and ensuring that the total power of all connected devices under load is below the rated power."
+            },
+            {
+                "question": "How can I tell how much charge is left in the device?",
+                "answer": "The battery level indicator shows the current battery charge. If no segment of the indicator is lit but the indicator itself is active - that is, illuminated, it is recommended to recharge the charging station."
+            },
+            {
+                "question": "Under what conditions can the PUPS charging station be used?",
+                "answer": "The charging station is designed for use in harsh conditions, including military operations and extreme situations. It is suitable for use in any weather, but its use during rain or snow should be avoided. If water gets inside the station, it is recommended to immediately turn off all switches, open the case, and dry the internal components."
+            },
+            {
+                "question": "What should I do if a component of the station fails?",
+                "answer": "If there are problems with the operation of any port or switch, we recommend contacting us to arrange for repair. Attempting to fix the problem yourself is not advisable. We applied a modular principle in manufacturing, which means only the damaged component can be replaced without needing to repair the entire device."
+            },
+            {
+                "question": "What is the recommended storage environment for the charging station?",
+                "answer": "The optimal place for storing the charging station is in a room with a temperature of 18 to 20 degrees Celsius. If the station has not been used for a long time, it should be fully charged before the next use."
+            },
+            {
+                "question": "What should I do if the inverter turns off and the charging station stops working under load?",
+                "answer": "If the charging station suddenly turns off, it may indicate that it was overloaded. In such a case, first turn off all switches and disconnect all connected devices. Then, you can turn the relevant functionality back on, ensuring that the total power of the connected appliances does not exceed the inverter's allowable power."
+            }
+        ]
+    },
+    "transferMilitary": {
+        "title": "Transfer of the «PUPS» Charging Station v.1 to the Military",
+        "description1": "After the successful completion of the «PUPS» charging station's first version development, it was handed over to the military unit of the 45th Brigade of the 25th Separate Rifle Battalion (Photo below). Military specialists actively used this invention during military operations for two weeks. After this period, they provided us with feedback, noting the redundancy of the cigarette lighter port and issues with understanding how to charge devices among the team.",
+        "description1additional": "Their feedback is presented on the page",
+        "description1Link": {
+            "title": "Military Feedback",
+            "url": "/pups1/military-review"
+        },
+        "description2": "The detailed process of refining the «PUPS» charging station v.1 is presented on the page",
+        "description2Link": {
+            "title": "Refinement of Shortcomings",
+            "url": "/pups1.5/improvements"
+        },
+        "description3": "Photo report of the military receiving the «PUPS» charging station v.1:",
+        "image": "/pups1/military-man.jpg"
+    },
+    "militaryReview": {
+        "title": "Military Feedback on the Transfer of 'PUPS' Charging Station v.1",
+        "listItem1": {
+            "title": "1. Feedback on Receiving the 'PUPS' Charging Station v.1",
+            "quote": "\"Yes, good day. We received such a 'can,' getting ready for combat departure from Danylo Diachenko with instructions. Thank you very much. It will be working right now. Send more if possible.\"",
+            "description": "Following this positive feedback and a request for another similar charging station, we decided to develop and manufacture another similar device. The development process is presented on the 'PUPS' charging station v.2 page",
+            "descriptionLink": {
+                "title": "'PUPS' v.2 Development Process",
+                "url": "/pups2/manufacturing-proccess"
+            }
+        },
+        "listItem2": {
+            "title": "2. Feedback on Refining the 'PUPS' Charging Station v.1",
+            "quote": "\"No need for more outputs, that socket... for the cigarette lighter isn't needed, so 2 – 4 USB fast outputs are enough and too many switches. My people... got confused about what to click...\"",
+            "description1": "After getting the station back, we analyzed its condition after use in military operation conditions. Photos of the charging station after two weeks of use are presented on the page",
+            "description1Link": {
+                "title": "Station After Use",
+                "url": "/pups1/after-using"
+            },
+            "description2": ". To improve functionality and meet the needs of military use as per their request, we made the following changes:",
+            "description2Link": {
+                "title": "Refining Process of 'PUPS' v.1 Station",
+                "url": "/pups1.5/improvements"
+            }
+        }
+    },
+    "afterUsing": {
+        "title": "'PUPS' Charging Station v.1 After Use",
+        "description": "After receiving the station back, we conducted an analysis of its condition post-use in military operation settings, where signs of usage were evident.",
+        "descriptionAddtional": "A photo of the received charging station is shown below:"
     }
 }

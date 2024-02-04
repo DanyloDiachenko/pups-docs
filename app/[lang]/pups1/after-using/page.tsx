@@ -1,33 +1,41 @@
-import Link from "next/link";
+import { dictionaries } from "../../dictionaries";
 import styles from "./styles.module.scss";
 
-const Page = () => {
+interface PageProps {
+    params: {
+        lang: string;
+    };
+}
+
+const Page = async ({ params }: PageProps) => {
+    const language = params.lang;
+
+    const strings = dictionaries[language as keyof typeof dictionaries];
+
     return (
         <>
-            <h1>Зарядна станція «PUPS» v.1 після використання</h1>
+            <h1>{strings.afterUsing.title}</h1>
             <p className={styles.descriptionMain}>
-                Після отримання станції назад, ми провели аналіз її стану після
-                використання в умовах військових операцій, на якій було видно
-                сліди використання.
+                {strings.afterUsing.description}
                 <br />
-                Фото отриманої зарядної станції наведено на фото нижче:
+                {strings.afterUsing.descriptionAddtional}
             </p>
             <div className={styles.photos}>
                 <img
                     src="/pups1/after-using1.jpg"
-                    alt="Зарядна станція «PUPS» v.1 після використання"
+                    alt={strings.afterUsing.title}
                 />
                 <img
                     src="/pups1/after-using2.jpg"
-                    alt="Зарядна станція «PUPS» v.1 після використання"
+                    alt={strings.afterUsing.title}
                 />
                 <img
                     src="/pups1/after-using3.jpg"
-                    alt="Зарядна станція «PUPS» v.1 після використання"
+                    alt={strings.afterUsing.title}
                 />
                 <img
                     src="/pups1/after-using4.jpg"
-                    alt="Зарядна станція «PUPS» v.1 після використання"
+                    alt={strings.afterUsing.title}
                 />
             </div>
         </>

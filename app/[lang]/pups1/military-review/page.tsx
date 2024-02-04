@@ -1,15 +1,24 @@
 import Link from "next/link";
 import styles from "./styles.module.scss";
+import { dictionaries } from "../../dictionaries";
 
-const Page = () => {
+interface PageProps {
+    params: {
+        lang: string;
+    };
+}
+
+const Page = async ({ params }: PageProps) => {
+    const language = params.lang;
+
+    const strings = dictionaries[language as keyof typeof dictionaries];
+
     return (
         <>
-            <h1>
-                Відгук від військових щодо передачі зарядної станції «PUPS» v.1
-            </h1>
+            <h1>{strings.militaryReview.title}</h1>
             <ul className={styles.list}>
                 <li>
-                    <h2>1. Відгук про отримання зарядної станції «PUPS» v.1</h2>
+                    <h2>{strings.militaryReview.listItem1.title}</h2>
                     <div className={styles.videoText}>
                         <iframe
                             allow="fullscreen"
@@ -17,27 +26,23 @@ const Page = () => {
                             src="https://streamable.com/e/gieu43?"
                             className={styles.video}
                         ></iframe>
-                        <p>
-                            «Так, доброго дня. Отримали таку «банку, готується
-                            до бойового виїзду від Дяченка Данила з інструкцією.
-                            Дуже дякуємо. Вона буде працювати вже зараз.
-                            Присилайте ще, якщо буде можливість»
-                        </p>
+                        <p>{strings.militaryReview.listItem1.quote}</p>
                     </div>
                     <p>
-                        Після цього позитивного відгуку та запиту про можливість
-                        надати їм ще одну схожу зарядну станцію, ми вирішили
-                        розробити та виготовити ще один схожий пристрій. Процес
-                        розробки наведено на сторінці зарядної станції «PUPS»
-                        v.2{" "}
-                        <Link href="/pups2/manufacturing-proccess">
-                            Процес розробки «PUPS» v.2
+                        {strings.militaryReview.listItem1.description}{" "}
+                        <Link
+                            href={`/${language}/${strings.militaryReview.listItem1.descriptionLink.url}`}
+                        >
+                            {
+                                strings.militaryReview.listItem1.descriptionLink
+                                    .title
+                            }
                         </Link>
                         .
                     </p>
                 </li>
                 <li>
-                    <h2>2. Відгук про доробку зарядної станції «PUPS» v.1</h2>
+                    <h2>{strings.militaryReview.listItem2.title}</h2>
                     <div className={styles.videoTextSm}>
                         <iframe
                             allow="fullscreen"
@@ -45,26 +50,26 @@ const Page = () => {
                             src="https://streamable.com/e/h2maom?"
                             className={styles.videoSmall}
                         ></iframe>
-                        <p>
-                            «Виходів більше не потрібно, не потрібна ота
-                            розетка… на… прикурювач, то єсть 2 – 4 USB швидкі
-                            виходи достатньо і забагато тумблєров. В мене люди…
-                            потірялись, що клацать…»
-                        </p>
+                        <p>{strings.militaryReview.listItem2.quote}</p>
                     </div>
                     <p>
-                        Після отримання станції назад, ми провели аналіз її
-                        стану після використання в умовах військових операцій.
-                        Фото зарядної станції після двотижневого використання
-                        наведено на сторінці{" "}
-                        <Link href="/pups1/after-using">
-                            Станція після використання
+                        {strings.militaryReview.listItem2.description1}{" "}
+                        <Link
+                            href={`/${language}/${strings.militaryReview.listItem2.description1Link.url}`}
+                        >
+                            {
+                                strings.militaryReview.listItem2
+                                    .description1Link.title
+                            }
                         </Link>
-                        . З метою поліпшення функціональності та відповідності
-                        потребам військового використання за їхнім запитом, ми
-                        внесли наступні зміни:{" "}
-                        <Link href="/pups1.5/improvements">
-                            Процес доробки станції «PUPS» v.1
+                        {strings.militaryReview.listItem2.description2}{" "}
+                        <Link
+                            href={`/${language}/${strings.militaryReview.listItem2.description2Link.url}`}
+                        >
+                            {
+                                strings.militaryReview.listItem2
+                                    .description2Link.title
+                            }
                         </Link>
                         .
                     </p>
