@@ -1,16 +1,25 @@
+import { dictionaries } from "../../dictionaries";
 import styles from "./styles.module.scss";
 
-const Page = () => {
+interface PageProps {
+    params: {
+        lang: string;
+    };
+}
+
+const Page = async ({ params }: PageProps) => {
+    const language = params.lang;
+
+    const strings = dictionaries[language as keyof typeof dictionaries];
+
     return (
         <>
-            <h1>Передача військовим зарядної станції «PUPS» v.1.5</h1>
+            <h1>{strings.transferMilitary15.title}</h1>
             <p className={styles.descriptionMain}>
-                Після завершення процесу модифікації, ми повторно передали цей
-                вдосконалений пристрій тому самому військовому підрозділу.
+                {strings.transferMilitary15.description}
             </p>
             <p className={styles.description}>
-                (Фотозвіт військвого про отримання зарядної станції «PUPS» v.1.5
-                поки, на жаль, не отримали)
+                {strings.transferMilitary15.description1additional}
             </p>
         </>
     );

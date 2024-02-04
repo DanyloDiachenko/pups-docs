@@ -776,5 +776,10 @@
                 "value": "2"
             }
         ]
+    },
+    "transferMilitary15": {
+        "title": "Transfer of 'PUPS' Charging Station v.1.5 to the Military",
+        "description": "After completing the modification process, we re-transferred this improved device to the same military unit.",
+        "description1additional": "(Unfortunately, we have not yet received a photo report of the military receiving the 'PUPS' charging station v.1.5)"
     }
 }
