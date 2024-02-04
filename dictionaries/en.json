@@ -781,5 +781,27 @@
         "title": "Transfer of 'PUPS' Charging Station v.1.5 to the Military",
         "description": "After completing the modification process, we re-transferred this improved device to the same military unit.",
         "description1additional": "(Unfortunately, we have not yet received a photo report of the military receiving the 'PUPS' charging station v.1.5)"
+    },
+    "loadTesting15": {
+        "title": "Testing of 'PUPS' Charging Station v.1.5",
+        "description": "This page presents only the testing of the new USB QC 3.0 port. Testing of other ports is presented on the page",
+        "link": "Testing of 'PUPS' Charging Station v.1",
+        "mahCharge": {
+            "title": "1. USB QC 3.0 Port Check",
+            "description": "A phone with a battery capacity of 4500 milliampere-hours was charged using the 5-volt USB Quick-Charge 3.0 port. The efficiency of the USB port at maximum load is approximately 87%.",
+            "descriptionToFormule": "battery loss for phone charging"
+        },
+        "cycles": {
+            "title": "2. Number of Phone Charging Cycles from the USB QC 3.0 Port",
+            "description": "The number of charge cycles from USB QC 3.0 was determined. A similar phone was used for the experiment. The capacity used to charge it was 5015 mAh (see previous point), meaning Q",
+            "descriptionAdditional": "equals 5085 mAh.",
+            "descriptionToFormule": "times the phone can be charged"
+        },
+        "timeCharge": {
+            "title": "3. Determining the Phone Charging Time from the USB QC 3.0 Port",
+            "description": "The charging time for the phone using the USB QC 3.0 port was calculated. The phone's battery capacity is 4500 mAh, which equals 4.5 ampere-hours. The maximum current of the USB port is 3.6 amperes, meaning I = 3.6 amperes.",
+            "descriptionToFormule": "hours needed to charge the phone"
+        },
+        "descriptionPhotos": "The photo below shows the process of using the 'PUPS' charging station v.1.5."
     }
 }

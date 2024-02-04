@@ -1,103 +1,121 @@
 import Link from "next/link";
-import styles from "./styles.module.scss";
 
-const Page = () => {
+import styles from "./styles.module.scss";
+import { dictionaries } from "../../dictionaries";
+
+interface PageProps {
+    params: {
+        lang: string;
+    };
+}
+
+const Page = async ({ params }: PageProps) => {
+    const language = params.lang;
+
+    const strings = dictionaries[language as keyof typeof dictionaries];
+
     return (
         <>
-            <h1>Тестування зарядної станції «PUPS» v.1.5</h1>
+            <h1>{strings.loadTesting15.title}</h1>
             <p className={styles.mainDescription}>
-                На сторінці наведено лише тестування нового порту USB QC 3.0.
-                Тестування інших портів наведено на сторінці{" "}
-                <Link href="/pups1/testing-load">
-                    Тестування зарядної станції «PUPS» v.1
+                {strings.loadTesting15.description}{" "}
+                <Link href={`/${language}/pups1/testing-load`}>
+                    {strings.loadTesting15.link}
                 </Link>
             </p>
             <ol className={styles.list}>
                 <li>
-                    <h2>1. Перевірка порту USB QC 3.0</h2>
+                    <h2>{strings.loadTesting15.mahCharge.title}</h2>
+                    <p>{strings.loadTesting15.mahCharge.description}</p>
                     <p>
-                        Була проведена зарядка телефону, ємністю 4500
-                        міліампер-годин, використовуючи порт USB 5 вольт
-                        Quick-Charge 3.0. ККД порту USB при максимальному
-                        навантаженні приблизно дорівнює 88%.
-                    </p>
-                    <p>
-                        Q<span className={styles.small}>зарядки</span> = Q
-                        <span className={styles.small}>телефона</span> + Q
-                        <span className={styles.small}>телефона</span> * (100% -
-                        n<span className={styles.small}>модуля</span>) = 4500 +
-                        4500 * 13% = 4500 + 585 = 5085 (міліампер-годин)
-                    </p>
-                </li>
-                <li>
-                    <h2>
-                        2. Кількість циклів зарядки телефону від порту USB QC
-                        3.0
-                    </h2>
-                    <p>
-                        Було визначено кількість циклів заряду від USB QC 3.0.
-                        Для експерименту використовувався аналогічний телефон.
-                        Ємність, витрачена на його зарядку, становить 5015
-                        міліампер-годин (див. попередній пункт), тобто Q
-                        <span className={styles.small}>зарядки</span> дорівнює
-                        5085 міліампер-годин.
-                    </p>
-                    <p>
-                        N = Q<span className={styles.small}>робоча</span> / Q
-                        <span className={styles.small}>зарядки</span> = 40000 /
-                        5815 = 6.88 - разів можливо зарядити телефон
+                        Q
+                        <span className={styles.small}>
+                            {strings.common.charge}
+                        </span>{" "}
+                        = Q
+                        <span className={styles.small}>
+                            {strings.common.phone}
+                        </span>{" "}
+                        + Q
+                        <span className={styles.small}>
+                            {strings.common.phone}
+                        </span>{" "}
+                        * (100% - n
+                        <span className={styles.small}>
+                            {strings.common.module}
+                        </span>
+                        ) = 4500 + 4500 * 13% = 4500 + 585 = 5085 - mAh{" "}
+                        {strings.loadTesting15.mahCharge.descriptionToFormule}
                     </p>
                 </li>
                 <li>
-                    <h2>
-                        3.Визначення часу зарядки телефону від порту USB QC 3.0
-                    </h2>
+                    <h2>{strings.loadTesting15.cycles.title}</h2>
                     <p>
-                        Було розраховано час зарядки телефону, використовуючи
-                        порт USB QC 3.0. Ємність АКБ телефону становить 4500
-                        міліампер-годин, і дорівнює 4.5 ампер-годин. Максимальна
-                        сила струму порту USB становить 3.6 ампер, тобто I = 3.6
-                        ампера.
+                        {strings.loadTesting15.cycles.description}
+                        <span className={styles.small}>
+                            {strings.common.charge}
+                        </span>{" "}
+                        {strings.loadTesting15.cycles.descriptionAdditional}
                     </p>
                     <p>
-                        t<span className={styles.small}>зарядки</span> = Q
-                        <span className={styles.small}>телефону</span> / I
-                        <span className={styles.small}>порту</span> = 4.5 / 2.1
-                        = 1.25 (години)
+                        N = Q
+                        <span className={styles.small}>
+                            {strings.common.work}
+                        </span>{" "}
+                        / Q
+                        <span className={styles.small}>
+                            {strings.common.charge}
+                        </span>{" "}
+                        = 40000 / 5815 = 6.88 -{" "}
+                        {strings.loadTesting15.cycles.descriptionToFormule}
+                    </p>
+                </li>
+                <li>
+                    <h2>{strings.loadTesting15.timeCharge.title}</h2>
+                    <p>{strings.loadTesting15.timeCharge.description}</p>
+                    <p>
+                        t
+                        <span className={styles.small}>
+                            {strings.common.charge}
+                        </span>{" "}
+                        = Q
+                        <span className={styles.small}>
+                            {strings.common.phone}
+                        </span>{" "}
+                        / I
+                        <span className={styles.small}>
+                            {strings.common.port}
+                        </span>{" "}
+                        = 4.5 / 2.1 = 1.25 -{" "}
+                        {strings.loadTesting15.timeCharge.descriptionToFormule}
                     </p>
                 </li>
             </ol>
             <p className={styles.description}>
-                На фото нижче наведено процес використання зарядної станції
-                «PUPS» v.1.5.
+                {strings.loadTesting15.descriptionPhotos}
             </p>
             <div className={styles.photos}>
                 <img
                     src="/pups1.5/charge1.jpeg"
-                    alt="Процес використання зарядної станції
-                «PUPS» v.1.5"
+                    alt={strings.loadTesting15.title}
                 />
                 <img
                     src="/pups1.5/charge2.jpeg"
-                    alt="Процес використання зарядної станції
-                «PUPS» v.1.5"
+                    alt={strings.loadTesting15.title}
                 />
             </div>
             <div className={styles.photosAdditional}>
                 <img
                     src="/pups1.5/charge3.jpeg"
-                    alt="Процес використання зарядної станції
-                «PUPS» v.1.5"
+                    alt={strings.loadTesting15.title}
                 />
                 <img
                     src="/pups1.5/charge4.jpeg"
-                    alt="Процес використання зарядної станції
-                «PUPS» v.1.5"
+                    alt={strings.loadTesting15.title}
                 />
                 <img
                     src="/pups1.5/charge5.jpeg"
-                    alt="Процес використання зарядної станції
-                «PUPS» v.1.5"
+                    alt={strings.loadTesting15.title}
                 />
             </div>
         </>
