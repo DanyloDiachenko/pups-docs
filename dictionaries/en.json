@@ -129,20 +129,24 @@
                     "link": "/pups2/manufactured-prototype"
                 },
                 {
-                    "title": "Technical Specifications",
-                    "link": "/pups2/technical-specifications"
+                    "title": "Battery Charging Time",
+                    "link": "/pups2/battery-charge-time"
                 },
                 {
                     "title": "Load Testing",
                     "link": "/pups2/load-testing"
                 },
                 {
+                    "title": "Technical Specifications",
+                    "link": "/pups2/technical-characteristics"
+                },
+                {
                     "title": "Usage Instructions",
-                    "link": "/pups2/usage-instructions"
+                    "link": "/pups2/instruction"
                 },
                 {
                     "title": "Transfer to Military",
-                    "link": "/pups2/transfer-to-military"
+                    "link": "/pups2/transfer-military"
                 }
             ]
         }
@@ -841,5 +845,12 @@
         "descriptionAdditional": "Below, you can see some key moments in the production of the device:",
         "descriptionBottom": "You can view a photo of the manufactured prototype of the 'PUPS' v.2 charging station by following this link",
         "linkBottom": "'PUPS' v.2 prototype"
+    },
+    "manufacturedPrototype2": {
+        "title": "Photo of 'PUPS' Charging Station v.1.5"
+    },
+    "batteryChargeTime2": {
+        "title": "Charging the «PUPS» v.2 accumulator battery",
+        "description": "Let's determine the battery charging time. The charging board accepts 220 volts and outputs 12.6 volts at 10 amps, meaning the batteries are charged with a voltage of 12.6 volts and a current of 10 amps. The station's battery was discharged to a voltage of 9.5 volts, which is the lower limit of the battery system's voltage. The station charged from 9.5 volts to 12.6 volts over approximately 5 hours."
     }
 }
