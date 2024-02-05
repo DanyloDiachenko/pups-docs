@@ -99,12 +99,12 @@
                     "link": "/pups1.5/manufactured-prototype"
                 },
                 {
-                    "title": "Technical Specifications",
-                    "link": "/pups1.5/technical-characteristics"
-                },
-                {
                     "title": "Load Testing",
                     "link": "/pups1.5/load-testing"
+                },
+                {
+                    "title": "Technical Specifications",
+                    "link": "/pups1.5/technical-characteristics"
                 },
                 {
                     "title": "Transfer to Military",
@@ -585,7 +585,7 @@
             { "title": "Weight", "value": "2.4 kg" },
             {
                 "title": "Battery Capacity",
-                "value": "630 watt-hours or 60 ampere-hours"
+                "value": "630 watt-hours or 50 ampere-hours"
             },
             {
                 "title": "Device Connections",
@@ -852,5 +852,67 @@
     "batteryChargeTime2": {
         "title": "Charging the «PUPS» v.2 accumulator battery",
         "description": "Let's determine the battery charging time. The charging board accepts 220 volts and outputs 12.6 volts at 10 amps, meaning the batteries are charged with a voltage of 12.6 volts and a current of 10 amps. The station's battery was discharged to a voltage of 9.5 volts, which is the lower limit of the battery system's voltage. The station charged from 9.5 volts to 12.6 volts over approximately 5 hours."
+    },
+    "loadTesting2": {
+        "title": "Testing of 'PUPS' v.2 Charging Station",
+        "acb": {
+            "title": "1. Determining the Battery Capacity",
+            "description": "The battery of the 'PUPS' v.2 charging station has a capacity of 60 Ah. Taking into account that the effective utilization of the battery capacity is approximately 80%, the actual, or working, battery capacity is 48 Ah or 48,000 mAh."
+        },
+        "usbCycles": {
+            "title": "2. Number of Phone Charging Cycles via USB QC 3.0 Port",
+            "description": "The number of charging cycles via the USB QC 3.0 port was determined. For the experiment, a phone with a capacity of 4500 mAh was used. The capacity expended during its charging amounted to 5015 mAh, as detailed on the",
+            "link": "'PUPS' v.1.5 testing page",
+            "descriptionAdditional": "The phone can be charged approximately 9.6 times via the USB Quick-Charge 3.0 port."
+        },
+        "cyclesTypeC": {
+            "title": "3. Number of Phone Charging Cycles via Type-C PD Port",
+            "description": "The number of charging cycles via the Type-C PD port was determined using a similar phone. The current strength and efficiency of the USB QC 3.0 port and the Type-C PD port are roughly the same, resulting in an approximate capacity consumption of 5015 mAh during phone charging.",
+            "descriptionAdditional": "The phone can be charged approximately 9.6 times via the Type-C PD port."
+        },
+        "another": {
+            "title": "4. Device Charging Times via Different Ports and Testing the 220-Volt Socket",
+            "description": "Since the technical specifications of the inverter and QC 3.0 port are identical to the 'PUPS' v.1.5 charging station, the charging times for devices have already been determined on previous pages:",
+            "link1": "'PUPS' v.1.5 testing",
+            "link1Description": "- charging time for the phone via the USB Quick-Charge 3.0 port, and",
+            "link2": "'PUPS' v.1 testing",
+            "link2Description": "- charging time for the laptop from the 220-volt socket."
+        }
+    },
+    "technicalCharacteristics2": {
+        "title": "Technical Characteristics of the 'PUPS' v.2 Charging Station",
+        "characteristics": [
+            { "title": "AC 220V Outlet", "value": "1" },
+            { "title": "USB Type-A", "value": "3" },
+            { "title": "USB Type-C", "value": "1" },
+            { "title": "Nominal Power, W", "value": "250" },
+            { "title": "Peak Power, W", "value": "500" },
+            { "title": "USB Type-A Power, W", "value": "18, 18, 18" },
+            { "title": "USB Type-C Power, W", "value": "18" },
+            {
+                "title": "Output Signal Waveform",
+                "value": "Modified Sine Wave"
+            },
+            { "title": "Battery Technology", "value": "Li-Poly" },
+            { "title": "Charge Cycles", "value": "2500" },
+            { "title": "Additional Features", "value": "Carry Handle" },
+            {
+                "title": "Charging Station Parameters",
+                "value": "From 220-volt outlet: 5 hours"
+            },
+            { "title": "Display", "value": "Battery Charge Indicator" },
+            { "title": "Flashlight", "value": "No" },
+            { "title": "Dimensions, mm", "value": "270 x 246 x 124" },
+            { "title": "Weight", "value": "2.7 kg" },
+            {
+                "title": "Battery Capacity",
+                "value": "756 watt-hours or 60 ampere-hours"
+            },
+            {
+                "title": "Device Connections",
+                "value": "220-volt outlet, USB Type-A x 3, USB Type-C x 1"
+            },
+            { "title": "Station Charging", "value": "From 220-volt outlet" }
+        ]
     }
 }

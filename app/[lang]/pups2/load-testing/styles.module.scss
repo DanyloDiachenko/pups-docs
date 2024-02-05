@@ -1,0 +1,21 @@
+.list {
+    li {
+        margin-top: 35px;
+
+        &:first-child {
+            margin-top: 0;
+        }
+
+        p {
+            margin-top: 15px;
+        }
+
+        img {
+            margin-top: 10px;
+        }
+
+        .small {
+            font-size: 12px;
+        }
+    }
+}
