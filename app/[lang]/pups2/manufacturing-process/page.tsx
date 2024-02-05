@@ -16,27 +16,23 @@ const Page = async ({ params }: PageProps) => {
 
     return (
         <>
-            <h1>Процес виготовлення зарядної станції «PUPS» v.2</h1>
-            <p>
-                Процес виготовлення зарядної станції «PUPS» v.2 майже повністю
-                едентичний процесу виготовлення зарядної станції «PUPS» v.2, за
-                виключення заміни деяких компонентів та портів.
-            </p>
-            <p>
-                Деякі моменти з виготовлення пристрою зображені на фото нижче:
-            </p>
+            <h1>{strings.manufacturingProcess2.title}</h1>
+            <p>{strings.manufacturingProcess2.description}</p>
+            <p>{strings.manufacturingProcess2.descriptionAdditional}</p>
             <div className={styles.images}>
-                <img src="" alt="" />
-                <img src="" alt="" />
-                <img src="" alt="" />
-                <img src="" alt="" />
+                <img
+                    src="/pups2/manufacture1.jpeg"
+                    alt={strings.manufacturingProcess2.title}
+                />
+                <img
+                    src="/pups2/manufacture2.jpeg"
+                    alt={strings.manufacturingProcess2.title}
+                />
             </div>
-
-            <p>
-                Фото виготовленого прототипу ЗС «PUPS» v.2 можна
-                побачити, перейшовши за посиланням{" "}
-                <Link href="/pups2/manufactured-prototype">
-                    прототип «PUPS» v.2
+            <p className={styles.bottomDescription}>
+                {strings.manufacturingProcess2.descriptionAdditional}{" "}
+                <Link href={`/${language}/pups2/manufactured-prototype`}>
+                    {strings.manufacturingProcess2.linkBottom}
                 </Link>
                 .
             </p>

@@ -805,38 +805,41 @@
         "descriptionPhotos": "The photo below shows the process of using the 'PUPS' charging station v.1.5."
     },
     "components2": {
-        "title": "Компоненти зарядної станції «PUPS» v.2",
-        "description": "Ціни вказано на момент грудня 2023 року. Ціни враховано без плати за доставку.",
-        "descriptionAddtional": "Відмінності від зарядної станції «PUPS» v.1 полягають у: заміні порту прикурювача на швидкий порт USB QC 3.0, заміні розгалужувача USB на порт USB QC 3.0 + Type-C PD, заміні зарядного пристрою на більш швидкий, заміні корпуса на незначно більший, заміні BMS-плати 50 Ah на BMS-плати 100 Ah.",
-        "thName": "Назва",
-        "thPricePerOne": "Ціна/штуку",
-        "thQuantity": "Кількість",
-        "thPriceFull": "Ціна повна",
+        "title": "Components of Charging Station 'PUPS' v.2",
+        "description": "Prices are as of December 2023. Prices do not include delivery charges.",
+        "descriptionAddtional": "Differences from Charging Station 'PUPS' v.1 include: replacing the cigarette lighter port with a fast USB QC 3.0 port, replacing the USB splitter with a USB QC 3.0 + Type-C PD port, replacing the charger with a faster one, replacing the casing with a slightly larger one, and replacing the 50 Ah BMS board with a 100 Ah BMS board.",
+        "thName": "Name",
+        "thPricePerOne": "Price/each",
+        "thQuantity": "Quantity",
+        "thPriceFull": "Total Price",
         "components": [
-            { "title": "Інвертор", "pricePerOne": 518.0, "quantity": 1 },
-            { "title": "Акумулятор", "pricePerOne": 250.0, "quantity": 18 },
+            { "title": "Inverter", "pricePerOne": 518.0, "quantity": 1 },
+            { "title": "Battery", "pricePerOne": 250.0, "quantity": 18 },
+            { "title": "Charger", "pricePerOne": 880.0, "quantity": 1 },
+            { "title": "Box Casing", "pricePerOne": 1020.0, "quantity": 1 },
+            { "title": "Charge Indicator", "pricePerOne": 50.0, "quantity": 1 },
+            { "title": "BMS Board", "pricePerOne": 250.0, "quantity": 1 },
             {
-                "title": "Зарядний пристрій",
-                "pricePerOne": 880.0,
-                "quantity": 1
-            },
-            { "title": "Ящик-корпус", "pricePerOne": 1020.0, "quantity": 1 },
-            { "title": "Індикатор заряду", "pricePerOne": 50.0, "quantity": 1 },
-            { "title": "BMS-плата", "pricePerOne": 250.0, "quantity": 1 },
-            {
-                "title": "Розгалужувач USB QC 3.0",
+                "title": "USB QC 3.0 Splitter",
                 "pricePerOne": 230.0,
                 "quantity": 1
             },
             {
-                "title": "Порт USB QC 3.0 + Type-C PD",
+                "title": "USB QC 3.0 + Type-C PD Port",
                 "pricePerOne": 280.0,
                 "quantity": 1
             },
-            { "title": "Перемикач-кнопка", "pricePerOne": 16.0, "quantity": 4 },
-            { "title": "Роз`єм 3pin", "pricePerOne": 12.0, "quantity": 1 },
-            { "title": "Штекер XT60", "pricePerOne": 35.0, "quantity": 1 },
-            { "title": "Шнур зарядки", "pricePerOne": 50.0, "quantity": 1 }
+            { "title": "Toggle Switch", "pricePerOne": 16.0, "quantity": 4 },
+            { "title": "3-pin Connector", "pricePerOne": 12.0, "quantity": 1 },
+            { "title": "XT60 Plug", "pricePerOne": 35.0, "quantity": 1 },
+            { "title": "Charging Cord", "pricePerOne": 50.0, "quantity": 1 }
         ]
+    },
+    "manufacturingProcess2": {
+        "title": "Manufacturing Process of 'PUPS' v.2 Charging Station",
+        "description": "The manufacturing process of the 'PUPS' v.2 charging station closely resembles the process of its previous version, except for the replacement of specific components and ports.",
+        "descriptionAdditional": "Below, you can see some key moments in the production of the device:",
+        "descriptionBottom": "You can view a photo of the manufactured prototype of the 'PUPS' v.2 charging station by following this link",
+        "linkBottom": "'PUPS' v.2 prototype"
     }
 }
