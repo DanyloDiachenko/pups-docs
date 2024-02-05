@@ -914,5 +914,41 @@
             },
             { "title": "Station Charging", "value": "From 220-volt outlet" }
         ]
+    },
+    "instruction2": {
+        "title": "User Manual for the 'PUPS' v.2 Charging Station",
+        "list": [
+            {
+                "title": "1. Schematic Diagram of the Top View of the Station",
+                "image": "/pups2/scheme-top.png",
+                "subUl": [
+                    "1. Battery Indicator Switch (2)",
+                    "2. Battery Charge Indicator",
+                    "3. USB QC 3.0 Port Switch (5)",
+                    "4. USB QC 3.0 Port Hub",
+                    "5. USB QC 3.0 + Type-C PD Port Switch (4)",
+                    "6. USB QC 3.0 + Type-C PD Port Hub"
+                ]
+            },
+            {
+                "title": "2. Schematic Diagram of the Side and Front View of the Station",
+                "image": "/pups1/scheme-left.png",
+                "subUl": [
+                    "1. Input for Station Charging from a 220-Volt Outlet",
+                    "2. Cooler",
+                    "3. 220-Volt Outlet",
+                    "4. 220-Volt Port Switch (3)"
+                ]
+            },
+            {
+                "title": "3. Port Switch",
+                "description": "Each port is equipped with an individual switch. To activate a port, toggle the corresponding switch to be in the ON position. If the switch is in the circular position, it means the port is turned off.",
+                "descriptionAdditional": "When you activate the USB port hub or USB + Type-C hub, the corresponding LED backlight illuminates. The inverter's operation and the presence of voltage in the 220-volt outlet are indicated by the automatically activated cooler. When connecting the charging station to a power source, the fan activates automatically, and a red LED lights up, which turns off after the station's battery is fully charged."
+            },
+            {
+                "title": "4. Safety Measures",
+                "description": "The safety measures for using the 'PUPS' v.2 charging station are similar to the previous model of the charging station."
+            }
+        ]
     }
 }
