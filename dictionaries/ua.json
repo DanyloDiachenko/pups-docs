@@ -122,7 +122,7 @@
                 },
                 {
                     "title": "Процес виготовлення",
-                    "link": "/pups2/manufacturing-proccess"
+                    "link": "/pups2/manufacturing-process"
                 },
                 {
                     "title": "Виготовлений прототип",
@@ -813,5 +813,40 @@
             "descriptionToFormule": "годин потрібно для зарядки телефону"
         },
         "descriptionPhotos": "На фото нижче наведено процес використання зарядної станції «PUPS» v.1.5."
+    },
+    "components2": {
+        "title": "Компоненти зарядної станції «PUPS» v.2",
+        "description": "Ціни вказано на момент грудня 2023 року. Ціни враховано без плати за доставку.",
+        "descriptionAddtional": "Відмінності від зарядної станції «PUPS» v.1 полягають у: заміні порту прикурювача на швидкий порт USB QC 3.0, заміні розгалужувача USB на порт USB QC 3.0 + Type-C PD, заміні зарядного пристрою на більш швидкий, заміні корпуса на незначно більший, заміні BMS-плати 50 Ah на BMS-плати 100 Ah.",
+        "thName": "Назва",
+        "thPricePerOne": "Ціна/штуку",
+        "thQuantity": "Кількість",
+        "thPriceFull": "Ціна повна",
+        "components": [
+            { "title": "Інвертор", "pricePerOne": 518.0, "quantity": 1 },
+            { "title": "Акумулятор", "pricePerOne": 250.0, "quantity": 18 },
+            {
+                "title": "Зарядний пристрій",
+                "pricePerOne": 880.0,
+                "quantity": 1
+            },
+            { "title": "Ящик-корпус", "pricePerOne": 1020.0, "quantity": 1 },
+            { "title": "Індикатор заряду", "pricePerOne": 50.0, "quantity": 1 },
+            { "title": "BMS-плата", "pricePerOne": 250.0, "quantity": 1 },
+            {
+                "title": "Розгалужувач USB QC 3.0",
+                "pricePerOne": 230.0,
+                "quantity": 1
+            },
+            {
+                "title": "Порт USB QC 3.0 + Type-C PD",
+                "pricePerOne": 280.0,
+                "quantity": 1
+            },
+            { "title": "Перемикач-кнопка", "pricePerOne": 16.0, "quantity": 4 },
+            { "title": "Роз`єм 3pin", "pricePerOne": 12.0, "quantity": 1 },
+            { "title": "Штекер XT60", "pricePerOne": 35.0, "quantity": 1 },
+            { "title": "Шнур зарядки", "pricePerOne": 50.0, "quantity": 1 }
+        ]
     }
 }
