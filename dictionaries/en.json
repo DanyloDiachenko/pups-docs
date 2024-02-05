@@ -689,18 +689,18 @@
         "image": "/pups1/military-man.jpg"
     },
     "militaryReview": {
-        "title": "Military Feedback on the Transfer of 'PUPS' Charging Station v.1",
+        "title": "Military Feedback on the Transfer of «PUPS» Charging Station v.1",
         "listItem1": {
-            "title": "1. Feedback on Receiving the 'PUPS' Charging Station v.1",
+            "title": "1. Feedback on Receiving the «PUPS» Charging Station v.1",
             "quote": "\"Yes, good day. We received such a 'can,' getting ready for combat departure from Danylo Diachenko with instructions. Thank you very much. It will be working right now. Send more if possible.\"",
-            "description": "Following this positive feedback and a request for another similar charging station, we decided to develop and manufacture another similar device. The development process is presented on the 'PUPS' charging station v.2 page",
+            "description": "Following this positive feedback and a request for another similar charging station, we decided to develop and manufacture another similar device. The development process is presented on the «PUPS» charging station v.2 page",
             "descriptionLink": {
-                "title": "'PUPS' v.2 Development Process",
+                "title": "«PUPS» v.2 Development Process",
                 "url": "/pups2/manufacturing-proccess"
             }
         },
         "listItem2": {
-            "title": "2. Feedback on Refining the 'PUPS' Charging Station v.1",
+            "title": "2. Feedback on Refining the «PUPS» Charging Station v.1",
             "quote": "\"No need for more outputs, that socket... for the cigarette lighter isn't needed, so 2 – 4 USB fast outputs are enough and too many switches. My people... got confused about what to click...\"",
             "description1": "After getting the station back, we analyzed its condition after use in military operation conditions. Photos of the charging station after two weeks of use are presented on the page",
             "description1Link": {
@@ -709,18 +709,18 @@
             },
             "description2": ". To improve functionality and meet the needs of military use as per their request, we made the following changes:",
             "description2Link": {
-                "title": "Refining Process of 'PUPS' v.1 Station",
+                "title": "Refining Process of «PUPS» v.1 Station",
                 "url": "/pups1.5/improvements"
             }
         }
     },
     "afterUsing": {
-        "title": "'PUPS' Charging Station v.1 After Use",
+        "title": "«PUPS» Charging Station v.1 After Use",
         "description": "After receiving the station back, we conducted an analysis of its condition post-use in military operation settings, where signs of usage were evident.",
         "descriptionAddtional": "A photo of the received charging station is shown below:"
     },
     "additionalComponents": {
-        "title": "'PUPS' Charging Station Components v.1.5",
+        "title": "«PUPS» Charging Station Components v.1.5",
         "description": "Prices are as of September-October 2023. Prices are considered without shipping fees.",
         "descriptionAddtional": "The cigarette lighter port was replaced with a fast USB hub QC 3.0.",
         "thName": "Name",
@@ -729,7 +729,7 @@
         "thPriceFull": "Total Price",
         "components": [
             {
-                "title": "(Components of 'PUPS' v.1)",
+                "title": "(Components of «PUPS» v.1)",
                 "pricePerOne": 6291,
                 "quantity": 1
             },
@@ -746,29 +746,29 @@
         ]
     },
     "improvements": {
-        "title": "Refinement of Shortcomings in 'PUPS' Charging Station v.1",
+        "title": "Refinement of Shortcomings in «PUPS» Charging Station v.1",
         "description": "To enhance functionality and meet the needs of military usage as per their request, we made the following changes: replaced the cigarette lighter port with two USB Quick-Charge 3.0 ports; for ease of use, added marker labels to the switches and ports with a white marker. As a result of these modifications, the updated station was upgraded to version 1.5.",
         "description1": "Photo presented on the page",
         "link": {
             "title": "manufactured prototype",
             "url": "/pups1.5/made-prototype"
         },
-        "description2": "of the 'PUPS' charging station v.1.5"
+        "description2": "of the «PUPS» charging station v.1.5"
     },
     "manufacturedPrototype15": {
-        "title": "Photo of 'PUPS' Charging Station v.1.5"
+        "title": "Photo of «PUPS» Charging Station v.1.5"
     },
     "technicalCharacteristics15": {
-        "title": "Technical Specifications of 'PUPS' Charging Station v.1.5",
-        "description": "The technical specifications of the 'PUPS' charging station v.1.5 are similar to those of the 'PUPS' charging station v.1 -",
+        "title": "Technical Specifications of «PUPS» Charging Station v.1.5",
+        "description": "The technical specifications of the «PUPS» charging station v.1.5 are similar to those of the «PUPS» charging station v.1 -",
         "link": {
-            "title": "Technical Specs of 'PUPS' v.1",
+            "title": "Technical Specs of «PUPS» v.1",
             "url": "/pups1/technical-characteristics"
         },
         "descriptionAdditional": ", except for the replacement of the cigarette lighter port with a dual USB Quick-Charge 3.0 port",
         "characteristics": [
             {
-                "name": "(Tech. specs of 'PUPS' v.1)",
+                "name": "(Tech. specs of «PUPS» v.1)",
                 "value": "..."
             },
             {
@@ -782,14 +782,14 @@
         ]
     },
     "transferMilitary15": {
-        "title": "Transfer of 'PUPS' Charging Station v.1.5 to the Military",
+        "title": "Transfer of «PUPS» Charging Station v.1.5 to the Military",
         "description": "After completing the modification process, we re-transferred this improved device to the same military unit.",
-        "description1additional": "(Unfortunately, we have not yet received a photo report of the military receiving the 'PUPS' charging station v.1.5)"
+        "description1additional": "(Unfortunately, we have not yet received a photo report of the military receiving the «PUPS» charging station v.1.5)"
     },
     "loadTesting15": {
-        "title": "Testing of 'PUPS' Charging Station v.1.5",
+        "title": "Testing of «PUPS» Charging Station v.1.5",
         "description": "This page presents only the testing of the new USB QC 3.0 port. Testing of other ports is presented on the page",
-        "link": "Testing of 'PUPS' Charging Station v.1",
+        "link": "Testing of «PUPS» Charging Station v.1",
         "mahCharge": {
             "title": "1. USB QC 3.0 Port Check",
             "description": "A phone with a battery capacity of 4500 milliampere-hours was charged using the 5-volt USB Quick-Charge 3.0 port. The efficiency of the USB port at maximum load is approximately 87%.",
@@ -806,12 +806,12 @@
             "description": "The charging time for the phone using the USB QC 3.0 port was calculated. The phone's battery capacity is 4500 mAh, which equals 4.5 ampere-hours. The maximum current of the USB port is 3.6 amperes, meaning I = 3.6 amperes.",
             "descriptionToFormule": "hours needed to charge the phone"
         },
-        "descriptionPhotos": "The photo below shows the process of using the 'PUPS' charging station v.1.5."
+        "descriptionPhotos": "The photo below shows the process of using the «PUPS» charging station v.1.5."
     },
     "components2": {
-        "title": "Components of Charging Station 'PUPS' v.2",
+        "title": "Components of Charging Station «PUPS» v.2",
         "description": "Prices are as of December 2023. Prices do not include delivery charges.",
-        "descriptionAddtional": "Differences from Charging Station 'PUPS' v.1 include: replacing the cigarette lighter port with a fast USB QC 3.0 port, replacing the USB splitter with a USB QC 3.0 + Type-C PD port, replacing the charger with a faster one, replacing the casing with a slightly larger one, and replacing the 50 Ah BMS board with a 100 Ah BMS board.",
+        "descriptionAddtional": "Differences from Charging Station «PUPS» v.1 include: replacing the cigarette lighter port with a fast USB QC 3.0 port, replacing the USB splitter with a USB QC 3.0 + Type-C PD port, replacing the charger with a faster one, replacing the casing with a slightly larger one, and replacing the 50 Ah BMS board with a 100 Ah BMS board.",
         "thName": "Name",
         "thPricePerOne": "Price/each",
         "thQuantity": "Quantity",
@@ -840,29 +840,29 @@
         ]
     },
     "manufacturingProcess2": {
-        "title": "Manufacturing Process of 'PUPS' v.2 Charging Station",
-        "description": "The manufacturing process of the 'PUPS' v.2 charging station closely resembles the process of its previous version, except for the replacement of specific components and ports.",
+        "title": "Manufacturing Process of «PUPS» v.2 Charging Station",
+        "description": "The manufacturing process of the «PUPS» v.2 charging station closely resembles the process of its previous version, except for the replacement of specific components and ports.",
         "descriptionAdditional": "Below, you can see some key moments in the production of the device:",
-        "descriptionBottom": "You can view a photo of the manufactured prototype of the 'PUPS' v.2 charging station by following this link",
-        "linkBottom": "'PUPS' v.2 prototype"
+        "descriptionBottom": "You can view a photo of the manufactured prototype of the «PUPS» v.2 charging station by following this link",
+        "linkBottom": "«PUPS» v.2 prototype"
     },
     "manufacturedPrototype2": {
-        "title": "Photo of 'PUPS' Charging Station v.1.5"
+        "title": "Photo of «PUPS» Charging Station v.1.5"
     },
     "batteryChargeTime2": {
         "title": "Charging the «PUPS» v.2 accumulator battery",
         "description": "Let's determine the battery charging time. The charging board accepts 220 volts and outputs 12.6 volts at 10 amps, meaning the batteries are charged with a voltage of 12.6 volts and a current of 10 amps. The station's battery was discharged to a voltage of 9.5 volts, which is the lower limit of the battery system's voltage. The station charged from 9.5 volts to 12.6 volts over approximately 5 hours."
     },
     "loadTesting2": {
-        "title": "Testing of 'PUPS' v.2 Charging Station",
+        "title": "Testing of «PUPS» v.2 Charging Station",
         "acb": {
             "title": "1. Determining the Battery Capacity",
-            "description": "The battery of the 'PUPS' v.2 charging station has a capacity of 60 Ah. Taking into account that the effective utilization of the battery capacity is approximately 80%, the actual, or working, battery capacity is 48 Ah or 48,000 mAh."
+            "description": "The battery of the «PUPS» v.2 charging station has a capacity of 60 Ah. Taking into account that the effective utilization of the battery capacity is approximately 80%, the actual, or working, battery capacity is 48 Ah or 48,000 mAh."
         },
         "usbCycles": {
             "title": "2. Number of Phone Charging Cycles via USB QC 3.0 Port",
             "description": "The number of charging cycles via the USB QC 3.0 port was determined. For the experiment, a phone with a capacity of 4500 mAh was used. The capacity expended during its charging amounted to 5015 mAh, as detailed on the",
-            "link": "'PUPS' v.1.5 testing page",
+            "link": "«PUPS» v.1.5 testing page",
             "descriptionAdditional": "The phone can be charged approximately 9.6 times via the USB Quick-Charge 3.0 port."
         },
         "cyclesTypeC": {
@@ -872,15 +872,15 @@
         },
         "another": {
             "title": "4. Device Charging Times via Different Ports and Testing the 220-Volt Socket",
-            "description": "Since the technical specifications of the inverter and QC 3.0 port are identical to the 'PUPS' v.1.5 charging station, the charging times for devices have already been determined on previous pages:",
-            "link1": "'PUPS' v.1.5 testing",
+            "description": "Since the technical specifications of the inverter and QC 3.0 port are identical to the «PUPS» v.1.5 charging station, the charging times for devices have already been determined on previous pages:",
+            "link1": "«PUPS» v.1.5 testing",
             "link1Description": "- charging time for the phone via the USB Quick-Charge 3.0 port, and",
-            "link2": "'PUPS' v.1 testing",
+            "link2": "«PUPS» v.1 testing",
             "link2Description": "- charging time for the laptop from the 220-volt socket."
         }
     },
     "technicalCharacteristics2": {
-        "title": "Technical Characteristics of the 'PUPS' v.2 Charging Station",
+        "title": "Technical Characteristics of the «PUPS» v.2 Charging Station",
         "characteristics": [
             { "title": "AC 220V Outlet", "value": "1" },
             { "title": "USB Type-A", "value": "3" },
@@ -916,7 +916,7 @@
         ]
     },
     "instruction2": {
-        "title": "User Manual for the 'PUPS' v.2 Charging Station",
+        "title": "User Manual for the «PUPS» v.2 Charging Station",
         "list": [
             {
                 "title": "1. Schematic Diagram of the Top View of the Station",
@@ -947,8 +947,13 @@
             },
             {
                 "title": "4. Safety Measures",
-                "description": "The safety measures for using the 'PUPS' v.2 charging station are similar to the previous model of the charging station."
+                "description": "The safety measures for using the «PUPS» v.2 charging station are similar to the previous model of the charging station."
             }
         ]
+    },
+    "transferMilitary2": {
+        "title": "Transfer of «PUPS» Charging Station v.2 to the Military",
+        "description": "After completing the manufacturing process, we transferred this improved device to the same military unit.",
+        "description1additional": "(Unfortunately, we have not yet received a photo report of the military receiving the «PUPS» charging station v.2)"
     }
 }
