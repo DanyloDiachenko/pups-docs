@@ -38,7 +38,9 @@
     }
 
     .feedback {
-        text-align: center;
+        @media (max-width: 1320px) {
+            text-align: center;
+        }
 
         .form {
             margin-top: 20px;

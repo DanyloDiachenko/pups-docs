@@ -26,7 +26,7 @@ export function middleware(request: NextRequest) {
     const shouldSkip = fileExtensions.some((ext) =>
         pathname.endsWith(`.${ext}`),
     );
-    if (shouldSkip) {
+    if (shouldSkip || !pathname.startsWith("/api")) {
         return;
     }
 
@@ -35,7 +35,9 @@ export function middleware(request: NextRequest) {
             pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`,
     );
 
-    if (pathnameHasLocale) return;
+    if (!pathnameHasLocale) {
+        return;
+    }
 
     const locale = getLocale(request);
     request.nextUrl.pathname = `/${locale}${pathname}`;

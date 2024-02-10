@@ -5,7 +5,8 @@
         "module": "module",
         "port": "port",
         "work": "work",
-        "full": "full"
+        "full": "full",
+        "uah": "UAH"
     },
     "header": {
         "support": "Support",
@@ -996,6 +997,34 @@
                     "answer": "We are always open to cooperation. Fill out the form on the website or call the provided phone number. We look forward to hearing from you!"
                 }
             ]
+        }
+    },
+    "buyPups": {
+        "title": "Purchase a «PUPS» Charging Station",
+        "constructor": {
+            "title": "Constructor",
+            "capacity": "Battery Capacity:",
+            "power": "Inverter Power (nominal):",
+            "powerShort": "watt",
+            "amperesShort": "amperes",
+            "yesShort": "Yes",
+            "noShort": "No",
+            "charger": "Charger:",
+            "autoLighter": "Presence of a Cigarette Lighter Socket:",
+            "usb": "Number of USB QC 3.0 Ports",
+            "typeC": "Number of Type-C PD Ports",
+            "rozette": "Number of 220 Volt Sockets",
+            "armor": "Enhanced Protection (case, port caps)",
+            "price": "Price",
+            "description": "* The final cost includes delivery charges, purchase of switches, balancing components (BMS), and other additional expenses.",
+            "descriptionAdditional": "After confirming the order, we will definitely contact you to clarify additional details and provide the final price.",
+            "submit": "Confirm Order"
+        },
+        "ready": {
+            "title": "Ready Options",
+            "variantsTitle": "Charging Station Variants:",
+            "description": "After confirming the order, we will definitely contact you to clarify additional details and provide the final price.",
+            "submit": "Confirm Order"
         }
     }
 }
