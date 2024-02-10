@@ -119,6 +119,26 @@ export const AsideSmall = ({ navigation }: AsideSmallProps) => {
                                 {strings.header.button}
                             </button>
                         </div>
+                        <div className={styles.contentBeforeNav}>
+                            <Link
+                                href={`/${params.lang}/support`}
+                                className={styles.email}
+                            >
+                                {strings.header.support}
+                            </Link>
+                            <Link
+                                href={`/${params.lang}/buy-pups`}
+                                className={styles.email}
+                            >
+                                {strings.header.feedback}
+                            </Link>
+                            <Link
+                                href={`/${params.lang}/support`}
+                                className={styles.email}
+                            >
+                                {strings.header.contacts}
+                            </Link>
+                        </div>
                         {navigation.map((tab, index) => (
                             <div className={styles.item} key={index}>
                                 <div

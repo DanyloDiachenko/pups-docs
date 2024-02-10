@@ -11,7 +11,6 @@ import { dictionaries } from "@/app/[lang]/dictionaries";
 export const Header = () => {
     const params = useParams();
     const router = useRouter();
-    const pathname = usePathname();
 
     if (!params.lang) {
         if (typeof window !== "undefined") {
@@ -20,7 +19,6 @@ export const Header = () => {
     }
 
     const strings = dictionaries[params.lang as keyof typeof dictionaries];
-    const header = strings && strings.header ? strings.header : null;
 
     const [scroll, setScroll] = useState<boolean>(true);
 
@@ -45,7 +43,7 @@ export const Header = () => {
     }, []);
 
     if (!strings) {
-        return <></>
+        return <></>;
     }
 
     return (
@@ -55,15 +53,24 @@ export const Header = () => {
             <LanguageSelector />
             <div className={styles.rightCol}>
                 <div className={styles.links}>
-                    <Link href="#" className={styles.email}>
+                    <Link
+                        href={`/${params.lang}/support`}
+                        className={styles.email}
+                    >
                         {strings.header.support}
                     </Link>
                     <span className={styles.line}>/</span>
-                    <Link href="#" className={styles.email}>
+                    <Link
+                        href={`/${params.lang}/buy-pups`}
+                        className={styles.email}
+                    >
                         {strings.header.feedback}
                     </Link>
                     <span className={styles.line}>/</span>
-                    <Link href="#" className={styles.email}>
+                    <Link
+                        href={`/${params.lang}/support`}
+                        className={styles.email}
+                    >
                         {strings.header.contacts}
                     </Link>
                 </div>
