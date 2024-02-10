@@ -1,14 +1,26 @@
 import { Faq } from "@/components/Faq";
 import styles from "./styles.module.scss";
-import { supportFaq } from "./faq";
+import { dictionaries } from "../dictionaries";
 
-const Page = () => {
+interface PageProps {
+    params: {
+        lang: string;
+    };
+}
+
+const Page = async ({ params }: PageProps) => {
+    const language = params.lang;
+
+    const strings = dictionaries[language as keyof typeof dictionaries];
+
     return (
         <>
-            <h1>Підтримка</h1>
+            <h1>{strings.support.title}</h1>
             <div className={styles.contacts}>
                 <div className={styles.contact}>
-                    <span className={styles.title}>Телефон:</span>
+                    <span className={styles.title}>
+                        {strings.support.phone}:
+                    </span>
                     <span className={styles.value}>+380954517597</span>
                 </div>
                 <div className={styles.contact}>
@@ -18,19 +30,21 @@ const Page = () => {
                     </span>
                 </div>
                 <div className={styles.contact}>
-                    <span className={styles.title}>Телеграм:</span>
+                    <span className={styles.title}>
+                        {strings.support.telegram}:
+                    </span>
                     <span className={styles.value}>@danil_diachenko</span>
                 </div>
             </div>
             <div className={styles.content}>
                 <div className={styles.feedback}>
-                    <h2>Зворотній зв`язок</h2>
+                    <h2>{strings.support.feeback.title}</h2>
                     <form className={styles.form}>
                         <label htmlFor="name">
                             <input
                                 name="name"
                                 type="text"
-                                placeholder="Ваше Ім`я"
+                                placeholder={strings.support.feeback.yourName}
                                 required
                             />
                         </label>
@@ -38,7 +52,7 @@ const Page = () => {
                             <input
                                 name="email"
                                 type="email"
-                                placeholder="Ваше E-mail"
+                                placeholder={strings.support.feeback.yourEmail}
                                 required
                             />
                         </label>
@@ -46,25 +60,25 @@ const Page = () => {
                             <input
                                 name="topic"
                                 type="text"
-                                placeholder="Тема"
+                                placeholder={strings.support.feeback.topic}
                                 required
                             />
                         </label>
                         <label htmlFor="message">
                             <textarea
                                 name="message"
-                                placeholder="Повідомлення"
+                                placeholder={strings.support.feeback.message}
                                 required
                             />
                         </label>
                         <button type="submit" className={styles.button}>
-                            Відправити
+                            {strings.support.feeback.submit}
                         </button>
                     </form>
                 </div>
                 <div className={styles.faq}>
-                    <h2>Можливі питання</h2>
-                    <Faq faq={supportFaq} />
+                    <h2>{strings.support.faq.title}</h2>
+                    <Faq faq={strings.support.faq.faq} />
                 </div>
             </div>
         </>

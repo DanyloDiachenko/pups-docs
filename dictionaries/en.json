@@ -955,5 +955,47 @@
         "title": "Transfer of «PUPS» Charging Station v.2 to the Military",
         "description": "After completing the manufacturing process, we transferred this improved device to the same military unit.",
         "description1additional": "(Unfortunately, we have not yet received a photo report of the military receiving the «PUPS» charging station v.2)"
+    },
+    "support": {
+        "title": "Support",
+        "phone": "Phone",
+        "telegram": "Telegram",
+        "feeback": {
+            "title": "Feedback",
+            "yourName": "Your Name",
+            "yourEmail": "Your E-mail",
+            "topic": "Subject",
+            "message": "Message",
+            "submit": "Submit"
+        },
+        "faq": {
+            "title": "Frequently Asked Questions",
+            "faq": [
+                {
+                    "question": "Do you have a physical store that can be visited in person?",
+                    "answer": "Currently, we do not have a physical store, but it is an interesting opportunity for the future. If our project develops, we will consider the possibility of opening our own space for the convenience of our customers."
+                },
+                {
+                    "question": "Is there an option for returning or exchanging goods, and what are the return conditions?",
+                    "answer": "Yes, we offer the possibility of returning or exchanging a product within 14 days of purchase, provided it is in proper condition. You can receive a refund or we are ready to repair the purchased item."
+                },
+                {
+                    "question": "Do you have a loyalty program or discounts for regular customers?",
+                    "answer": "We do not try to attract customers with discounts since we already offer competitive prices in the charging station market. However, we provide a 10% discount for military personnel."
+                },
+                {
+                    "question": "What payment methods are accepted in your store?",
+                    "answer": "After placing an order, we will contact you and provide the payment details. We accept full prepayment by card."
+                },
+                {
+                    "question": "Do you have the ability to track an order after it has been shipped?",
+                    "answer": "Yes, you can track your order on the \"My Account\" page on our website. There you will find information about the current stage of your order, from acceptance to shipment."
+                },
+                {
+                    "question": "Do you have contact information for the press or partners for cooperation or press releases?",
+                    "answer": "We are always open to cooperation. Fill out the form on the website or call the provided phone number. We look forward to hearing from you!"
+                }
+            ]
+        }
     }
 }
