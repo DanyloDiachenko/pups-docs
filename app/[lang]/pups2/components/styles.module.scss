@@ -1,4 +1,7 @@
-.description {
+.tableWrapper {
+    max-width: 1160px;
+    overflow: auto;
+    padding-bottom: 5px;
 }
 
 .table {
@@ -21,23 +24,56 @@
                 padding-top: 10px;
                 padding-bottom: 10px;
                 text-align: start;
+                text-wrap: nowrap;
+
+                @media (max-width: 500px) {
+                    padding-left: 7.5px;
+                }
 
                 &.name {
                     min-width: 350px;
                     border-top-left-radius: 7px;
+
+                    @media (max-width: 1100px) {
+                        min-width: 275px;
+                    }
+                    @media (max-width: 500px) {
+                        min-width: 175px;
+                    }
                 }
 
                 &.pricePerOne {
                     min-width: 250px;
+
+                    @media (max-width: 1100px) {
+                        min-width: 150px;
+                    }
+                    @media (max-width: 500px) {
+                        min-width: 100px;
+                    }
                 }
 
                 &.quantity {
                     min-width: 250px;
+
+                    @media (max-width: 1100px) {
+                        min-width: 130px;
+                    }
+                    @media (max-width: 500px) {
+                        min-width: 85px;
+                    }
                 }
 
                 &.priceFull {
                     min-width: 250px;
                     border-top-right-radius: 7px;
+
+                    @media (max-width: 1100px) {
+                        min-width: 150px;
+                    }
+                    @media (max-width: 500px) {
+                        min-width: 100px;
+                    }
                 }
             }
         }
@@ -66,6 +102,10 @@
                 padding-top: 10px;
                 padding-bottom: 10px;
                 border-bottom: 1px solid #242a4d;
+
+                @media (max-width: 500px) {
+                    padding-left: 7.5px;
+                }
 
                 &.tdSecond,
                 &.tdFourth {
