@@ -17,11 +17,7 @@ const Page = async ({ params }: PageProps) => {
             <h1>{strings.manufacturedPrototype15.title}</h1>
             <div className={styles.photos}>
                 <img
-                    src="/pups2/proto5.jpeg"
-                    alt={strings.manufacturedPrototype15.title}
-                />
-                <img
-                    src="/pups2/proto3.jpeg"
+                    src="/pups2/proto7.png"
                     alt={strings.manufacturedPrototype15.title}
                 />
                 <img
@@ -34,10 +30,6 @@ const Page = async ({ params }: PageProps) => {
                 />
                 <img
                     src="/pups2/proto6.jpeg"
-                    alt={strings.manufacturedPrototype15.title}
-                />
-                <img
-                    src="/pups2/proto2.jpeg"
                     alt={strings.manufacturedPrototype15.title}
                 />
             </div>
