@@ -1,10 +1,17 @@
 "use client";
 
-import { ChangeEvent, useState } from "react";
+import { useRouter } from "next/navigation";
+import { ChangeEvent, FormEvent, useState } from "react";
+import { toast } from "react-toastify";
 
 import styles from "./styles.module.scss";
+import { AuthApi } from "@/api/auth.api";
+import { setCookie } from "@/helpers/cookies.helper";
+import { AuthorizationFormProps } from "./component.props";
 
-export const Authorization = () => {
+export const Authorization = ({ language }: AuthorizationFormProps) => {
+    const router = useRouter();
+
     const [activeSection, setActiveSection] = useState<"login" | "register">(
         "login",
     );
@@ -25,7 +32,39 @@ export const Authorization = () => {
         });
     };
 
-    const submit = () => {};
+    const submit = async (e: FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+
+        if (activeSection === "login") {
+            const response = await AuthApi.login(fields);
+
+            if (response.error) {
+                toast.error(response.error);
+            } else {
+                toast.success("Ви успішно увійшли в акаунт!");
+
+                response.token && setCookie("token", response.token);
+
+                setTimeout(() => {
+                    router.push(`/${language}/profile`);
+                }, 2000);
+            }
+        } else {
+            const response = await AuthApi.register(fields);
+
+            if (response.error) {
+                toast.error(response.error);
+            } else {
+                toast.success("Ви успішно зареєструвалися!");
+
+                response.token && setCookie("token", response.token);
+
+                setTimeout(() => {
+                    router.push(`/${language}/profile`);
+                }, 2000);
+            }
+        }
+    };
 
     return (
         <>

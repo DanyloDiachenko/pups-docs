@@ -1,4 +1,4 @@
-import { Authorization } from "@/components/Authorization";
+import { Authorization } from "@/components/AuthorizationForm";
 import styles from "./styles.module.scss";
 
 const Page = () => {

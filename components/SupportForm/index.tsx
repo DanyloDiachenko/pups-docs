@@ -2,7 +2,7 @@
 
 import { ChangeEvent, FormEvent, useState } from "react";
 
-import { SupportFormProps } from "./supportForm.props";
+import { SupportFormProps } from "./component.props";
 import styles from "./styles.module.scss";
 
 export const SupportForm = ({ strings }: SupportFormProps) => {

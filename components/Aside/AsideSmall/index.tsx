@@ -6,7 +6,7 @@ import { useEffect, useRef, useState } from "react";
 
 import styles from "./styles.module.scss";
 import { AsideSmallProps } from "./component.props";
-import { onClickOutside } from "@/helpers/onClickOutside";
+import { onClickOutside } from "@/helpers/onClickOutside.helper";
 import { LanguageSelector } from "@/components/LanguageSelector";
 import { dictionaries } from "@/app/[lang]/dictionaries";
 

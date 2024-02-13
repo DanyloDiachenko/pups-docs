@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { ToastContainer } from "react-toastify";
+
 import "./globals.scss";
 import { Aside } from "@/components/Aside";
 import { Header } from "@/components/Header";
@@ -31,6 +33,7 @@ const RootLayout = ({
                         {children}
                     </div>
                 </main>
+                <ToastContainer position="bottom-left" autoClose={2000} />
             </body>
         </html>
     );
