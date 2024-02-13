@@ -190,7 +190,7 @@
             {
                 "title": "«PUPS» Charging Station v.2",
                 "description": "Discover new components, manufacturing process, prototype, technical specifications, instructions, and testing of the station, as well as information about military handover.",
-                "image": "/slider5.jpg",
+                "image": "/slider5.png",
                 "buttonText": "Learn More",
                 "buttonLink": "/pups2/components"
             },
@@ -199,7 +199,7 @@
                 "description": "If you want to delve deeper into the project, have questions for the author, or are considering collaboration, we are ready to connect with you! Visit our support page to get in touch with us.",
                 "image": "/slider7.jpeg",
                 "buttonText": "Contact Us",
-                "buttonLink": "/contact"
+                "buttonLink": "/support"
             }
         ]
     },
