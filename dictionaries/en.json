@@ -1026,5 +1026,13 @@
             "description": "After confirming the order, we will definitely contact you to clarify additional details and provide the final price.",
             "submit": "Confirm Order"
         }
+    },
+    "auth": {
+        "authTitle": "Authorization",
+        "signIn": "Sign In",
+        "signUp": "Sign up",
+        "email": "Yout Email",
+        "password": "Your Password",
+        "submit": "Submit"
     }
 }

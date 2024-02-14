@@ -8,8 +8,12 @@ import styles from "./styles.module.scss";
 import { AuthApi } from "@/api/auth.api";
 import { setCookie } from "@/helpers/cookies.helper";
 import { AuthorizationFormProps } from "./component.props";
+import { Loader } from "../Loader";
 
-export const Authorization = ({ language }: AuthorizationFormProps) => {
+export const Authorization = ({
+    language,
+    strings,
+}: AuthorizationFormProps) => {
     const router = useRouter();
 
     const [activeSection, setActiveSection] = useState<"login" | "register">(
@@ -19,6 +23,7 @@ export const Authorization = ({ language }: AuthorizationFormProps) => {
         email: "",
         password: "",
     });
+    const [isLoading, setIsLoading] = useState<boolean>(false);
 
     const setFieldsHandler = (
         field: "email" | "password",
@@ -34,6 +39,8 @@ export const Authorization = ({ language }: AuthorizationFormProps) => {
 
     const submit = async (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
+
+        setIsLoading(true);
 
         if (activeSection === "login") {
             const response = await AuthApi.login(fields);
@@ -64,6 +71,8 @@ export const Authorization = ({ language }: AuthorizationFormProps) => {
                 }, 2000);
             }
         }
+
+        setIsLoading(false);
     };
 
     return (
@@ -73,7 +82,7 @@ export const Authorization = ({ language }: AuthorizationFormProps) => {
                     className={activeSection === "login" ? styles.active : ""}
                     onClick={() => setActiveSection("login")}
                 >
-                    Увійти
+                    {strings.auth.signIn}
                 </h2>
                 <h2
                     className={
@@ -81,7 +90,7 @@ export const Authorization = ({ language }: AuthorizationFormProps) => {
                     }
                     onClick={() => setActiveSection("register")}
                 >
-                    Зареєструватися
+                    {strings.auth.signUp}
                 </h2>
             </div>
             <form className={styles.form} onSubmit={submit}>
@@ -89,7 +98,7 @@ export const Authorization = ({ language }: AuthorizationFormProps) => {
                     <input
                         name="email"
                         type="email"
-                        placeholder="Ваша пошта"
+                        placeholder={strings.auth.email}
                         required
                         onChange={(e) => setFieldsHandler("email", e)}
                     />
@@ -98,15 +107,16 @@ export const Authorization = ({ language }: AuthorizationFormProps) => {
                     <input
                         name="password"
                         type="password"
-                        placeholder="Ваш Пароль"
+                        placeholder={strings.auth.password}
                         required
                         onChange={(e) => setFieldsHandler("password", e)}
                     />
                 </label>
                 <button type="submit" className={styles.button}>
-                    Підтвердити
+                    {strings.auth.submit}
                 </button>
             </form>
+            {isLoading && <Loader />}
         </>
     );
 };

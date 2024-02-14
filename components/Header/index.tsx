@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 import styles from "./styles.module.scss";
 import { LanguageSelector } from "../LanguageSelector";
 import { dictionaries } from "@/app/[lang]/dictionaries";
+import { getCookie } from "@/helpers/cookies.helper";
 
 export const Header = () => {
     const params = useParams();
@@ -42,6 +43,12 @@ export const Header = () => {
         };
     }, []);
 
+    const onProfileClick = () => {
+        const token = getCookie("token");
+
+        router.push(`/${params.lang}/${token ? "profile" : "/auth"}`);
+    };
+
     if (!strings) {
         return <></>;
     }
@@ -74,7 +81,7 @@ export const Header = () => {
                         {strings.header.contacts}
                     </Link>
                 </div>
-                <button className={styles.button}>
+                <button className={styles.button} onClick={onProfileClick}>
                     {strings.header.button}
                 </button>
             </div>
