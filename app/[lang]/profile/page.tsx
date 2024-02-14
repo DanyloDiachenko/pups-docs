@@ -3,7 +3,7 @@ import styles from "./styles.module.scss";
 import { ChangePasswordForm } from "@/components/ChangePasswordForm";
 import { Orders } from "@/components/Orders";
 
-export const getOrders = async () => {
+const getOrders = async () => {
     const response = await OrdersApi.getOrders();
 
     if (response.error) {
