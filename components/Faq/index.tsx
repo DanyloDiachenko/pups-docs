@@ -15,9 +15,11 @@ export const Faq = ({ faq }: FaqProps) => {
 
     useEffect(() => {
         setIsActiveClass(true);
+
         const timeoutId = setTimeout(() => {
             setIsActiveClass(false);
         }, 500);
+
         return () => clearTimeout(timeoutId);
     }, [activeFaqIndex]);
 

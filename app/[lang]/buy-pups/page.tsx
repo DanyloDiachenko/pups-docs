@@ -1,6 +1,8 @@
 "use client";
 
+import { useRouter } from "next/navigation";
 import { FormEvent, useState } from "react";
+import { toast } from "react-toastify";
 
 import {
     IOption,
@@ -10,6 +12,7 @@ import {
 } from "./options";
 import styles from "./styles.module.scss";
 import { dictionaries } from "../dictionaries";
+import { getCookie } from "@/helpers/cookies.helper";
 
 interface ISelectedOptions {
     capacity: string;
@@ -31,6 +34,8 @@ interface PageProps {
 const Page = ({ params }: PageProps) => {
     const language = params.lang;
     const strings = dictionaries[language as keyof typeof dictionaries];
+
+    const router = useRouter();
 
     const [selectedOptions, setSelectedOptions] = useState<ISelectedOptions>({
         capacity: initialOptions.capacity[0].value,
@@ -77,6 +82,16 @@ const Page = ({ params }: PageProps) => {
 
     const submitCalculator = (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
+
+        const token = getCookie("token");
+
+        if (!token) {
+            toast.error("Спершу увійдіть в акаунт!");
+
+            router.push(`/${language}/auth`);
+
+            return;
+        }
     };
 
     const submitReadyPups = (e: FormEvent<HTMLFormElement>) => {

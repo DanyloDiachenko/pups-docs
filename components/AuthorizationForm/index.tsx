@@ -9,6 +9,7 @@ import { AuthApi } from "@/api/auth.api";
 import { setCookie } from "@/helpers/cookies.helper";
 import { AuthorizationFormProps } from "./component.props";
 import { Loader } from "../Loader";
+import { cookies } from "next/headers";
 
 export const Authorization = ({
     language,
@@ -52,9 +53,7 @@ export const Authorization = ({
 
                 response.token && setCookie("token", response.token);
 
-                setTimeout(() => {
-                    router.push(`/${language}/profile`);
-                }, 2000);
+                router.push(`/${language}/profile`);
             }
         } else {
             const response = await AuthApi.register(fields);
@@ -66,9 +65,7 @@ export const Authorization = ({
 
                 response.token && setCookie("token", response.token);
 
-                setTimeout(() => {
-                    router.push(`/${language}/profile`);
-                }, 2000);
+                router.push(`/${language}/profile`);
             }
         }
 

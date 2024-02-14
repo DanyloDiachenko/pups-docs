@@ -1,4 +1,4 @@
-import { NextRequest } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 
 let locales = ["en", "ua"];
 
@@ -10,7 +10,7 @@ function getLocale(request: NextRequest) {
 
     const requestedLocales = acceptLanguage.split(",").map((lang) => {
         const [locale] = lang.trim().split(";")[0].split("-");
-        return `${locale}-${locale.toUpperCase()}`;
+        return locale.toLowerCase();
     });
 
     const locale = requestedLocales.find((locale) => locales.includes(locale));
@@ -26,25 +26,35 @@ export function middleware(request: NextRequest) {
     const shouldSkip = fileExtensions.some((ext) =>
         pathname.endsWith(`.${ext}`),
     );
-    if (shouldSkip || !pathname.startsWith("/api")) {
+
+    if (shouldSkip || pathname.includes("/_next/")) {
         return;
     }
 
-    const pathnameHasLocale = locales.some(
-        (locale) =>
-            pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`,
+    // Проверка наличия токена
+    const cookies = request.cookies;
+    const token = cookies.get("token");
+
+    // Проверка, начинается ли путь с локали и ведет ли на страницу профиля
+    const pathnameHasLocale = locales.some((locale) =>
+        pathname.startsWith(`/${locale}/`),
     );
+    const isProfilePage = pathname.includes("/profile");
 
-    if (!pathnameHasLocale) {
-        return;
+    if (pathnameHasLocale && isProfilePage && !token) {
+        const locale = getLocale(request); // Получение предпочтительной локали из заголовка запроса
+        // Перенаправление на страницу аутентификации с сохранением текущей локали
+        return NextResponse.redirect(new URL(`/${locale}/auth`, request.url));
     }
 
-    const locale = getLocale(request);
-    request.nextUrl.pathname = `/${locale}${pathname}`;
-
-    return Response.redirect(request.nextUrl);
+    // Если путь уже содержит локаль, не нужно добавлять её снова
+    if (!pathnameHasLocale) {
+        const locale = getLocale(request); // Получение предпочтительной локали
+        request.nextUrl.pathname = `/${locale}${pathname}`; // Добавление локали к пути
+        return NextResponse.redirect(request.nextUrl);
+    }
 }
 
 export const config = {
-    matcher: ["/((?!_next|\\.(?:jpg|jpeg|png|gif|svg|webp)$).*)"],
+    matcher: ["/:path*"], // Обработка всех путей
 };
