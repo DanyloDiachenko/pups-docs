@@ -2,6 +2,7 @@ import { GetOrdersApi } from "@/api/getOrders.api";
 import styles from "./styles.module.scss";
 import { ChangePasswordForm } from "@/components/Forms/ChangePasswordForm";
 import { Orders } from "@/components/Orders";
+import { dictionaries } from "../dictionaries";
 
 const getOrders = async () => {
     const response = await GetOrdersApi.getOrders();
@@ -13,7 +14,17 @@ const getOrders = async () => {
     }
 };
 
-const Page = async () => {
+interface PageProps {
+    params: {
+        lang: string;
+    };
+}
+
+const Page = async ({ params }: PageProps) => {
+    const language = params.lang;
+
+    const strings = dictionaries[language as keyof typeof dictionaries];
+
     const orders = await getOrders();
 
     return (
@@ -24,7 +35,7 @@ const Page = async () => {
                 <span className={styles.email}>danildiachenko23@gmail.com</span>
             </div>
             <h2 className={styles.changePassword}>Змінити пароль</h2>
-            <ChangePasswordForm />
+            <ChangePasswordForm language={language} />
             <h2 className={styles.myOrders}>Мої замовлення</h2>
             <Orders orders={orders} />
         </>

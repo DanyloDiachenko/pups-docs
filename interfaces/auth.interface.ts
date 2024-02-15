@@ -7,3 +7,7 @@ export interface IAuthResponse {
     token?: string;
     error?: string;
 }
+
+export interface IAuthChangePasswordPayload {
+    password: string;
+}
