@@ -8,7 +8,7 @@ import styles from "./styles.module.scss";
 import { AuthApi } from "@/api/auth.api";
 import { setCookie } from "@/helpers/cookies.helper";
 import { AuthorizationFormProps } from "./component.props";
-import { Loader } from "../Loader";
+import { Loader } from "../../Loader";
 import { cookies } from "next/headers";
 
 export const Authorization = ({

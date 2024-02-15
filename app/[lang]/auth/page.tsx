@@ -1,4 +1,4 @@
-import { Authorization } from "@/components/AuthorizationForm";
+import { Authorization } from "@/components/Forms/AuthorizationForm";
 import styles from "./styles.module.scss";
 import { dictionaries } from "../dictionaries";
 

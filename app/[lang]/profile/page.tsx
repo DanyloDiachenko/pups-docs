@@ -1,6 +1,6 @@
 import { OrdersApi } from "@/api/orders.api";
 import styles from "./styles.module.scss";
-import { ChangePasswordForm } from "@/components/ChangePasswordForm";
+import { ChangePasswordForm } from "@/components/Forms/ChangePasswordForm";
 import { Orders } from "@/components/Orders";
 
 const getOrders = async () => {

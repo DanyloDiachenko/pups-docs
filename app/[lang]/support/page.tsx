@@ -1,7 +1,7 @@
 import { Faq } from "@/components/Faq";
 import styles from "./styles.module.scss";
 import { dictionaries } from "../dictionaries";
-import { SupportForm } from "@/components/SupportForm";
+import { SupportForm } from "@/components/Forms/SupportForm";
 
 interface PageProps {
     params: {

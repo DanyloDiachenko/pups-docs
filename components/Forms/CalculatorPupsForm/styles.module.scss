@@ -1,0 +1,126 @@
+.form {
+    label {
+        display: block;
+        margin-top: 20px;
+    }
+
+    .title {
+        margin-top: 20px;
+        font-size: 22px;
+        margin-bottom: 15px;
+    }
+
+    .variant {
+        margin-top: 10px;
+        display: flex;
+        gap: 5px;
+        align-items: center;
+        font-size: 18px;
+        position: relative;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        padding-left: 30px;
+
+        &:first-child {
+            margin-top: 0;
+        }
+
+        input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            height: 0;
+            width: 0;
+            cursor: pointer;
+        }
+
+        .checkmark {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 16px;
+            width: 16px;
+            background-color: none;
+            border-radius: 50%;
+            border: 2px solid #7600eb;
+            cursor: pointer;
+        }
+
+        input:checked ~ .checkmark {
+            background-color: none;
+        }
+
+        .checkmark:after {
+            content: "";
+            position: absolute;
+            display: none;
+        }
+
+        input:checked ~ .checkmark:after {
+            display: block;
+        }
+
+        .checkmark:after {
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #7600eb;
+        }
+
+        .price {
+            color: #a5a5a5;
+            margin-left: 5px;
+        }
+    }
+}
+
+.description {
+    margin-top: 40px;
+
+    .price {
+        font-size: 24px;
+        font-weight: 500;
+        color: #ffffff;
+        display: block;
+        margin-bottom: 10px;
+
+        span {
+            color: #7600eb;
+            font-weight: 600;
+            text-decoration: underline;
+        }
+    }
+}
+
+.submit {
+    background: #fd7081;
+    border: none;
+    color: #ffffff;
+    transition: 0.3s;
+    box-sizing: border-box;
+    padding: 15px 40px;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 22px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+
+    &:hover {
+        background: #fc4359;
+    }
+
+    @media (max-width: 600px) {
+        padding: 12px 30px;
+        margin-top: 15px;
+        font-size: 20px;
+    }
+}

@@ -4,7 +4,7 @@ import { ChangeEvent, FormEvent, useState } from "react";
 
 import { SupportFormProps } from "./component.props";
 import styles from "./styles.module.scss";
-import { Loader } from "../Loader";
+import { Loader } from "../../Loader";
 import { NotifcationsApi } from "@/api/sendNotification.api";
 import { toast } from "react-toastify";
 

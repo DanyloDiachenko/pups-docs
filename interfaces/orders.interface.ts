@@ -17,8 +17,10 @@ export interface IOrder {
     armor: boolean;
     price: number;
     status: OrderStatus;
-    readyPupsVersion: number | null;
+    readyPupsVersion?: number;
 }
+
+export interface ICreateOrderPayload extends IOrder {}
 
 export interface IOrdersResponse {
     data?: IOrder[];
