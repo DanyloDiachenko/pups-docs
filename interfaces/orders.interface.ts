@@ -20,9 +20,9 @@ export interface IOrder {
     readyPupsVersion?: number;
 }
 
-export interface ICreateOrderPayload extends IOrder {}
-
 export interface IOrdersResponse {
     data?: IOrder[];
     error?: string;
 }
+
+export interface ICreateOrderPayload extends IOrder {}

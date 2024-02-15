@@ -12,6 +12,8 @@ import {
     ICreateOrderPayload,
     OrderStatus,
 } from "@/interfaces/orders.interface";
+import { CreateOrderApi } from "@/api/createOrder.api";
+import { Loader } from "@/components/Loader";
 
 interface ISelectedOptions {
     capacity: number;
@@ -40,6 +42,7 @@ export const CalculatorPupsForm = ({
         outletQuantity: initialOptions.outletQuantity[0].value as number,
         armor: initialOptions.armor[0].value as boolean,
     });
+    const [isLoading, setIsLoading] = useState<boolean>(false);
 
     const handleOptionChange = (
         optionType: keyof ISelectedOptions,
@@ -54,6 +57,8 @@ export const CalculatorPupsForm = ({
     const submitCalculator = async (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
 
+        setIsLoading(true);
+
         const token = getCookie("token");
 
         if (!token) {
@@ -64,44 +69,29 @@ export const CalculatorPupsForm = ({
             return;
         }
 
-        try {
-            const bodyToPatch: ICreateOrderPayload = {
-                capacity: selectedOptions.capacity,
-                power: selectedOptions.power,
-                charger: selectedOptions.charger,
-                isAutoLighter: selectedOptions.isAutoLighter,
-                usbQuantity: selectedOptions.usbQuantity,
-                typecQuantity: initialOptions.typecQuantity[0].value as number,
-                outletQuantity: initialOptions.outletQuantity[0]
-                    .value as number,
-                armor: initialOptions.armor[0].value as boolean,
-                //
-                price: calculateTotalPrice(),
-                status: OrderStatus.Placed,
-            };
+        const createOrderPayload: ICreateOrderPayload = {
+            capacity: selectedOptions.capacity,
+            power: selectedOptions.power,
+            charger: selectedOptions.charger,
+            isAutoLighter: selectedOptions.isAutoLighter,
+            usbQuantity: selectedOptions.usbQuantity,
+            typecQuantity: initialOptions.typecQuantity[0].value as number,
+            outletQuantity: initialOptions.outletQuantity[0].value as number,
+            armor: initialOptions.armor[0].value as boolean,
+            //
+            price: calculateTotalPrice(),
+            status: OrderStatus.Placed,
+        };
 
-            const response = await fetch(
-                `${process.env.NEXT_PUBLIC_API_URL}/users/create-order`,
-                {
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/json",
-                        Authorization: `Bearer ${token}`,
-                    },
-                    body: JSON.stringify(bodyToPatch),
-                },
-            );
+        const response = await CreateOrderApi.createOrder(createOrderPayload);
 
-            if (response.ok) {
-                toast.success("Замовлення створено успішно!");
-            } else {
-                console.log(response);
-            }
-
+        if (response.data) {
+            toast.success("Замовлення створено успішно!");
+        } else {
             console.log(response);
-        } catch (error) {
-            console.log(error);
         }
+
+        setIsLoading(false);
     };
 
     const calculateTotalPrice = () => {
@@ -124,280 +114,293 @@ export const CalculatorPupsForm = ({
     };
 
     return (
-        <form className={styles.form} onSubmit={submitCalculator}>
-            <>
-                <div className={styles.title}>
-                    {strings.buyPups.constructor.capacity}
-                </div>
-                {initialOptions.capacity.map((option) => (
-                    <label
-                        key={option.id}
-                        className={styles.variant}
-                        htmlFor={option.id}
-                    >
-                        <input
-                            type="radio"
-                            id={option.id}
-                            name="capacity"
-                            checked={selectedOptions.capacity === option.value}
-                            onChange={() =>
-                                handleOptionChange("capacity", option.value)
-                            }
-                        />
-                        <span className={styles.checkmark}></span>
-                        <span>
-                            {option.label}
-                            <span className={styles.price}>
-                                {`(${option.price} ${strings.common.uah})`}
+        <>
+            <form className={styles.form} onSubmit={submitCalculator}>
+                <>
+                    <div className={styles.title}>
+                        {strings.buyPups.constructor.capacity}
+                    </div>
+                    {initialOptions.capacity.map((option) => (
+                        <label
+                            key={option.id}
+                            className={styles.variant}
+                            htmlFor={option.id}
+                        >
+                            <input
+                                type="radio"
+                                id={option.id}
+                                name="capacity"
+                                checked={
+                                    selectedOptions.capacity === option.value
+                                }
+                                onChange={() =>
+                                    handleOptionChange("capacity", option.value)
+                                }
+                            />
+                            <span className={styles.checkmark}></span>
+                            <span>
+                                {option.label}
+                                <span className={styles.price}>
+                                    {`(${option.price} ${strings.common.uah})`}
+                                </span>
                             </span>
-                        </span>
-                    </label>
-                ))}
-            </>
-            <>
-                <div className={styles.title}>
-                    {strings.buyPups.constructor.power}
-                </div>
-                {initialOptions.power.map((option) => (
-                    <label
-                        key={option.id}
-                        className={styles.variant}
-                        htmlFor={option.id}
-                    >
-                        <input
-                            type="radio"
-                            id={option.id}
-                            name="inverter"
-                            checked={selectedOptions.power === option.value}
-                            onChange={() =>
-                                handleOptionChange(
-                                    "power",
-                                    option.value as number,
-                                )
-                            }
-                        />
-                        <span className={styles.checkmark}></span>
-                        <span>
-                            {option.label}{" "}
-                            {strings.buyPups.constructor.powerShort}
-                            <span className={styles.price}>
-                                {`(${option.price} ${strings.common.uah})`}
+                        </label>
+                    ))}
+                </>
+                <>
+                    <div className={styles.title}>
+                        {strings.buyPups.constructor.power}
+                    </div>
+                    {initialOptions.power.map((option) => (
+                        <label
+                            key={option.id}
+                            className={styles.variant}
+                            htmlFor={option.id}
+                        >
+                            <input
+                                type="radio"
+                                id={option.id}
+                                name="inverter"
+                                checked={selectedOptions.power === option.value}
+                                onChange={() =>
+                                    handleOptionChange(
+                                        "power",
+                                        option.value as number,
+                                    )
+                                }
+                            />
+                            <span className={styles.checkmark}></span>
+                            <span>
+                                {option.label}{" "}
+                                {strings.buyPups.constructor.powerShort}
+                                <span className={styles.price}>
+                                    {`(${option.price} ${strings.common.uah})`}
+                                </span>
                             </span>
-                        </span>
-                    </label>
-                ))}
-            </>
-            <>
-                <div className={styles.title}>
-                    {strings.buyPups.constructor.charger}
-                </div>
-                {initialOptions.charger.map((option) => (
-                    <label
-                        key={option.id}
-                        className={styles.variant}
-                        htmlFor={option.id}
-                    >
-                        <input
-                            type="radio"
-                            id={option.id}
-                            name="charger"
-                            checked={selectedOptions.charger === option.value}
-                            onChange={() =>
-                                handleOptionChange("charger", option.value)
-                            }
-                        />
-                        <span className={styles.checkmark}></span>
-                        <span>
-                            {option.label}{" "}
-                            {strings.buyPups.constructor.amperesShort}
-                            <span className={styles.price}>
-                                {`(${option.price} ${strings.common.uah})`}
+                        </label>
+                    ))}
+                </>
+                <>
+                    <div className={styles.title}>
+                        {strings.buyPups.constructor.charger}
+                    </div>
+                    {initialOptions.charger.map((option) => (
+                        <label
+                            key={option.id}
+                            className={styles.variant}
+                            htmlFor={option.id}
+                        >
+                            <input
+                                type="radio"
+                                id={option.id}
+                                name="charger"
+                                checked={
+                                    selectedOptions.charger === option.value
+                                }
+                                onChange={() =>
+                                    handleOptionChange("charger", option.value)
+                                }
+                            />
+                            <span className={styles.checkmark}></span>
+                            <span>
+                                {option.label}{" "}
+                                {strings.buyPups.constructor.amperesShort}
+                                <span className={styles.price}>
+                                    {`(${option.price} ${strings.common.uah})`}
+                                </span>
                             </span>
-                        </span>
-                    </label>
-                ))}
-            </>
-            <>
-                <div className={styles.title}>
-                    {strings.buyPups.constructor.autoLighter}
-                </div>
-                {initialOptions.isAutoLighter.map((option, index) => (
-                    <label
-                        key={option.id}
-                        className={styles.variant}
-                        htmlFor={option.id}
-                    >
-                        <input
-                            type="radio"
-                            id={option.id}
-                            name="cigarette"
-                            checked={
-                                selectedOptions.isAutoLighter === option.value
-                            }
-                            onChange={() =>
-                                handleOptionChange(
-                                    "isAutoLighter",
-                                    option.value,
-                                )
-                            }
-                        />
-                        <span className={styles.checkmark}></span>
-                        <span>
-                            {option.label}{" "}
-                            {index === 0
-                                ? strings.buyPups.constructor.noShort
-                                : strings.buyPups.constructor.yesShort}
-                            <span className={styles.price}>
-                                {`(${option.price} ${strings.common.uah})`}
+                        </label>
+                    ))}
+                </>
+                <>
+                    <div className={styles.title}>
+                        {strings.buyPups.constructor.autoLighter}
+                    </div>
+                    {initialOptions.isAutoLighter.map((option, index) => (
+                        <label
+                            key={option.id}
+                            className={styles.variant}
+                            htmlFor={option.id}
+                        >
+                            <input
+                                type="radio"
+                                id={option.id}
+                                name="cigarette"
+                                checked={
+                                    selectedOptions.isAutoLighter ===
+                                    option.value
+                                }
+                                onChange={() =>
+                                    handleOptionChange(
+                                        "isAutoLighter",
+                                        option.value,
+                                    )
+                                }
+                            />
+                            <span className={styles.checkmark}></span>
+                            <span>
+                                {option.label}{" "}
+                                {index === 0
+                                    ? strings.buyPups.constructor.noShort
+                                    : strings.buyPups.constructor.yesShort}
+                                <span className={styles.price}>
+                                    {`(${option.price} ${strings.common.uah})`}
+                                </span>
                             </span>
-                        </span>
-                    </label>
-                ))}
-            </>
-            <>
-                <div className={styles.title}>
-                    {strings.buyPups.constructor.usb}
-                </div>
-                {initialOptions.usbQuantity.map((option) => (
-                    <label
-                        key={option.id}
-                        className={styles.variant}
-                        htmlFor={option.id}
-                    >
-                        <input
-                            type="radio"
-                            id={option.id}
-                            name="usb"
-                            checked={
-                                selectedOptions.usbQuantity === option.value
-                            }
-                            onChange={() =>
-                                handleOptionChange("usbQuantity", option.value)
-                            }
-                        />
-                        <span className={styles.checkmark}></span>
-                        <span>
-                            {option.label}
-                            <span className={styles.price}>
-                                {`(${option.price} ${strings.common.uah})`}
+                        </label>
+                    ))}
+                </>
+                <>
+                    <div className={styles.title}>
+                        {strings.buyPups.constructor.usb}
+                    </div>
+                    {initialOptions.usbQuantity.map((option) => (
+                        <label
+                            key={option.id}
+                            className={styles.variant}
+                            htmlFor={option.id}
+                        >
+                            <input
+                                type="radio"
+                                id={option.id}
+                                name="usb"
+                                checked={
+                                    selectedOptions.usbQuantity === option.value
+                                }
+                                onChange={() =>
+                                    handleOptionChange(
+                                        "usbQuantity",
+                                        option.value,
+                                    )
+                                }
+                            />
+                            <span className={styles.checkmark}></span>
+                            <span>
+                                {option.label}
+                                <span className={styles.price}>
+                                    {`(${option.price} ${strings.common.uah})`}
+                                </span>
                             </span>
-                        </span>
-                    </label>
-                ))}
-            </>
-            <>
-                <div className={styles.title}>
-                    {strings.buyPups.constructor.typeC}
-                </div>
-                {initialOptions.typecQuantity.map((option) => (
-                    <label
-                        key={option.id}
-                        className={styles.variant}
-                        htmlFor={option.id}
-                    >
-                        <input
-                            type="radio"
-                            id={option.id}
-                            name="typec"
-                            checked={
-                                selectedOptions.typecQuantity === option.value
-                            }
-                            onChange={() =>
-                                handleOptionChange(
-                                    "typecQuantity",
-                                    option.value,
-                                )
-                            }
-                        />
-                        <span className={styles.checkmark}></span>
-                        <span>
-                            {option.label}
-                            <span className={styles.price}>
-                                {`(${option.price} ${strings.common.uah})`}
+                        </label>
+                    ))}
+                </>
+                <>
+                    <div className={styles.title}>
+                        {strings.buyPups.constructor.typeC}
+                    </div>
+                    {initialOptions.typecQuantity.map((option) => (
+                        <label
+                            key={option.id}
+                            className={styles.variant}
+                            htmlFor={option.id}
+                        >
+                            <input
+                                type="radio"
+                                id={option.id}
+                                name="typec"
+                                checked={
+                                    selectedOptions.typecQuantity ===
+                                    option.value
+                                }
+                                onChange={() =>
+                                    handleOptionChange(
+                                        "typecQuantity",
+                                        option.value,
+                                    )
+                                }
+                            />
+                            <span className={styles.checkmark}></span>
+                            <span>
+                                {option.label}
+                                <span className={styles.price}>
+                                    {`(${option.price} ${strings.common.uah})`}
+                                </span>
                             </span>
-                        </span>
-                    </label>
-                ))}
-            </>
-            <>
-                <div className={styles.title}>
-                    {strings.buyPups.constructor.rozette}
-                </div>
-                {initialOptions.outletQuantity.map((option) => (
-                    <label
-                        key={option.id}
-                        className={styles.variant}
-                        htmlFor={option.id}
-                    >
-                        <input
-                            type="radio"
-                            id={option.id}
-                            name="rozette"
-                            checked={
-                                selectedOptions.outletQuantity === option.value
-                            }
-                            onChange={() =>
-                                handleOptionChange(
-                                    "outletQuantity",
-                                    option.value,
-                                )
-                            }
-                        />
-                        <span className={styles.checkmark}></span>
-                        <span>
-                            {option.label}
-                            <span className={styles.price}>
-                                {`(${option.price} ${strings.common.uah})`}
+                        </label>
+                    ))}
+                </>
+                <>
+                    <div className={styles.title}>
+                        {strings.buyPups.constructor.rozette}
+                    </div>
+                    {initialOptions.outletQuantity.map((option) => (
+                        <label
+                            key={option.id}
+                            className={styles.variant}
+                            htmlFor={option.id}
+                        >
+                            <input
+                                type="radio"
+                                id={option.id}
+                                name="rozette"
+                                checked={
+                                    selectedOptions.outletQuantity ===
+                                    option.value
+                                }
+                                onChange={() =>
+                                    handleOptionChange(
+                                        "outletQuantity",
+                                        option.value,
+                                    )
+                                }
+                            />
+                            <span className={styles.checkmark}></span>
+                            <span>
+                                {option.label}
+                                <span className={styles.price}>
+                                    {`(${option.price} ${strings.common.uah})`}
+                                </span>
                             </span>
-                        </span>
-                    </label>
-                ))}
-            </>
-            <>
-                <div className={styles.title}>
-                    {strings.buyPups.constructor.armor}
-                </div>
-                {initialOptions.armor.map((option, index) => (
-                    <label
-                        key={option.id}
-                        className={styles.variant}
-                        htmlFor={option.id}
-                    >
-                        <input
-                            type="radio"
-                            id={option.id}
-                            name="armor"
-                            checked={selectedOptions.armor === option.value}
-                            onChange={() =>
-                                handleOptionChange("armor", option.value)
-                            }
-                        />
-                        <span className={styles.checkmark}></span>
-                        <span>
-                            {option.label}{" "}
-                            {index === 0
-                                ? strings.buyPups.constructor.noShort
-                                : strings.buyPups.constructor.yesShort}
-                            <span className={styles.price}>
-                                {`(${option.price} ${strings.common.uah})`}
+                        </label>
+                    ))}
+                </>
+                <>
+                    <div className={styles.title}>
+                        {strings.buyPups.constructor.armor}
+                    </div>
+                    {initialOptions.armor.map((option, index) => (
+                        <label
+                            key={option.id}
+                            className={styles.variant}
+                            htmlFor={option.id}
+                        >
+                            <input
+                                type="radio"
+                                id={option.id}
+                                name="armor"
+                                checked={selectedOptions.armor === option.value}
+                                onChange={() =>
+                                    handleOptionChange("armor", option.value)
+                                }
+                            />
+                            <span className={styles.checkmark}></span>
+                            <span>
+                                {option.label}{" "}
+                                {index === 0
+                                    ? strings.buyPups.constructor.noShort
+                                    : strings.buyPups.constructor.yesShort}
+                                <span className={styles.price}>
+                                    {`(${option.price} ${strings.common.uah})`}
+                                </span>
                             </span>
-                        </span>
-                    </label>
-                ))}
-            </>
-            <p className={styles.description}>
-                <span className={styles.price}>
-                    {strings.buyPups.constructor.price}:{" "}
-                    <span>{calculateTotalPrice().toFixed(2)}</span>{" "}
-                    {strings.common.uah}
-                </span>
-                {strings.buyPups.constructor.description}
-                <br />
-                {strings.buyPups.constructor.descriptionAdditional}
-            </p>
-            <button className={styles.submit}>
-                {strings.buyPups.constructor.submit}
-            </button>
-        </form>
+                        </label>
+                    ))}
+                </>
+                <p className={styles.description}>
+                    <span className={styles.price}>
+                        {strings.buyPups.constructor.price}:{" "}
+                        <span>{calculateTotalPrice().toFixed(2)}</span>{" "}
+                        {strings.common.uah}
+                    </span>
+                    {strings.buyPups.constructor.description}
+                    <br />
+                    {strings.buyPups.constructor.descriptionAdditional}
+                </p>
+                <button className={styles.submit}>
+                    {strings.buyPups.constructor.submit}
+                </button>
+            </form>
+            {isLoading && <Loader />}
+        </>
     );
 };

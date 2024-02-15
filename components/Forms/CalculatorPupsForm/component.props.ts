@@ -22,12 +22,6 @@ export interface CalculatorPupsFormProps {
                 descriptionAdditional: string;
                 submit: string;
             };
-            ready: {
-                title: string;
-                variantsTitle: string;
-                description: string;
-                submit: string;
-            };
         };
         common: {
             uah: string;

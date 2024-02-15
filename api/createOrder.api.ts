@@ -1,17 +1,25 @@
 import { API_URL } from "./apiUrl";
-import { IOrdersResponse } from "@/interfaces/orders.interface";
+import {
+    IOrdersResponse,
+    ICreateOrderPayload,
+} from "@/interfaces/orders.interface";
 import { getServerCookie } from "@/helpers/getServerCookie.helper";
+import { getCookie } from "@/helpers/cookies.helper";
 
-export const OrdersApi = {
-    async getOrders(): Promise<IOrdersResponse> {
-        const token = getServerCookie("token");
+export const CreateOrderApi = {
+    async createOrder(
+        createOrderPayload: ICreateOrderPayload,
+    ): Promise<IOrdersResponse> {
+        const token = getCookie("token");
 
         try {
-            const response = await fetch(`${API_URL}/users/orders`, {
+            const response = await fetch(`${API_URL}/users/create-order`, {
+                method: "POST",
                 headers: {
                     "Content-Type": "application/json",
                     Authorization: `Bearer ${token || ""}`,
                 },
+                body: JSON.stringify(createOrderPayload),
             });
 
             if (response.ok) {
@@ -27,6 +35,4 @@ export const OrdersApi = {
             return { error: error.message ? error.message : "" };
         }
     },
-
-    async createOrder() {},
 };
