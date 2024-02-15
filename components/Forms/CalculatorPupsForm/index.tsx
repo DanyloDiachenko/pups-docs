@@ -81,6 +81,7 @@ export const CalculatorPupsForm = ({
             //
             price: calculateTotalPrice(),
             status: OrderStatus.Placed,
+            id: Date.now()
         };
 
         const response = await CreateOrderApi.createOrder(createOrderPayload);

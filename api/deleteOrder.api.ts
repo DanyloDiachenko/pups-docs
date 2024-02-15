@@ -1,24 +1,19 @@
 import { API_URL } from "./apiUrl";
-import {
-    IOrdersResponse,
-    ICreateOrderPayload,
-} from "@/interfaces/orders.interface";
+import { IOrdersResponse } from "@/interfaces/orders.interface";
 import { getCookie } from "@/helpers/cookies.helper";
 
-export const CreateOrderApi = {
-    async createOrder(
-        createOrderPayload: ICreateOrderPayload,
-    ): Promise<IOrdersResponse> {
+export const DeleteOrderApi = {
+    async deleteOrder(orderId: number): Promise<IOrdersResponse> {
         const token = getCookie("token");
 
         try {
-            const response = await fetch(`${API_URL}/users/create-order`, {
-                method: "POST",
+            const response = await fetch(`${API_URL}/users/delete-order`, {
+                method: "DELETE",
                 headers: {
                     "Content-Type": "application/json",
                     Authorization: `Bearer ${token || ""}`,
                 },
-                body: JSON.stringify(createOrderPayload),
+                body: JSON.stringify({ orderId: orderId }),
             });
 
             if (response.ok) {

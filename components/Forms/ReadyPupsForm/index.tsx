@@ -54,6 +54,7 @@ export const ReadyPupsForm = ({
             price: -1,
             status: OrderStatus.Placed,
             readyPupsVersion: selectedPupsVersion,
+            id: Date.now(),
         };
 
         const response = await CreateOrderApi.createOrder(createOrderPayload);
