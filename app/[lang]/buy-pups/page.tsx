@@ -4,6 +4,7 @@ import styles from "./styles.module.scss";
 import { dictionaries } from "../dictionaries";
 import { CalculatorPupsForm } from "@/components/Forms/CalculatorPupsForm";
 import { ReadyPupsForm } from "@/components/Forms/ReadyPupsForm";
+import { Faq } from "@/components/Faq";
 
 interface PageProps {
     params: {
@@ -28,6 +29,7 @@ const Page = ({ params }: PageProps) => {
                     <ReadyPupsForm language={language} strings={strings} />
                 </div>
             </div>
+            <Faq faq={strings.buyPups.faq} />
         </>
     );
 };

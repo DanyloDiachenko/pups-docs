@@ -1,3 +1,4 @@
+import { Faq } from "@/components/Faq";
 import { dictionaries } from "../../dictionaries";
 import styles from "./styles.module.scss";
 
@@ -25,6 +26,7 @@ const Page = async ({ params }: PageProps) => {
                     ),
                 )}
             </ol>
+            <Faq faq={strings.technicalCharacteristics.faq} />
         </>
     );
 };

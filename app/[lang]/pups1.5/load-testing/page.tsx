@@ -2,6 +2,7 @@ import Link from "next/link";
 
 import styles from "./styles.module.scss";
 import { dictionaries } from "../../dictionaries";
+import { Faq } from "@/components/Faq";
 
 interface PageProps {
     params: {
@@ -118,6 +119,7 @@ const Page = async ({ params }: PageProps) => {
                     alt={strings.loadTesting15.title}
                 />
             </div>
+            <Faq faq={strings.loadTesting15.faq} />
         </>
     );
 };

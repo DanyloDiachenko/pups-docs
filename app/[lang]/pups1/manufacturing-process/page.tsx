@@ -2,6 +2,7 @@ import Link from "next/link";
 
 import styles from "./styles.module.scss";
 import { dictionaries } from "../../dictionaries";
+import { Faq } from "@/components/Faq";
 
 interface PageProps {
     params: {
@@ -56,6 +57,7 @@ const Page = async ({ params }: PageProps) => {
                     {strings.manufacturingProcess.additionalInfo.link}
                 </Link>
             </p>
+            <Faq faq={strings.manufacturingProcess.faq} />
         </>
     );
 };

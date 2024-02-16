@@ -420,7 +420,45 @@
             "title": "Special ventilation holes were also created in the case; mounting for the installation of various components inside the case. Photos of the developed prototype of the first version of the charging station can be seen by following the ",
             "link": "link.",
             "url": "/pups1/manufactured-prototype"
-        }
+        },
+        "faq": [
+            {
+                "question": "What were the main considerations during the planning of future functions of the charging station?",
+                "answer": "The main characteristics of the future station were preliminarily planned to meet our needs in its further use. These include: the ability to charge phones, laptops, drones; the possibility of power supply from a cigarette lighter socket through an adapter; the presence of a 220-volt network with average power."
+            },
+            {
+                "question": "Can you provide more details about the purchased components for manufacturing?",
+                "answer": "The main components for its creation were selected and purchased, such as: inverter, case, charger, batteries, etc. The list of all purchased components and their prices is provided on the components page."
+            },
+            {
+                "question": "How was the connection scheme developed for the prototype of the charging station?",
+                "answer": "Accordingly, the principal scheme of the planned prototype of the charging station was developed."
+            },
+            {
+                "question": "What criteria were considered when choosing batteries for the battery pack?",
+                "answer": "Lithium-polymer batteries with a voltage range of 3.7 – 4.2 volts and a capacity of 10000 milliampere-hours were chosen for creating the battery pack."
+            },
+            {
+                "question": "How were the batteries integrated with the BMS board, and what wiring was used?",
+                "answer": "The battery system was integrated with a BMS board, which was modified to work in a 3S configuration. Two pairs of cables were laid from the battery and BMS board: one for current output and the other for the charging process."
+            },
+            {
+                "question": "What measures were taken for insulation and protection of the battery system?",
+                "answer": "The manufactured battery system was protected with plastic cardboard and additionally insulated with reinforced tape, providing protection from external factors and increased safety during operation. The overall dimensions of the completed battery system are 150x162x90 millimeters."
+            },
+            {
+                "question": "Can you explain the process of installing the charging board and how overheating issues during charging were addressed?",
+                "answer": "A module (board) of the charging device was installed in the case for charging the battery system. To prevent overheating during charging, a cooling fan is activated, which is also connected to the charging board. The charging device module has one red indicator LED, which signals that the charging process is ongoing."
+            },
+            {
+                "question": "How were the station outputs managed, and what indicators were included to signal the charging process?",
+                "answer": "A module (board) of the charging device was installed in the case for charging the battery system. To prevent overheating during charging, a cooling fan is activated, which is also connected to the charging board. The charging device module has one red indicator LED, which signals that the charging process is ongoing."
+            },
+            {
+                "question": "What was involved in the process of developing and cutting ports in the case for various device inputs and outputs?",
+                "answer": "The final stage of creating the charging station was the design and cutting of ports in the case. The case was used in a way that maximized the space for component placement while ensuring easy access to charging inputs and power outputs for various devices. The input for charging and the output for the inverter were located on one side, while other outputs, such as USB, charge indicator, and cigarette lighter output, were placed on top of the case for convenience."
+            }
+        ]
     },
     "components": {
         "title": "Components of the «PUPS» Charging Station v.1",
@@ -447,6 +485,36 @@
                 "title": "Cigarette Lighter Port",
                 "pricePerOne": 76.0,
                 "quantity": 1
+            }
+        ],
+        "faq": [
+            {
+                "question": "What type of batteries are used in your device?",
+                "answer": "High-quality lithium-polymer batteries with a capacity of 10 Ah, 3.7-4.2 volts are used."
+            },
+            {
+                "question": "What is the casing of the box made of?",
+                "answer": "The box casing is made of strong and waterproof polypropylene, suitable for protecting electronic components from adverse external influences."
+            },
+            {
+                "question": "What is the purpose of the BMS board?",
+                "answer": "The BMS board (Battery Management System) is responsible for managing and protecting batteries, including voltage, current, temperature control, as well as protection against overload and overcharging."
+            },
+            {
+                "question": "What function does the charge indicator perform?",
+                "answer": "The charge indicator displays the battery charge level on the screen, allowing the user to monitor the current state of the device's charge."
+            },
+            {
+                "question": "What other components can be connected to the USB splitter?",
+                "answer": "The USB splitter allows connecting various devices such as mobile phones, tablets, MP3 players, etc., for charging."
+            },
+            {
+                "question": "What are the advantages of using an inverter in the charging station?",
+                "answer": "The inverter converts DC power from the batteries into AC power, allowing various devices that operate on AC power to be powered."
+            },
+            {
+                "question": "What is the purpose of the switch button?",
+                "answer": "The switch button is used to turn the power of the charging station components on and off, providing convenient and quick access to the device's functions."
             }
         ]
     },
@@ -491,6 +559,28 @@
                 "title": "5. Testing the charging station's charge indicator",
                 "description": "The station's batteries were fully charged, and a voltmeter was connected to them, and the switch for the indicator was turned on. Initially, the battery voltage was 12.6 volts, and 4 segments of the indicator were lit. A 200-watt 220-volt incandescent lamp was used for the load. After 3 segments of the indicator lit up, the battery voltage was approximately 11.7 volts; 2 segments - 11.1 volts; 1 segment - 10.5 volts. The absence of segments, but still operational inverter - 9.9 volts."
             }
+        ],
+        "faq": [
+            {
+                "question": "Why was 4770 mAh consumed during phone charging through the 5V 1A USB port, instead of 4500 mAh?",
+                "answer": "This is due to the presence of a 12V to 5V step-down module with 94% efficiency in the USB hub. Therefore, an additional 270 mAh were consumed to compensate for energy losses during conversion."
+            },
+            {
+                "question": "Why is more energy consumed when charging through the 5V 2.1A USB port?",
+                "answer": "When charging through the 5V 2.1A USB port, the efficiency of the step-down module dropped to 93% due to heating, which led to greater energy loss, resulting in 4815 mAh being consumed."
+            },
+            {
+                "question": "How was the cigarette lighter port tested?",
+                "answer": "For testing the cigarette lighter port, a 12V 48W 5-meter LED strip was connected, after which the strip successfully lit up."
+            },
+            {
+                "question": "How much energy was consumed to charge the laptop through the 220V port?",
+                "answer": "During laptop charging through the 220V port, 8372 mAh were consumed from the station's battery, significantly exceeding the laptop battery capacity (6140 mAh) due to energy conversion and losses."
+            },
+            {
+                "question": "How does the charge indicator on the PUPS charging station work?",
+                "answer": "The charge indicator shows the battery level of the station through the number of segments: 4 segments correspond to 12.6 volts, 3 segments to 11.7 volts, 2 segments to 11.1 volts, 1 segment to 10.5 volts. The inverter remains operational down to 9.9 volts."
+            }
         ]
     },
     "chargeTime": {
@@ -512,6 +602,20 @@
                 "title": "3. Determining the charging time of a laptop from the 220-volt port",
                 "description": "The charging time for the laptop was calculated using the 220-volt socket port. The laptop's battery capacity is 6140 mAh, which equals 6.14 Ah. The current of the laptop charging adapter is 3.3 amps.",
                 "descriptionToFormule": " = 6.14 / 3.3 = 1.9 - hours spent on charging the laptop"
+            }
+        ],
+        "faq": [
+            {
+                "question": "How is the charging time for a phone calculated through the 5V 1A USB port?",
+                "answer": "The charging time is calculated by dividing the phone's battery capacity (4500 mAh, or 4.5 Ah) by the current of the USB port (1 amp), resulting in 4.5 hours for a full charge."
+            },
+            {
+                "question": "Why is the charging time shorter through the 5V 2.1A USB port?",
+                "answer": "Due to the higher current of the USB port at 2.1 amps, the charging time decreases, as the phone's battery capacity (4500 mAh, or 4.5 Ah) is divided by 2.1 amps, reducing the charging time to approximately 2.1 hours."
+            },
+            {
+                "question": "How is the charging time for a laptop determined from the 220V port?",
+                "answer": "The charging time for a laptop is determined by dividing the battery capacity (6140 mAh, or 6.14 Ah) by the charging adapter's current (3.3 amps). This results in approximately 1.9 hours for a full charge."
             }
         ]
     },
@@ -559,6 +663,24 @@
                 "descriptionAfter3": " equals 8372 mAh.",
                 "descriptionForFormule": " = 40000 / 8372 = 4.8 times the laptop can be charged"
             }
+        ],
+        "faq": [
+            {
+                "question": "What is the working capacity of the battery for the 'PUPS' v.1 charging station?",
+                "answer": "The working capacity of the battery (accumulator) for the 'PUPS' v.1 charging station is defined as the amount of energy that the battery can provide for charging devices. For this station, the working capacity is 40 Ah or 40000 mAh."
+            },
+            {
+                "question": "How is the number of charging cycles for a phone from a USB 5 volt 1 amp port calculated?",
+                "answer": "The number of charging cycles for a phone from a USB 5 volt 1 amp port is calculated by dividing the working capacity of the station's battery by the capacity used to charge the phone (4770 mAh for Redmi Note 8 Pro), which is approximately 8.39 times."
+            },
+            {
+                "question": "How is the number of charging cycles for a phone from a USB 5 volt 2.1 amp port determined?",
+                "answer": "The number of charging cycles for a phone from a USB 5 volt 2.1 amp port is determined in a similar manner to the previous method, where the working capacity of the battery is divided by the capacity needed for charging (4815 mAh), which is approximately 8.31 times."
+            },
+            {
+                "question": "How many times can a laptop be charged from a 220 volt port using the charging station?",
+                "answer": "Using the 220 volt port of the 'PUPS' v.1 charging station, a MacBook model M2 Pro 2023 can be charged approximately 4.8 times, based on the capacity spent on charging (8372 mAh)."
+            }
         ]
     },
     "technicalCharacteristics": {
@@ -595,6 +717,32 @@
                 "value": "220 volt outlet, USB Type-A x 2, Car Socket (Cigarette Lighter)"
             },
             { "title": "Station Charging", "value": "From 220 volt outlet" }
+        ],
+        "faq": [
+            {
+                "question": "Can I use all the ports for charging simultaneously on the 'PUPS' v.1 charging station?",
+                "answer": "Yes, the 'PUPS' v.1 charging station is designed to use multiple ports at the same time, but the total power should not exceed the station's rated power."
+            },
+            {
+                "question": "Is the 'PUPS' v.1 charging station suitable for use with high-power devices like power tools?",
+                "answer": "The charging station has a peak power of 500W, making it suitable for short-term use with some high-power devices. However, ensure your device's power requirements do not exceed the station's peak power."
+            },
+            {
+                "question": "How often should the charging station be recharged to maintain optimal battery capacity?",
+                "answer": "It's recommended to regularly recharge the charging station, even if not in use, to maintain the battery's optimal condition. Ideally, recharge the station every 3-6 months."
+            },
+            {
+                "question": "Is it possible to replace the battery in the 'PUPS' v.1 charging station when it wears out?",
+                "answer": "For information on battery replacement, refer to the user manual or contact the manufacturer directly, as this may depend on the specific model and its design."
+            },
+            {
+                "question": "Does the 'PUPS' v.1 charging station have overload and short circuit protection?",
+                "answer": "Yes, the charging station is typically equipped with overload and short circuit protection for safety during use."
+            },
+            {
+                "question": "Can I use the 'PUPS' v.1 charging station outdoors?",
+                "answer": "Yes, the charging station can be used outdoors, but avoid direct exposure to water and keep it in a dry place to prevent damage."
+            }
         ]
     },
     "instruction": {
@@ -809,7 +957,29 @@
             "description": "The charging time for the phone using the USB QC 3.0 port was calculated. The phone's battery capacity is 4500 mAh, which equals 4.5 ampere-hours. The maximum current of the USB port is 3.6 amperes, meaning I = 3.6 amperes.",
             "descriptionToFormule": "hours needed to charge the phone"
         },
-        "descriptionPhotos": "The photo below shows the process of using the «PUPS» charging station v.1.5."
+        "descriptionPhotos": "The photo below shows the process of using the «PUPS» charging station v.1.5.",
+        "faq": [
+            {
+                "question": "What was tested in the 'PUPS' v.1.5 charging station?",
+                "answer": "The 'PUPS' v.1.5 charging station underwent testing for its new USB QC 3.0 port. Information on testing other ports can be found on the page for the 'PUPS' v.1 charging station."
+            },
+            {
+                "question": "What was the efficiency of the USB QC 3.0 port during testing?",
+                "answer": "The efficiency of the USB QC 3.0 port at maximum load was approximately 87%."
+            },
+            {
+                "question": "How many charging cycles can be achieved from the USB QC 3.0 port for a phone with a 4500 mAh battery?",
+                "answer": "It was determined that the USB QC 3.0 port can charge a similar phone approximately 5015 mAh, taking into account the capacity spent on charging, which equals 5085 mAh."
+            },
+            {
+                "question": "What is the charging time for a phone from the USB QC 3.0 port?",
+                "answer": "The charging time for a phone using the USB QC 3.0 port was calculated based on the phone's battery capacity (4500 mAh or 4.5 ampere-hours) and the maximum current strength of the USB port (3.6 amperes)."
+            },
+            {
+                "question": "Where can I see photos of the 'PUPS' v.1.5 charging station in use?",
+                "answer": "Photos of the 'PUPS' v.1.5 charging station in use can be viewed in the description on this page."
+            }
+        ]
     },
     "components2": {
         "title": "Components of Charging Station «PUPS» v.2",
@@ -880,7 +1050,25 @@
             "link1Description": "- charging time for the phone via the USB Quick-Charge 3.0 port, and",
             "link2": "«PUPS» v.1 testing",
             "link2Description": "- charging time for the laptop from the 220-volt socket."
-        }
+        },
+        "faq": [
+            {
+                "question": "What is the working capacity of the battery in the 'PUPS' v.2 charging station?",
+                "answer": "The working capacity of the battery in the 'PUPS' v.2 charging station is 48 Ah or 48000 mAh, based on the total capacity of 60 Ah with an approximate effective battery usage of 80%."
+            },
+            {
+                "question": "How many charging cycles can be achieved for a phone through the USB QC 3.0 port on the 'PUPS' v.2 station?",
+                "answer": "Through the USB QC 3.0 port on the 'PUPS' v.2 charging station, a phone with a 4500 mAh capacity can be charged approximately 9.6 times, considering the spent capacity of 5015 mAh during charging."
+            },
+            {
+                "question": "Is the number of charging cycles for a phone through the USB QC 3.0 port and the Type-C PD port the same?",
+                "answer": "Yes, the number of charging cycles for a phone through both the USB QC 3.0 port and the Type-C PD port is approximately the same, around 9.6 times for a phone with a 4500 mAh capacity, as the current strength and efficiency of both ports are similar."
+            },
+            {
+                "question": "Where can I find information about the charging time for devices through different ports of the 'PUPS' v.2 charging station?",
+                "answer": "Information about the charging time for devices through different ports, including the USB QC 3.0 port and the 220-volt socket, is available on the testing page for the 'PUPS' v.1.5 and 'PUPS' v.1 charging stations, respectively."
+            }
+        ]
     },
     "technicalCharacteristics2": {
         "title": "Technical Characteristics of the «PUPS» v.2 Charging Station",
@@ -916,6 +1104,28 @@
                 "value": "220-volt outlet, USB Type-A x 3, USB Type-C x 1"
             },
             { "title": "Station Charging", "value": "From 220-volt outlet" }
+        ],
+        "faq": [
+            {
+                "question": "Can I simultaneously charge multiple devices at maximum power on each USB Type-A and Type-C port?",
+                "answer": "Yes, you can charge multiple devices simultaneously using all available USB Type-A and Type-C ports, but the total power consumption should not exceed the station's rated power."
+            },
+            {
+                "question": "Does the 'PUPS' v.2 charging station support fast charging for devices compatible with USB Power Delivery through the Type-C port?",
+                "answer": "Yes, the Type-C port supports 18W power, which allows for fast charging of compatible devices."
+            },
+            {
+                "question": "What are the benefits of a modified sine wave as the output signal form for connected devices?",
+                "answer": "A modified sine wave provides efficient operation for most electronic devices and is more economical compared to a pure sine wave, although it may not be ideal for some sensitive devices."
+            },
+            {
+                "question": "Can the 'PUPS' v.2 charging station be used as an uninterruptible power supply for a home office?",
+                "answer": "Yes, you can use the station as a backup power source to support critical devices during short-term power outages, but ensure the total load does not exceed the station's peak power."
+            },
+            {
+                "question": "How does the weight of the charging station affect its portability and convenience for use in hiking or travel?",
+                "answer": "The weight of the charging station at 2.7 kg makes it portable and convenient for use in hiking or travel, especially with the carrying handle, although a backpack or cart may be needed for longer treks."
+            }
         ]
     },
     "instruction2": {
@@ -1027,7 +1237,25 @@
             "variantsTitle": "Charging Station Variants:",
             "description": "After confirming the order, we will definitely contact you to clarify additional details and provide the final price.",
             "submit": "Confirm Order"
-        }
+        },
+        "faq": [
+            {
+                "question": "How can I customize the 'PUPS' charging station to fit my needs?",
+                "answer": "You can use the online configurator to select the desired battery capacity, inverter power, number and types of ports (USB QC 3.0, Type-C PD), the presence of a cigarette lighter socket, and 220-volt sockets, as well as additional protection for the casing."
+            },
+            {
+                "question": "Is it possible to purchase a ready-made charging station without custom settings?",
+                "answer": "Yes, you can also choose from one of the pre-configured charging station options that are ready for immediate use."
+            },
+            {
+                "question": "Does the price listed on the website include shipping costs and additional components?",
+                "answer": "The final cost will include shipping expenses, switches, balancing components (BMS), and other additional costs. After confirming your order, we will contact you to finalize the details and inform you of the total price."
+            },
+            {
+                "question": "How do I confirm my order for a 'PUPS' charging station?",
+                "answer": "To confirm your order, you will need to click the 'Confirm Order' button on the website after selecting the required specifications or a ready-made option. We will then contact you with further instructions."
+            }
+        ]
     },
     "auth": {
         "authTitle": "Authorization",

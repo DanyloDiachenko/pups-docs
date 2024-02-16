@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { dictionaries } from "../../dictionaries";
 import styles from "./styles.module.scss";
+import { Faq } from "@/components/Faq";
 
 interface PageProps {
     params: {
@@ -54,6 +55,7 @@ const Page = async ({ params }: PageProps) => {
                     </p>
                 </li>
             </ol>
+            <Faq faq={strings.loadTesting2.faq} />
         </>
     );
 };
