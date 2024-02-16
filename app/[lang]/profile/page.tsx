@@ -29,15 +29,19 @@ const Page = async ({ params }: PageProps) => {
 
     return (
         <>
-            <h1>Мій кабінет</h1>
+            <h1>{strings.profile.title}</h1>
             <div className={styles.hello}>
-                Вітаю, <span className={styles.dog}>@</span>
+                {strings.profile.hello}, <span className={styles.dog}>@</span>
                 <span className={styles.email}>danildiachenko23@gmail.com</span>
             </div>
-            <h2 className={styles.changePassword}>Змінити пароль</h2>
-            <ChangePasswordForm language={language} />
-            <h2 className={styles.myOrders}>Мої замовлення</h2>
-            <Orders orders={orders} />
+            <h2 className={styles.changePassword}>
+                {strings.profile.changePassword.title}
+            </h2>
+            <ChangePasswordForm strings={strings} language={language} />
+            <h2 className={styles.myOrders}>
+                {strings.profile.myOrders.title}
+            </h2>
+            <Orders orders={orders} language={language} strings={strings} />
         </>
     );
 };

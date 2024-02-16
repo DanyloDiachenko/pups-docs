@@ -6,7 +6,9 @@
         "port": "порту",
         "work": "робоча",
         "full": "повна",
-        "uah": "грн"
+        "uah": "грн",
+        "yes": "Так",
+        "no": "Ні"
     },
     "header": {
         "support": "Підтримка",
@@ -1048,5 +1050,45 @@
         "email": "Ваша Пошта",
         "password": "Ваш Пароль",
         "submit": "Підтвердити"
+    },
+    "profile": {
+        "title": "Мій кабінет",
+        "hello": "Вітаю",
+        "changePassword": {
+            "title": "Змінити пароль",
+            "newPassword": "Новий пароль",
+            "submitNewPassword": "Підтвердіть новий пароль",
+            "submit": "Підтвердити"
+        },
+        "myOrders": {
+            "title": "Мої замовлення",
+            "table": {
+                "type": "Тип",
+                "typeCustom": "Кастом",
+                "capacity": "Ємність",
+                "capacityAdd": "АКБ",
+                "power": "Потужність",
+                "powerAdd": "номінальна",
+                "usbQuantity": "Кількість",
+                "typecQuantity": "Кількість",
+                "isAutoLighter": "Наявність",
+                "isAutoLighterAdd": "прикурювача",
+                "status": {
+                    "title": "Статус",
+                    "placed": "Розміщено",
+                    "purchasingMaterials": "Закупівля матеріалів",
+                    "manufacturing": "На виробництві",
+                    "delivering": "Доставляється",
+                    "completed": "Завершено"
+                },
+                "price": "Ціна",
+                "created": "Дата",
+                "createdAdd": "створення",
+                "delete": "Скасувати",
+                "descriptionWeSee": "Як тільки ми побачимо Ваше нове замовлення, ми обов'язково Вам напишемо на електронну адресу, яку Ви надали при реєстрації. Будь ласка, очікуйте на наш зв`язок!",
+                "descriptionNoOrders": "Ви ще не робили жодного замовлення, для замовлення перейдіть на сторінку",
+                "descriptionLinkOrder": "Замовити"
+            }
+        }
     }
 }

@@ -80,8 +80,8 @@ export const CalculatorPupsForm = ({
             armor: initialOptions.armor[0].value as boolean,
             //
             price: calculateTotalPrice(),
-            status: OrderStatus.Placed,
-            id: Date.now()
+            status: OrderStatus.placed,
+            id: Date.now(),
         };
 
         const response = await CreateOrderApi.createOrder(createOrderPayload);

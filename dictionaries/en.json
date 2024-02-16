@@ -6,7 +6,9 @@
         "port": "port",
         "work": "work",
         "full": "full",
-        "uah": "UAH"
+        "uah": "UAH",
+        "yes": "Yes",
+        "no": "No"
     },
     "header": {
         "support": "Support",
@@ -1034,5 +1036,45 @@
         "email": "Yout Email",
         "password": "Your Password",
         "submit": "Submit"
+    },
+    "profile": {
+        "title": "My Profile",
+        "hello": "Welcome",
+        "changePassword": {
+            "title": "Change Password",
+            "newPassword": "New Password",
+            "submitNewPassword": "Confirm New Password",
+            "submit": "Confirm"
+        },
+        "myOrders": {
+            "title": "My Orders",
+            "table": {
+                "type": "Type",
+                "typeCustom": "Custom",
+                "capacity": "Battery",
+                "capacityAdd": "capacity",
+                "power": "Nominal",
+                "powerAdd": "power",
+                "usbQuantity": "Number of",
+                "typecQuantity": "Number of",
+                "isAutoLighter": "Is auto",
+                "isAutoLighterAdd": "lighter",
+                "status": {
+                    "title": "Status",
+                    "placed": "Placed",
+                    "purchasingMaterials": "Purchasing materials",
+                    "manufacturing": "In production",
+                    "delivering": "Delivering",
+                    "completed": "Completed"
+                },
+                "price": "Price",
+                "created": "Created",
+                "createdAdd": "at",
+                "delete": "Cancel",
+                "descriptionWeSee": "As soon as we see your new order, we will definitely write to you at the email address you provided during registration. Please await our contact!",
+                "descriptionNoOrders": "You have not made any orders yet, to place an order please go to the",
+                "descriptionLinkOrder": "Order Page"
+            }
+        }
     }
 }

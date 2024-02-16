@@ -10,7 +10,10 @@ import { getCookie } from "@/helpers/cookies.helper";
 import { ChangePasswordFormProps } from "./component.props";
 import { AuthApi } from "@/api/auth.api";
 
-export const ChangePasswordForm = ({ language }: ChangePasswordFormProps) => {
+export const ChangePasswordForm = ({
+    language,
+    strings,
+}: ChangePasswordFormProps) => {
     const router = useRouter();
 
     const [formData, setFormData] = useState({
@@ -70,7 +73,7 @@ export const ChangePasswordForm = ({ language }: ChangePasswordFormProps) => {
                     <input
                         name="passwordNew"
                         type="password"
-                        placeholder="Новий пароль"
+                        placeholder={strings.profile.changePassword.newPassword}
                         required
                         value={formData.passwordNew}
                         onChange={handleChange}
@@ -80,14 +83,16 @@ export const ChangePasswordForm = ({ language }: ChangePasswordFormProps) => {
                     <input
                         name="passwordNewRepeat"
                         type="password"
-                        placeholder="Підтвердіть новий пароль"
+                        placeholder={
+                            strings.profile.changePassword.submitNewPassword
+                        }
                         required
                         value={formData.passwordNewRepeat}
                         onChange={handleChange}
                     />
                 </label>
                 <button type="submit" className={styles.button}>
-                    Підтвердити
+                    {strings.profile.changePassword.submit}
                 </button>
             </form>
             {isLoading && <Loader />}

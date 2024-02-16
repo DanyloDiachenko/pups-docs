@@ -1,9 +1,9 @@
 export enum OrderStatus {
-    Placed = "Створена",
-    MaterialsPurchased = "Закупівля матераілів",
-    InProduction = "Виготовлення",
-    InDelivery = "Доставка",
-    Completed = "Завершений",
+    placed = "placed",
+    purchasingMaterials = "purchasingMaterials",
+    manufacturing = "manufacturing",
+    delivering = "delivering",
+    completed = "completed",
 }
 
 export interface IOrder {

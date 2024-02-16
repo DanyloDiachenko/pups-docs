@@ -52,7 +52,7 @@ export const ReadyPupsForm = ({
             armor: false,
             //
             price: -1,
-            status: OrderStatus.Placed,
+            status: OrderStatus.placed,
             readyPupsVersion: selectedPupsVersion,
             id: Date.now(),
         };
