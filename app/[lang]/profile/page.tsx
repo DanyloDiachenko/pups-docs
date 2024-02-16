@@ -21,7 +21,7 @@ const getEmail = async () => {
     if (response.error) {
         return "";
     } else {
-        return response.email;
+        return response.email || "";
     }
 };
 
