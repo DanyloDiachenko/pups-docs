@@ -19,7 +19,9 @@ export const Aside = () => {
             router.back();
         }
     }
-    
+
+    console.log(params.lang);
+
     const strings = dictionaries[params.lang as keyof typeof dictionaries];
     const navigation = strings && strings.navigation ? strings.navigation : [];
 
@@ -63,7 +65,7 @@ export const Aside = () => {
                 <div className={styles.asideWrapper}>
                     <Link
                         className={styles.logo}
-                        href={`/${params.lang}`}
+                        href={`/${params.lang}/`}
                         onClick={() => setActiveLink("")}
                     >
                         <img src="/logo.png" alt="Логотип" />

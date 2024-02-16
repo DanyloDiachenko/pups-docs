@@ -11,3 +11,8 @@ export interface IAuthResponse {
 export interface IAuthChangePasswordPayload {
     password: string;
 }
+
+export interface IGetEmailResponse {
+    email?: string;
+    error?: string;
+}
