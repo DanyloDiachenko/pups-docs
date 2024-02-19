@@ -41,7 +41,6 @@ export const Orders = ({ orders, language, strings }: OrdersProps) => {
             router.refresh();
         } else {
             toast.error(response.error);
-            console.log(response);
         }
 
         setOrdersAll(orders);
@@ -84,8 +83,6 @@ export const Orders = ({ orders, language, strings }: OrdersProps) => {
                 throw new Error(responseData.message);
             }
         } catch (error: any) {
-            console.log(error);
-
             return { error: error.message ? error.message : "" };
         }
     };

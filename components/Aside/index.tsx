@@ -20,8 +20,6 @@ export const Aside = () => {
         }
     }
 
-    console.log(params.lang);
-
     const strings = dictionaries[params.lang as keyof typeof dictionaries];
     const navigation = strings && strings.navigation ? strings.navigation : [];
 

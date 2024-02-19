@@ -22,8 +22,6 @@ export const GetEmailApi = {
                 throw new Error(responseData.message);
             }
         } catch (error: any) {
-            console.log(error);
-
             return { error: error.message ? error.message : "" };
         }
     },

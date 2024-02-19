@@ -62,7 +62,6 @@ export const ReadyPupsForm = ({
         if (response.data) {
             toast.success("Замовлення створено успішно!");
         } else {
-            console.log(response);
         }
 
         setIsLoading(false);

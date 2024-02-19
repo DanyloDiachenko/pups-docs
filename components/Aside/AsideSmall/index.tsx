@@ -9,6 +9,7 @@ import { AsideSmallProps } from "./component.props";
 import { onClickOutside } from "@/helpers/onClickOutside.helper";
 import { LanguageSelector } from "@/components/LanguageSelector";
 import { dictionaries } from "@/app/[lang]/dictionaries";
+import { getCookie } from "@/helpers/cookies.helper";
 
 export const AsideSmall = ({ navigation }: AsideSmallProps) => {
     const pathname = usePathname();
@@ -84,6 +85,16 @@ export const AsideSmall = ({ navigation }: AsideSmallProps) => {
         };
     }, []);
 
+    useEffect(() => {
+        setIsContentOpened(false);
+    }, [pathname]);
+
+    const onProfileClick = () => {
+        const token = getCookie("token");
+
+        router.push(`/${params.lang}/${token ? "profile" : "/auth"}`);
+    };
+
     if (!strings) {
         return <></>;
     }
@@ -97,7 +108,7 @@ export const AsideSmall = ({ navigation }: AsideSmallProps) => {
         >
             <div className={styles.asideWrapper}>
                 <div className={styles.top}>
-                    <Link className={styles.logo} href="/">
+                    <Link className={styles.logo} href={`/${params.lang}/`}>
                         <img src="/logo.png" alt="Логотип" />
                         «PUPS»
                     </Link>
@@ -115,7 +126,10 @@ export const AsideSmall = ({ navigation }: AsideSmallProps) => {
                     <div className={styles.wrapper}>
                         <div className={styles.topContent}>
                             <LanguageSelector />
-                            <button className={styles.button}>
+                            <button
+                                className={styles.button}
+                                onClick={onProfileClick}
+                            >
                                 {strings.header.button}
                             </button>
                         </div>

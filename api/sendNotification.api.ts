@@ -33,8 +33,6 @@ export const NotifcationsApi = {
                 throw new Error(responseData.message);
             }
         } catch (error: any) {
-            console.log(error);
-
             return { error: error.message ? error.message : "" };
         }
     },
