@@ -87,7 +87,7 @@ const Page = async ({ params }: PageProps) => {
                         <span className={styles.small}>
                             {strings.common.port}
                         </span>{" "}
-                        = 4.5 / 2.1 = 1.25 -{" "}
+                        = 4.5 / 3.6 = 1.25 -{" "}
                         {strings.loadTesting15.timeCharge.descriptionToFormule}
                     </p>
                 </li>
